@@ -5,5 +5,7 @@ package com.ning.jcbm;
  * in addition to different input (file) and format/handler type.
  */
 public enum Operation {
-    READ, WRITE, READ_WRITE;
+    COMPRESS,
+    UNCOMPRESS
+    ;
 }

@@ -6,64 +6,67 @@ import java.util.*;
 import com.sun.japex.JapexDriverBase;
 import com.sun.japex.TestCase;
 
-import com.ning.jcbm.util.*;
-
 /**
  */
 public abstract class DriverBase extends JapexDriverBase
 {
+    protected final String _driverName;
+    
     /**
      * Operation we are testing
      */
     protected Operation _operation;
 
     /**
+     * Whether driver should use streaming compression or not (block-based)
+     */
+    protected boolean _streaming;
+    
+    /**
      * Number of bytes processed during test
      */
     protected int _totalLength;
 
     /**
-     * Depending on whether we want to consider file I/O overhead
-     * or not, we can define temporary input/output files too
+     * Directory in which input files are stored (file names
+     * are same as test case names)
      */
-    private File _tmpInputFile;
-
-    private File _tmpOutputFile;    
+    private File _inputDir;
     
     /**
-     * In-memory input data used for read and read-write tests (possibly
-     * written to a File).
+     * Uncompressed test data
      */
-    protected byte[] _inputData;
-//    protected List<byte[]> _inputData;
+    protected byte[] _uncompressed;
 
+    /**
+     * Compressed test data
+     */
+    protected byte[] _compressed;
+
+    protected DriverBase(String name)
+    {
+        _driverName = name;
+    }
+    
+    @Override
+    public void initializeDriver()
+    {
+        // Where are the input files?
+        String dirName = getParam("japex.inputDir");
+        if (dirName == null) {
+            throw new RuntimeException("japex.inputFile not specified");
+        }
+        _inputDir = new File(dirName);
+        if (!_inputDir.exists() || !_inputDir.isDirectory()) {
+            throw new IllegalArgumentException("No input directory '"+_inputDir.getAbsolutePath()+"'");
+        }
+        _streaming = this.getBooleanParam("japex.streaming");
+    }
+    
     @Override
     public void prepare(TestCase testCase)
     {
-        String inputFile = testCase.getParam("japex.inputFile");        
-        if (inputFile == null) {
-            throw new RuntimeException("japex.inputFile not specified");
-        }
-        String tmpDirName = testCase.getParam("japex.tmpFileDir");        
-        if (tmpDirName == null) {
-            throw new RuntimeException("japex.tmpFileDir not specified");
-        }
-        tmpDirName = tmpDirName.trim();
-        if (tmpDirName.length() == 0) { // no file i/o
-            _tmpInputFile = null;
-            _tmpOutputFile = null;
-        } else { // use file i/o
-            File dir = new File(tmpDirName);
-            if (!dir.exists()) {
-                if (!dir.mkdirs()) {
-                    throw new IllegalArgumentException("Could not create directory '"+dir+"': can not create temporary files");
-                }
-            }
-            /*
-            _tmpInputFile = new File(dir, TMP_INPUT_FILENAME);
-            _tmpOutputFile = new File(dir, TMP_OUTPUT_FILENAME);
-            */
-        }
+        String name = testCase.getName();
         _operation = null;
         String operStr = testCase.getParam("japex.operation");
         if (operStr != null) {
@@ -72,51 +75,36 @@ public abstract class DriverBase extends JapexDriverBase
             } catch (Exception e) { }
         }
         if (_operation == null) {
-           throw new IllegalArgumentException("Invalid or missing value for japex.itemOperation (value: ["+operStr
+           throw new IllegalArgumentException("Invalid or missing value for japex.operation (value: ["+operStr
                 +"]), has to be one of: "+Arrays.asList(Operation.values()));
         }
-        
-        // First things first: load in input data, bind to value objects
         try {
-            byte[] json = loadFile(inputFile);
-//            _valuesToWrite = readJsonAs(json, _valueType);
-
-            // And for read, read/write cases, convert to format we need
-            
-            // First: handle input data conversion to raw format if testing reading
-            switch (_operation) {
-            case READ:
-            case READ_WRITE:
-//                byte[] data = convertInputData(_valuesToWrite);
-                byte[] data = null;
-
-                // compression to use?
-                _inputData = data;
-                
-                // And, with file-backed tests, write the thing
-                if (_tmpInputFile != null) {
-                    FileOutputStream out = new FileOutputStream(_tmpInputFile);
-                    out.write(_inputData);
-                    out.close();
-                }
-                break;
-            case WRITE:
-                _inputData = null;
-            }
-            // And for output tests, delete output file
-            switch (_operation) {
-            case READ_WRITE:
-            case WRITE:
-                if (_tmpOutputFile != null && _tmpOutputFile.exists()) {
-                    _tmpOutputFile.delete();
-                }
-            }
+            // First things first: load uncompressed input in memory; compress to verify round-tripping
+            _uncompressed = loadFile(new File(_inputDir, name));
+            _compressed = compressBlock(_uncompressed);
+            verifyRoundTrip(testCase.getName(), _uncompressed, _compressed);
         }
         catch (RuntimeException e) {
             throw e;
         }
         catch (Exception e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    protected void verifyRoundTrip(String name, byte[] raw, byte[] compressed) throws IOException
+    {
+        byte[] actual = uncompressBlock(compressed);
+        if (actual.length != raw.length) {
+            throw new IllegalArgumentException("Round-trip failed for driver '"+_driverName+"', input '"+name+"': uncompressed length was "+actual.length+" bytes; expected "+raw.length);
+        }
+        int i = 0;
+        for (int len = actual.length; i < len; ++i) {
+            if (actual[i] != raw[i]) {
+                throw new IllegalArgumentException("Round-trip failed for driver '"+_driverName+"', input '"+name+"': bytes at offset "+i
+                        +" (from total of "+len+") differed, expected 0x"+Integer.toHexString(raw[i] & 0xFF)
+                        +", got 0x"+Integer.toHexString(actual[i] & 0xFF));
+            }
         }
     }
     
@@ -131,7 +119,19 @@ public abstract class DriverBase extends JapexDriverBase
         _totalLength = 0;
 
         try {
-            _totalLength = runTest(_operation);
+            if (_operation == Operation.COMPRESS) {
+                if (_streaming) {
+                } else {
+                    byte[] stuff = compressBlock(_uncompressed);
+                    _totalLength = stuff.length;
+                }
+            } else { // uncompress
+                if (_streaming) {
+                } else {
+                    byte[] stuff = uncompressBlock(_compressed);
+                    _totalLength = stuff.length;
+                }
+            }
         } catch (Exception e) {
             if (e instanceof RuntimeException) {
                 throw (RuntimeException) e;
@@ -149,13 +149,6 @@ public abstract class DriverBase extends JapexDriverBase
         // Throughput choices; Mbsp, tps; for us 'tps' makes more sense due to differing sizes:
         getTestSuite().setParam("japex.resultUnit", "tps");
         //getTestSuite().setParam("japex.resultUnit", "mbps");
-
-        if (_tmpInputFile != null && _tmpInputFile.exists()) {
-            _tmpInputFile.delete();
-        }
-        if (_tmpOutputFile != null && _tmpOutputFile.exists()) {
-            _tmpOutputFile.delete();
-        }
     }
 
     /*
@@ -163,88 +156,10 @@ public abstract class DriverBase extends JapexDriverBase
     // Abstract methods for sub-classes to implement
     ///////////////////////////////////////////////////////////////////////
      */
-    
-    /**
-     * @return Number of bytes processed (read and/or written) during the test
-     */
-    protected final int runTest(Operation operation) throws Exception
-    {
-        int totalBytes = 0;
 
-        InputStream in = null;
+    protected abstract byte[] compressBlock(byte[] uncompressed) throws IOException;
 
-        if (operation == Operation.READ || operation == Operation.READ_WRITE) {
-            if (_tmpInputFile == null) {
-                in = new ByteArrayInputStream(_inputData);
-            } else {
-                in = new FileInputStream(_tmpInputFile);
-            }
-        }
-
-        int count;
-        
-        switch (operation) {
-        case READ:
-            count = runReadTest(in);
-            totalBytes += _inputData.length;
-            if (count != _valuesToWrite.size()) {
-                throw new IllegalStateException("Failed to read entries: expected "+_valuesToWrite.size()+", found "+count);
-            }
-            break;
-        case READ_WRITE:
-            totalBytes += _inputData.length;
-            if (_tmpOutputFile == null) {
-                DevNullOutputStream nout = new DevNullOutputStream();
-                OutputStream out = getCompressedStream(compression, nout);
-                count = runReadWriteTest(in, out);
-                out.close();
-                totalBytes += nout.length();
-            } else {
-                FileOutputStream fout = new FileOutputStream(_tmpOutputFile);
-                OutputStream out = fout;
-                count = runReadWriteTest(in, out);
-                fout.close();
-                totalBytes += (int) _tmpOutputFile.length();
-                _tmpOutputFile.delete();
-            }
-            if (count != _valuesToWrite.size()) {
-                throw new IllegalStateException("Failed to read entries: expected "+_valuesToWrite.size()+", found "+count);
-            }
-            break;
-        case WRITE:
-            if (_tmpOutputFile == null) {
-                DevNullOutputStream out = new DevNullOutputStream();
-                runWriteTest(_valuesToWrite, out);
-                out.close();
-                totalBytes += out.length();
-            } else {
-                FileOutputStream out = new FileOutputStream(_tmpOutputFile);
-                runWriteTest(_valuesToWrite, out);
-                out.close();
-                totalBytes += (int) _tmpOutputFile.length();
-                _tmpOutputFile.delete();
-            }
-            break;
-        default:
-            throw new Error("Internal error");
-        }
-
-        return totalBytes;
-    }
-
-    protected abstract byte[] convertInputData(byte[] data) throws Exception;
-    
-    /**
-     * @return Number of values read
-     */
-    protected abstract int runReadTest(InputStream in) throws Exception;
-    
-    /**
-     * @return Number of values read
-     */
-    protected abstract int runReadWriteTest(InputStream in, OutputStream out) throws Exception;
-
-    protected abstract void runWriteTest(byte[] data, OutputStream out) throws Exception;
+    protected abstract byte[] uncompressBlock(byte[] compressed) throws IOException;
     
     /*
     ///////////////////////////////////////////////////////////////////////
@@ -252,11 +167,10 @@ public abstract class DriverBase extends JapexDriverBase
     ///////////////////////////////////////////////////////////////////////
      */
     
-    protected byte[] loadFile(String filename) throws IOException
+    protected byte[] loadFile(File file) throws IOException
     {
-        File f = new File(filename);
-        FileInputStream in = new FileInputStream(f);
-        ByteArrayOutputStream out = new ByteArrayOutputStream((int) f.length());
+        FileInputStream in = new FileInputStream(file);
+        ByteArrayOutputStream out = new ByteArrayOutputStream((int) file.length());
         byte[] buffer = new byte[4000];
         int count;
         
