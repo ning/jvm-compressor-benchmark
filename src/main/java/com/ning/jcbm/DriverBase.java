@@ -3,6 +3,7 @@ package com.ning.jcbm;
 import java.io.*;
 import java.util.*;
 
+import com.sun.japex.Constants;
 import com.sun.japex.JapexDriverBase;
 import com.sun.japex.TestCase;
 
@@ -32,6 +33,8 @@ public abstract class DriverBase extends JapexDriverBase
      * are same as test case names)
      */
     private File _inputDir;
+
+    private File _inputFile;
     
     /**
      * Uncompressed test data
@@ -67,8 +70,14 @@ public abstract class DriverBase extends JapexDriverBase
     public void prepare(TestCase testCase)
     {
         String name = testCase.getName();
+
+        String[] parts = name.split("/");
+        if (parts.length < 2) {
+            throw new IllegalArgumentException("Invalid test name '"+name+"'; should have at least 2 components separated by slash");
+        }
         _operation = null;
-        String operStr = testCase.getParam("japex.operation");
+        String filename = parts[0];
+        String operStr = parts[1];
         if (operStr != null) {
             try {
                 _operation = Operation.valueOf(operStr);
@@ -78,9 +87,10 @@ public abstract class DriverBase extends JapexDriverBase
            throw new IllegalArgumentException("Invalid or missing value for japex.operation (value: ["+operStr
                 +"]), has to be one of: "+Arrays.asList(Operation.values()));
         }
+        _inputFile = new File(_inputDir, filename); 
         try {
             // First things first: load uncompressed input in memory; compress to verify round-tripping
-            _uncompressed = loadFile(new File(_inputDir, name));
+            _uncompressed = loadFile(_inputFile);
             _compressed = compressBlock(_uncompressed);
             verifyRoundTrip(testCase.getName(), _uncompressed, _compressed);
         }
@@ -144,12 +154,22 @@ public abstract class DriverBase extends JapexDriverBase
     public void finish(TestCase testCase)
     {
         // Set compressed size in KB on X axis
+
         testCase.setDoubleParam("japex.resultValueX", ((double) _compressed.length) / 1024.0);
         getTestSuite().setParam("japex.resultUnitX", "KB");
 
-        // Throughput choices; Mbsp, tps; for us 'tps' makes more sense due to differing sizes:
-        getTestSuite().setParam("japex.resultUnit", "tps");
-        //getTestSuite().setParam("japex.resultUnit", "mbps");
+        testCase.setParam("japex.inputFile", _inputFile.getAbsolutePath());
+
+        // And then processing speed relative to input, in Mbps
+        
+        // Throughput choices; Mbps, tps; let's use Mbps to get relative speed (tps has issues with widely varying file sizes)
+//        testCase.setDoubleParam("japex.resultValue", (double) _uncompressed.length / (1024.0 * 1024.0));
+//        getTestSuite().setParam("japex.resultUnit", "tps"); // or mbps
+        
+        double itersPerSec = 1000.0 * testCase.getDoubleParam(Constants.RUN_ITERATIONS_SUM) / testCase.getDoubleParam(Constants.ACTUAL_RUN_TIME);
+        
+        testCase.setDoubleParam("japex.resultValue", itersPerSec * _uncompressed.length / (1024.0 * 1024.0));
+        testCase.setParam("japex.resultUnit", "MB/s");
     }
 
     /*

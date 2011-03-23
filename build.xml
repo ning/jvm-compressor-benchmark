@@ -33,7 +33,7 @@
 
   <target name="compile" depends="init">
     <javac srcdir="${dir.src.java}" destdir="${dir.build.classes}"
-           source="1.6" target="1.6"
+           source="1.6" target="1.6" debug="true"
            includeantruntime="false"
       >
       <classpath>

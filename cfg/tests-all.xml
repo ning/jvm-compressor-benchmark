@@ -14,10 +14,9 @@ combinations.
 
     <!-- Test cases: name has to match with filename -->
 
-<testCase name='build.xml'><param name='japex.operation' value='COMPRESS' /></testCase>
-<testCase name='lzf.jar'><param name='japex.operation' value='COMPRESS' /></testCase>
-
-<testCase name='build.xml'><param name='japex.operation' value='UNCOMPRESS' /></testCase>
-<testCase name='lzf.jar'><param name='japex.operation' value='UNCOMPRESS' /></testCase>
+<testCase name='build.xml/COMPRESS' />
+<testCase name='lzf.jar/COMPRESS' />
+<testCase name='build.xml/UNCOMPRESS' />
+<testCase name='lzf.jar/UNCOMPRESS' />
 
 </testSuite>
