@@ -33,7 +33,9 @@
 
   <target name="compile" depends="init">
     <javac srcdir="${dir.src.java}" destdir="${dir.build.classes}"
-           source="1.5" target="1.5" debug="on">
+           source="1.6" target="1.6"
+           includeantruntime="false"
+      >
       <classpath>
         <path path="${build.classpath}"/>
         <fileset dir="${dir.lib}" includes="*.jar" />
