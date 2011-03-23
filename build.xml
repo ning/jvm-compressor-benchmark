@@ -38,21 +38,10 @@
       >
       <classpath>
         <path path="${build.classpath}"/>
-        <fileset dir="${dir.lib}" includes="*.jar" />
-        <fileset dir="${dir.lib}/stax2" includes="*.jar" />
-        <fileset dir="${dir.lib}/xstream" includes="*.jar" />
-        <fileset dir="${dir.lib}/jaxb2" includes="*.jar" />
-        <fileset dir="${dir.lib}/hessian" includes="*.jar" />
+        <fileset dir="${dir.lib}/japex" includes="*.jar" />
 
-        <!-- json driver jars... -->
-        <fileset dir="${dir.lib}/flexjson" includes="*.jar" />
-        <fileset dir="${dir.lib}/jackson" includes="*.jar" />
-        <fileset dir="${dir.lib}/json-org" includes="*.jar" />
-        <fileset dir="${dir.lib}/json-lib" includes="*.jar" />
-        <fileset dir="${dir.lib}/json-simple" includes="*.jar" />
-        <fileset dir="${dir.lib}/json-stringtree" includes="*.jar" />
-        <fileset dir="${dir.lib}/json-tools" includes="*.jar" />
-        <fileset dir="${dir.lib}/gson" includes="*.jar" />
+        <!-- codec dirs -->
+        <fileset dir="${dir.lib}/lzf" includes="*.jar" />
        </classpath>
     </javac>
   </target>

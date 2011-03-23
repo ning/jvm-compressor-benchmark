@@ -139,11 +139,12 @@ public abstract class DriverBase extends JapexDriverBase
             throw new RuntimeException(e);
         }
     }   
+
     @Override
     public void finish(TestCase testCase)
     {
-        // Set file size in KB on X axis
-        testCase.setDoubleParam("japex.resultValueX", ((double) _totalLength) / 1024.0);
+        // Set compressed size in KB on X axis
+        testCase.setDoubleParam("japex.resultValueX", ((double) _compressed.length) / 1024.0);
         getTestSuite().setParam("japex.resultUnitX", "KB");
 
         // Throughput choices; Mbsp, tps; for us 'tps' makes more sense due to differing sizes:
