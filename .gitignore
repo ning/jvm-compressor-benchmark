@@ -1,0 +1,8 @@
+# build stuff, ant, eclipse
+.classpath
+.project
+.settings
+build
+
+# And japex outputs
+reports
