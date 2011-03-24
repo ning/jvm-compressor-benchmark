@@ -25,7 +25,6 @@
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver1" />
   </driver>
 
-<!--  
   <driver name="QuickLZ/level-3/block">
         <description><div xmlns=""><p>Test driver for QuickLZ (level 3), block mode
 </p></div></description>
@@ -33,6 +32,5 @@
         <param name="japex.classPath" value="lib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver3" />
   </driver>
--->
 
 </driverGroup>
