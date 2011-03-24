@@ -1,7 +1,6 @@
 package com.ning.jcbm;
 
 import java.io.*;
-import java.util.zip.GZIPInputStream;
 
 import com.sun.japex.Constants;
 import com.sun.japex.JapexDriverBase;
@@ -205,15 +204,15 @@ public abstract class DriverBase extends JapexDriverBase
         return out.toByteArray();
     }
 
-    protected byte[] uncompressBlockUsingStream(byte[] compressed) throws IOException
+    protected byte[] uncompressBlockUsingStream(InputStream in) throws IOException
     {
-        GZIPInputStream in = new GZIPInputStream(new ByteArrayInputStream(compressed));
-        ByteArrayOutputStream out = new ByteArrayOutputStream(compressed.length);
+        ByteArrayOutputStream out = new ByteArrayOutputStream(_compressed.length);
         byte[] buffer = new byte[4000];
         int count;
         while ((count = in.read(buffer)) >= 0) {
             out.write(buffer, 0, count);
         }
+        in.close();
         out.close();
         return out.toByteArray();
     }

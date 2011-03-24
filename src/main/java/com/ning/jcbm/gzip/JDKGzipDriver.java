@@ -18,7 +18,7 @@ public class JDKGzipDriver extends DriverBase
     }
 
     protected byte[] uncompressBlock(byte[] compressed) throws IOException {
-        return uncompressBlockUsingStream(compressed);
+        return uncompressBlockUsingStream(new GZIPInputStream(new ByteArrayInputStream(compressed)));
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException

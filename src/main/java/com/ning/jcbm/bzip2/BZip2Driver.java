@@ -1,22 +1,16 @@
-package com.ning.jcbm.gzip;
+package com.ning.jcbm.bzip2;
 
 import java.io.*;
 
-import com.jcraft.jzlib.ZInputStream;
-import com.jcraft.jzlib.ZOutputStream;
+import org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream;
+import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
 import com.ning.jcbm.DriverBase;
 
-public class JCraftGzipDriver extends DriverBase
+public class BZip2Driver  extends DriverBase
 {
-    // Which compression level should we use? Multiple? Start with half-way
-    private final static int COMP_LEVEL = 5;
-
-    // do we want gzip wrapping or not?
-    private final static boolean NO_WRAP = true;
-    
-    public JCraftGzipDriver() {
-        super("GZIP(jcraft)");
+    public BZip2Driver() {
+        super("bzip2");
     }
 
     // No native Block API; but need some impl for test framework
@@ -26,19 +20,19 @@ public class JCraftGzipDriver extends DriverBase
     }
 
     protected byte[] uncompressBlock(byte[] compressed) throws IOException {
-        return uncompressBlockUsingStream(new ZInputStream(new ByteArrayInputStream(compressed), NO_WRAP));
+        return uncompressBlockUsingStream(new BZip2CompressorInputStream(new ByteArrayInputStream(compressed)));
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
-        ZOutputStream out = new ZOutputStream(rawOut, COMP_LEVEL, NO_WRAP);
+        BZip2CompressorOutputStream out = new BZip2CompressorOutputStream(rawOut);
         out.write(uncompressed);
         out.close();
     }
     
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
-        ZInputStream in = new ZInputStream(compIn, NO_WRAP);
+        BZip2CompressorInputStream in = new BZip2CompressorInputStream(compIn);
 
         int total = 0;
         int count;
