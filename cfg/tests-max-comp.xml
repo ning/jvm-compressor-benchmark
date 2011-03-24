@@ -5,8 +5,7 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
     <description><div xmlns=""><p>
-Micro-benchmark for testing performance of various xml-parser/xsl-processor
-combinations.
+Micro-benchmark for testing performance of compressors on JVM platform
 </p></div></description>
 
     <!-- Drivers -->

@@ -3,6 +3,8 @@
 echo "About to run full test"
 
 # Nothing big stored in memory, heap can remain modest 
+# Since there are 10 input files, 2 modes (comp/uncomp),
+# group by 5
 java -server -cp lib/japex/\* \
  -Xmx128M \
  -Djava.awt.headless=true \
@@ -11,7 +13,7 @@ java -server -cp lib/japex/\* \
  -Djapex.runTime=10 \
  -Djapex.numberOfThreads=1 \
  -Djapex.reportsDirectory=reports \
- -Djapex.plotGroupSize=8 \
+ -Djapex.plotGroupSize=5 \
  -Djapex.inputDir="testdata/maximumcompression" \
  com.sun.japex.Japex \
  cfg/tests-max-comp.xml

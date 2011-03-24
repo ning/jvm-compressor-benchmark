@@ -1,10 +1,13 @@
 package com.ning.jcbm;
 
 import java.io.*;
+import java.util.zip.GZIPInputStream;
 
 import com.sun.japex.Constants;
 import com.sun.japex.JapexDriverBase;
 import com.sun.japex.TestCase;
+
+import com.ning.jcbm.util.*;
 
 /**
  */
@@ -21,6 +24,12 @@ public abstract class DriverBase extends JapexDriverBase
      * Whether driver should use streaming compression or not (block-based)
      */
     protected boolean _streaming;
+    
+    /**
+     * We will give a reusable input buffer for compressors to
+     * give each a fair chance for reuse as needed.
+     */
+    protected final byte[] _inputBuffer = new byte[4000];
     
     /**
      * Number of bytes processed during test
@@ -49,6 +58,12 @@ public abstract class DriverBase extends JapexDriverBase
     {
         _driverName = name;
     }
+
+    /*
+    ///////////////////////////////////////////////////////////////////////
+    // Overridden driver methods
+    ///////////////////////////////////////////////////////////////////////
+     */
     
     @Override
     public void initializeDriver()
@@ -62,7 +77,7 @@ public abstract class DriverBase extends JapexDriverBase
         if (!_inputDir.exists() || !_inputDir.isDirectory()) {
             throw new IllegalArgumentException("No input directory '"+_inputDir.getAbsolutePath()+"'");
         }
-        _streaming = this.getBooleanParam("japex.streaming");
+        _streaming = getBooleanParam("streaming");
     }
     
     @Override
@@ -78,12 +93,12 @@ public abstract class DriverBase extends JapexDriverBase
         _operation = null;
         String operStr = parts[0];
         String filename = parts[1];
-        if ("C".equals(operStr)) {
+        if (operStr.startsWith("C")) {
             _operation = Operation.COMPRESS;
-        } else if ("U".equals(operStr)) {
+        } else if (operStr.startsWith("U")) {
             _operation = Operation.UNCOMPRESS;            
         } else {
-            throw new IllegalArgumentException("Invalid 'operation' part of name, '"+operStr+"': should be 'C' or 'U'");
+            throw new IllegalArgumentException("Invalid 'operation' part of name, '"+operStr+"': should start with 'C' or 'U'");
         }
         _inputFile = new File(_inputDir, filename); 
         try {
@@ -99,28 +114,12 @@ public abstract class DriverBase extends JapexDriverBase
             throw new RuntimeException(e);
         }
     }
-
-    protected void verifyRoundTrip(String name, byte[] raw, byte[] compressed) throws IOException
-    {
-        byte[] actual = uncompressBlock(compressed);
-        if (actual.length != raw.length) {
-            throw new IllegalArgumentException("Round-trip failed for driver '"+_driverName+"', input '"+name+"': uncompressed length was "+actual.length+" bytes; expected "+raw.length);
-        }
-        int i = 0;
-        for (int len = actual.length; i < len; ++i) {
-            if (actual[i] != raw[i]) {
-                throw new IllegalArgumentException("Round-trip failed for driver '"+_driverName+"', input '"+name+"': bytes at offset "+i
-                        +" (from total of "+len+") differed, expected 0x"+Integer.toHexString(raw[i] & 0xFF)
-                        +", got 0x"+Integer.toHexString(actual[i] & 0xFF));
-            }
-        }
-    }
     
     @Override
     public void warmup(TestCase testCase) {
         run(testCase);
     }
-
+    
     @Override
     public void run(TestCase testCase)
     {
@@ -129,12 +128,19 @@ public abstract class DriverBase extends JapexDriverBase
         try {
             if (_operation == Operation.COMPRESS) {
                 if (_streaming) {
+                    DevNullOutputStream out = new DevNullOutputStream();
+                    compressToStream(_uncompressed, out);
+                    out.close();
+                    _totalLength = out.length();
                 } else {
                     byte[] stuff = compressBlock(_uncompressed);
                     _totalLength = stuff.length;
                 }
             } else { // uncompress
                 if (_streaming) {
+                    ByteArrayInputStream in = new ByteArrayInputStream(_compressed);
+                    _totalLength = uncompressFromStream(in, _inputBuffer);
+                    in.close();
                 } else {
                     byte[] stuff = uncompressBlock(_compressed);
                     _totalLength = stuff.length;
@@ -179,12 +185,54 @@ public abstract class DriverBase extends JapexDriverBase
     protected abstract byte[] compressBlock(byte[] uncompressed) throws IOException;
 
     protected abstract byte[] uncompressBlock(byte[] compressed) throws IOException;
+
+    protected abstract void compressToStream(byte[] uncompressed, OutputStream out)
+        throws IOException;
+
+    protected abstract int uncompressFromStream(InputStream in, byte[] buffer)
+        throws IOException;
     
     /*
     ///////////////////////////////////////////////////////////////////////
     // Internal methods
     ///////////////////////////////////////////////////////////////////////
      */
+
+    protected byte[] compressBlockUsingStream(byte[] uncompressed) throws IOException
+    {
+        ByteArrayOutputStream out = new ByteArrayOutputStream(uncompressed.length);
+        compressToStream(uncompressed, out);
+        return out.toByteArray();
+    }
+
+    protected byte[] uncompressBlockUsingStream(byte[] compressed) throws IOException
+    {
+        GZIPInputStream in = new GZIPInputStream(new ByteArrayInputStream(compressed));
+        ByteArrayOutputStream out = new ByteArrayOutputStream(compressed.length);
+        byte[] buffer = new byte[4000];
+        int count;
+        while ((count = in.read(buffer)) >= 0) {
+            out.write(buffer, 0, count);
+        }
+        out.close();
+        return out.toByteArray();
+    }
+    
+    protected void verifyRoundTrip(String name, byte[] raw, byte[] compressed) throws IOException
+    {
+        byte[] actual = uncompressBlock(compressed);
+        if (actual.length != raw.length) {
+            throw new IllegalArgumentException("Round-trip failed for driver '"+_driverName+"', input '"+name+"': uncompressed length was "+actual.length+" bytes; expected "+raw.length);
+        }
+        int i = 0;
+        for (int len = actual.length; i < len; ++i) {
+            if (actual[i] != raw[i]) {
+                throw new IllegalArgumentException("Round-trip failed for driver '"+_driverName+"', input '"+name+"': bytes at offset "+i
+                        +" (from total of "+len+") differed, expected 0x"+Integer.toHexString(raw[i] & 0xFF)
+                        +", got 0x"+Integer.toHexString(actual[i] & 0xFF));
+            }
+        }
+    }
     
     protected byte[] loadFile(File file) throws IOException
     {

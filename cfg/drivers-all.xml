@@ -7,30 +7,53 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
+  <driver name="Gzip/JDK/stream">
+        <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming
+</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
+  </driver>
+
+  <driver name="Gzip/jzlib/stream">
+        <description><div xmlns=""><p>Test driver for JCraft's jzlib (gzip), streaming
+</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/jzlib/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.gzip.JCraftGzipDriver" />
+  </driver>
+
   <!--  Let's use LZF as the normalized value for now -->
   <driver name="LZF/block" normal="true">
-        <description><div xmlns=""><p>Test driver for LZF, block mode
-</p></div></description>
+        <description><div xmlns=""><p>Test driver for LZF, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/*.jar"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+  <driver name="LZF/stream">
+        <description><div xmlns=""><p>Test driver for LZF, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 
-  <driver name="QuickLZ/level-1/block">
+  <driver name="QuickLZ/L1/block">
         <description><div xmlns=""><p>Test driver for QuickLZ (level 1), block mode
 </p></div></description>
         <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver1" />
   </driver>
 
-  <driver name="QuickLZ/level-3/block">
+<!--  
+  <driver name="QuickLZ/L3/block">
         <description><div xmlns=""><p>Test driver for QuickLZ (level 3), block mode
 </p></div></description>
         <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver3" />
   </driver>
+  -->
+
 
 </driverGroup>
