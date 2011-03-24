@@ -1,7 +1,6 @@
 package com.ning.jcbm;
 
 import java.io.*;
-import java.util.*;
 
 import com.sun.japex.Constants;
 import com.sun.japex.JapexDriverBase;
@@ -71,21 +70,20 @@ public abstract class DriverBase extends JapexDriverBase
     {
         String name = testCase.getName();
 
-        String[] parts = name.split("/");
+        
+        String[] parts = name.split(":");
         if (parts.length < 2) {
             throw new IllegalArgumentException("Invalid test name '"+name+"'; should have at least 2 components separated by slash");
         }
         _operation = null;
-        String filename = parts[0];
-        String operStr = parts[1];
-        if (operStr != null) {
-            try {
-                _operation = Operation.valueOf(operStr);
-            } catch (Exception e) { }
-        }
-        if (_operation == null) {
-           throw new IllegalArgumentException("Invalid or missing value for japex.operation (value: ["+operStr
-                +"]), has to be one of: "+Arrays.asList(Operation.values()));
+        String operStr = parts[0];
+        String filename = parts[1];
+        if ("C".equals(operStr)) {
+            _operation = Operation.COMPRESS;
+        } else if ("U".equals(operStr)) {
+            _operation = Operation.UNCOMPRESS;            
+        } else {
+            throw new IllegalArgumentException("Invalid 'operation' part of name, '"+operStr+"': should be 'C' or 'U'");
         }
         _inputFile = new File(_inputDir, filename); 
         try {

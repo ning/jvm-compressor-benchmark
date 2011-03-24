@@ -14,9 +14,9 @@ combinations.
 
     <!-- Test cases: name has to match with filename -->
 
-<testCase name='build.xml/COMPRESS' />
-<testCase name='lzf.jar/COMPRESS' />
-<testCase name='build.xml/UNCOMPRESS' />
-<testCase name='lzf.jar/UNCOMPRESS' />
+<testCase name='C:build.xml' />
+<testCase name='C:lzf.jar' />
+<testCase name='U:build.xml' />
+<testCase name='U:lzf.jar' />
 
 </testSuite>
