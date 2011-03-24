@@ -11,6 +11,9 @@ public class JCraftGzipDriver extends DriverBase
 {
     // Which compression level should we use? Multiple? Start with half-way
     private final static int COMP_LEVEL = 5;
+
+    // do we want gzip wrapping or not?
+    private final static boolean NO_WRAP = true;
     
     public JCraftGzipDriver() {
         super("GZIP(jcraft)");
@@ -28,14 +31,14 @@ public class JCraftGzipDriver extends DriverBase
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
-        ZOutputStream out = new ZOutputStream(rawOut, COMP_LEVEL);
+        ZOutputStream out = new ZOutputStream(rawOut, COMP_LEVEL, NO_WRAP);
         out.write(uncompressed);
         out.close();
     }
     
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
-        ZInputStream in = new ZInputStream(compIn);
+        ZInputStream in = new ZInputStream(compIn, NO_WRAP);
 
         int total = 0;
         int count;

@@ -7,14 +7,9 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
-  <driver name="Gzip/JDK/stream">
-        <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming
-</p></div></description>
-        <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
-  </driver>
 
+<!-- 23-Mar-2011, tatu: Ugh. Is JCraft one buggy or what is going on? Doesn't work, yet  -->
+<!--
   <driver name="Gzip/jzlib/stream">
         <description><div xmlns=""><p>Test driver for JCraft's jzlib (gzip), streaming
 </p></div></description>
@@ -23,6 +18,8 @@
         <param name="japex.classPath" value="lib/jzlib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JCraftGzipDriver" />
   </driver>
+
+-->
 
   <!--  Let's use LZF as the normalized value for now -->
   <driver name="LZF/block" normal="true">
@@ -46,14 +43,19 @@
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver1" />
   </driver>
 
-<!--  
   <driver name="QuickLZ/L3/block">
         <description><div xmlns=""><p>Test driver for QuickLZ (level 3), block mode
 </p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver3" />
   </driver>
-  -->
 
+  <driver name="Gzip/JDK/stream">
+        <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming
+</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
+  </driver>
 
 </driverGroup>
