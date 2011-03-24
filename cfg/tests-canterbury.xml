@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Test suite for JVM compressors"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p></div></description>
+
+    <!-- Drivers -->
+    <xi:include href="drivers-all.xml" />
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='C:alice29.txt' />
+<testCase name='C:asyoulik.txt' />
+<testCase name='C:cp.html' />
+<testCase name='C:fields.c' />
+<testCase name='C:grammar.lsp' />
+<testCase name='C:kennedy.xls' />
+<testCase name='C:lcet10.txt' />
+<testCase name='C:plrabn12.txt' />
+<testCase name='C:ptt5' />
+<testCase name='C:sum' />
+<testCase name='C:xargs.1' />
+
+<testCase name='U:alice29.txt' />
+<testCase name='U:asyoulik.txt' />
+<testCase name='U:cp.html' />
+<testCase name='U:fields.c' />
+<testCase name='U:grammar.lsp' />
+<testCase name='U:kennedy.xls' />
+<testCase name='U:lcet10.txt' />
+<testCase name='U:plrabn12.txt' />
+<testCase name='U:ptt5' />
+<testCase name='U:sum' />
+<testCase name='U:xargs.1' />
+
+</testSuite>

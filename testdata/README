@@ -1,0 +1,5 @@
+Directories here represent sets of freely available benchmark file test sets:
+
+* maximumcompression: 10 test files from [http://www.maximumcompression.com]
+* calgary: 18 test files from [http://corpus.canterbury.ac.nz/descriptions/#calgary]
+* canterbury: 11 test files from [http://corpus.canterbury.ac.nz/descriptions/#cantrbry]
