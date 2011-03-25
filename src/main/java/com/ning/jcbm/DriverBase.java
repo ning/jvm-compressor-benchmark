@@ -157,10 +157,9 @@ public abstract class DriverBase extends JapexDriverBase
     public void finish(TestCase testCase)
     {
         // Set relative compressed size (in percents) as resultX
-
-        double sizePct = (100.0 * _compressed.length) / (double) _uncompressed.length;
+        double sizeRatio = calcSizeRatio();
         
-        testCase.setDoubleParam("japex.resultValueX", sizePct);
+        testCase.setDoubleParam("japex.resultValueX", 100.0 * sizeRatio);
         getTestSuite().setParam("japex.resultUnitX", "Size%");
 
         // And main result throughput, MB/s
@@ -168,11 +167,16 @@ public abstract class DriverBase extends JapexDriverBase
 //        testCase.setParam("japex.inputFile", _inputFile.getAbsolutePath());
 
         double itersPerSec = 1000.0 * testCase.getDoubleParam(Constants.RUN_ITERATIONS_SUM) / testCase.getDoubleParam(Constants.ACTUAL_RUN_TIME);
+        double througputMBps = itersPerSec * _uncompressed.length / (1024.0 * 1024.0);
         
-        testCase.setDoubleParam("japex.resultValue", itersPerSec * _uncompressed.length / (1024.0 * 1024.0));
+        testCase.setDoubleParam("japex.resultValue", througputMBps);
         testCase.setParam("japex.resultUnit", "MB/s");
     }
 
+    protected double calcSizeRatio() {
+        return (double) _compressed.length / (double) _uncompressed.length;
+    }
+    
     /*
     ///////////////////////////////////////////////////////////////////////
     // Abstract methods for sub-classes to implement
