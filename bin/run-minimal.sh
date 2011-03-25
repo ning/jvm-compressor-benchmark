@@ -1,6 +1,6 @@
 #!/bin/sh
  
-echo "About to run minimal sanity test on 2 input files, 2 codecs"
+echo "About to run minimal sanity test on 2 input files, couple of codecs"
 
 # Nothing big stored in memory, heap can remain modest 
 # Since there are 11 input files, 2 modes (comp/uncomp),

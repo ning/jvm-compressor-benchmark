@@ -44,6 +44,7 @@ public class LzfDriver extends DriverBase
         while ((count = in.read(inputBuffer)) >= 0) {
             total += count;
         }
+	in.close();
         return total;
     }
 }
