@@ -34,5 +34,7 @@ Micro-benchmark for testing performance of compressors on JVM platform
 <testCase name='U:rafale.bmp' />
 <testCase name='U:vcfiu.hlp' />
 <testCase name='U:world95.txt' />
+<testCase name='U:A10.jpg' />
+<testCase name='U:world95.txt' />
 
 </testSuite>

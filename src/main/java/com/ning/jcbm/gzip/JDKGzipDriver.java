@@ -45,6 +45,7 @@ public class JDKGzipDriver extends DriverBase
     
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
+        _inflater.reset();
         InflaterInputStream in = new InflaterInputStream(compIn, _inflater);
 
         int total = 0;

@@ -2,10 +2,6 @@
  
 echo "About to run minimal sanity test on 2 input files, 2 codecs"
 
-# Nothing big stored in memory, heap can remain modest 
-# Since there are 11 input files, 2 modes (comp/uncomp),
-# group by... hmmh. 5.5 would be optimal. But I guess 11 has to do?
-
 java -server -cp lib/japex/\* \
  -Xmx128M \
  -Djava.awt.headless=true \

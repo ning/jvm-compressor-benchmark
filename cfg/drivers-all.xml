@@ -23,7 +23,6 @@
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
-
   <driver name="QuickLZ/L1/block">
         <description><div xmlns=""><p>Test driver for QuickLZ (level 1), block mode
 </p></div></description>
@@ -37,7 +36,6 @@
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver3" />
   </driver>
-
   <driver name="Gzip/JDK/stream">
         <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming
 </p></div></description>
@@ -45,7 +43,6 @@
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
   </driver>
-
   <driver name="Gzip/jzlib/stream">
         <description><div xmlns=""><p>Test driver for JCraft's jzlib (gzip), streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -53,7 +50,6 @@
         <param name="japex.classPath" value="lib/jzlib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JCraftGzipDriver" />
   </driver>
-
   <driver name="BZip2/stream">
         <description><div xmlns=""><p>Test driver for Commons-compress BZip2 implementation</p></div></description>
         <param name="streaming" value="true" />
@@ -61,5 +57,4 @@
         <param name="japex.classPath" value="lib/jakarta/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
   </driver>
-
 </driverGroup>
