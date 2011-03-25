@@ -25,8 +25,8 @@ public final class DevNullOutputStream extends OutputStream
 
     @Override public void write(byte[] bytes, int offset, int len) {
         length += len;
-        while (offset < len) {
-            sum += bytes[offset++];
+        for (int i = offset, end = offset+len; i < end; ++i) {
+            sum += bytes[i];
         }
     }
 

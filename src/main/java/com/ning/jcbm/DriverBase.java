@@ -12,6 +12,17 @@ import com.ning.jcbm.util.*;
  */
 public abstract class DriverBase extends JapexDriverBase
 {
+    /* 24-Mar-2011, tatu: Looks like we get skewed values for some things; specifically,
+     *    comp/uncomp speeds in gigabytes. This is problematic mostly just for graphs,
+     *    since outliers stretch stuff. So, let's just cap to some max value.
+     *    
+     *    For now, 1gig/sec can serve as boundary (highest so far seen was 2.5G/s)
+     */
+    
+    final static double MAX_COMPRESS_THROUGHPUT = 999.9;
+
+    final static double MAX_UNCOMPRESS_THROUGHPUT = 999.9;
+    
     protected final String _driverName;
     
     /**
@@ -34,7 +45,7 @@ public abstract class DriverBase extends JapexDriverBase
      * Number of bytes processed during test
      */
     protected int _totalLength;
-
+    
     /**
      * Directory in which input files are stored (file names
      * are same as test case names)
@@ -167,9 +178,15 @@ public abstract class DriverBase extends JapexDriverBase
 //        testCase.setParam("japex.inputFile", _inputFile.getAbsolutePath());
 
         double itersPerSec = 1000.0 * testCase.getDoubleParam(Constants.RUN_ITERATIONS_SUM) / testCase.getDoubleParam(Constants.ACTUAL_RUN_TIME);
-        double througputMBps = itersPerSec * _uncompressed.length / (1024.0 * 1024.0);
+        double throughputMBps = itersPerSec * _uncompressed.length / (1024.0 * 1024.0);
+
+        // truncate outliers (see javadocs for MAX values)
+        double MAX = (_operation == Operation.COMPRESS) ? MAX_COMPRESS_THROUGHPUT : MAX_UNCOMPRESS_THROUGHPUT;
+        if (throughputMBps > MAX) {
+            throughputMBps = MAX;
+        }
         
-        testCase.setDoubleParam("japex.resultValue", througputMBps);
+        testCase.setDoubleParam("japex.resultValue", throughputMBps);
         testCase.setParam("japex.resultUnit", "MB/s");
     }
 

@@ -31,11 +31,13 @@ public class JDKGzipDriver extends DriverBase
     }
 
     protected byte[] uncompressBlock(byte[] compressed) throws IOException {
-        return uncompressBlockUsingStream(new GZIPInputStream(new ByteArrayInputStream(compressed)));
+        _inflater.reset();
+        return uncompressBlockUsingStream(new InflaterInputStream(new ByteArrayInputStream(compressed), _inflater));
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
+        _deflater.reset();
         DeflaterOutputStream out = new DeflaterOutputStream(rawOut, _deflater, 4000);
         out.write(uncompressed);
         out.close();
@@ -43,7 +45,7 @@ public class JDKGzipDriver extends DriverBase
     
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
-        DeflaterInputStream in = new DeflaterInputStream(compIn, _deflater);
+        InflaterInputStream in = new InflaterInputStream(compIn, _inflater);
 
         int total = 0;
         int count;
