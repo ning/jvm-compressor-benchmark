@@ -1,6 +1,6 @@
 #!/bin/sh
  
-echo "About to run full test"
+echo "About to run test with 'maximum compression' test data"
 
 # Nothing big stored in memory, heap can remain modest 
 # Since there are 10 input files, 2 modes (comp/uncomp),
@@ -12,7 +12,7 @@ java -server -cp lib/japex/\* \
  -Djapex.warmupTime=7 \
  -Djapex.runTime=30 \
  -Djapex.numberOfThreads=1 \
- -Djapex.reportsDirectory=reports \
+ -Djapex.reportsDirectory=reports/maxcomp \
  -Djapex.plotGroupSize=5 \
  -Djapex.inputDir="testdata/maximumcompression" \
  com.sun.japex.Japex \

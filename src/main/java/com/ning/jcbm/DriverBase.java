@@ -156,19 +156,17 @@ public abstract class DriverBase extends JapexDriverBase
     @Override
     public void finish(TestCase testCase)
     {
-        // Set compressed size in KB on X axis
+        // Set relative compressed size (in percents) as resultX
 
-        testCase.setDoubleParam("japex.resultValueX", ((double) _compressed.length) / 1024.0);
-        getTestSuite().setParam("japex.resultUnitX", "KB");
-
-        testCase.setParam("japex.inputFile", _inputFile.getAbsolutePath());
-
-        // And then processing speed relative to input, in Mbps
+        double sizePct = (100.0 * _compressed.length) / (double) _uncompressed.length;
         
-        // Throughput choices; Mbps, tps; let's use Mbps to get relative speed (tps has issues with widely varying file sizes)
-//        testCase.setDoubleParam("japex.resultValue", (double) _uncompressed.length / (1024.0 * 1024.0));
-//        getTestSuite().setParam("japex.resultUnit", "tps"); // or mbps
+        testCase.setDoubleParam("japex.resultValueX", sizePct);
+        getTestSuite().setParam("japex.resultUnitX", "Size%");
+
+        // And main result throughput, MB/s
         
+//        testCase.setParam("japex.inputFile", _inputFile.getAbsolutePath());
+
         double itersPerSec = 1000.0 * testCase.getDoubleParam(Constants.RUN_ITERATIONS_SUM) / testCase.getDoubleParam(Constants.ACTUAL_RUN_TIME);
         
         testCase.setDoubleParam("japex.resultValue", itersPerSec * _uncompressed.length / (1024.0 * 1024.0));

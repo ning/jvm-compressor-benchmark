@@ -7,8 +7,10 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
-  <!--  Let's use LZF as the normalized value for now -->
-  <driver name="LZF/block" normal="true">
+  <!-- Normalize or not? Makes sense for throughput; but not so much for
+       compression rate
+    -->
+  <driver name="LZF/block" normal="false">
         <description><div xmlns=""><p>Test driver for LZF, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf/*.jar"/>

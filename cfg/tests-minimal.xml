@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Test suite for JVM compressors"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p></div></description>
+
+    <!-- Drivers; only use two, so embed -->
+
+    <driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+  <driver name="LZF/block" >
+        <description><div xmlns=""><p>Test driver for LZF, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+
+  <driver name="Gzip/JDK/stream">
+        <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming
+</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
+      </driver>
+    </driverGroup>
+
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='C:alice29.txt' />
+<testCase name='C:kennedy.xls' />
+
+<testCase name='U:alice29.txt' />
+<testCase name='U:kennedy.xls' />
+
+</testSuite>
