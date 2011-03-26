@@ -14,7 +14,7 @@ java -server -cp lib/japex/\* \
  -Djapex.numberOfThreads=1 \
  -Djapex.reportsDirectory=reports/calgary \
  -Djapex.plotGroupSize=6 \
- -Djapex.inputDir="testdata/calgary" \
+ -Djapex.inputDir="testdata/calgary-compress" \
  com.sun.japex.Japex \
  cfg/tests-calgary-compress.xml
 
