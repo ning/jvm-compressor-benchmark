@@ -19,6 +19,15 @@ Micro-benchmark for testing performance of compressors on JVM platform
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 
+  <driver name="BZip2/stream">
+        <description><div xmlns=""><p>Test driver for Commons-compress BZip2 implementation</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/jakarta/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
+  </driver>
+
+<!--  
   <driver name="LZF/stream">
         <description><div xmlns=""><p>Test driver for LZF, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -34,9 +43,9 @@ Micro-benchmark for testing performance of compressors on JVM platform
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
       </driver>
+-->
+
     </driverGroup>
-
-
     <!-- Test cases: name has to match with filename -->
 
 <testCase name='C:alice29.txt' />
