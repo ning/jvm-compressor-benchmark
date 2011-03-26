@@ -1,6 +1,6 @@
 #!/bin/sh
  
-echo "About to run minimal sanity test on 2 input files, 2 codecs"
+echo "About to run minimal sanity test on 2 input files, couple of codecs"
 
 java -server -cp lib/japex/\* \
  -Xmx128M \
