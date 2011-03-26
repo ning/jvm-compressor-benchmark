@@ -12,9 +12,9 @@ java -server -cp lib/japex/\* \
  -Djapex.warmupTime=7 \
  -Djapex.runTime=30 \
  -Djapex.numberOfThreads=1 \
- -Djapex.reportsDirectory=reports/calgary \
+ -Djapex.reportsDirectory=reports/calgary-compress \
  -Djapex.plotGroupSize=6 \
- -Djapex.inputDir="testdata/calgary-compress" \
+ -Djapex.inputDir="testdata/calgary" \
  com.sun.japex.Japex \
  cfg/tests-calgary-compress.xml
 
