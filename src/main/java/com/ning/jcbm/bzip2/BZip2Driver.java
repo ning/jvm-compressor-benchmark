@@ -9,6 +9,8 @@ import com.ning.jcbm.DriverBase;
 
 public class BZip2Driver  extends DriverBase
 {
+    private final static int COMP_LEVEL = 2; // from 1 to 9; 100 - 900k blocks
+    
     public BZip2Driver() {
         super("bzip2");
     }
@@ -25,7 +27,7 @@ public class BZip2Driver  extends DriverBase
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
-        BZip2CompressorOutputStream out = new BZip2CompressorOutputStream(rawOut);
+        BZip2CompressorOutputStream out = new BZip2CompressorOutputStream(rawOut, COMP_LEVEL);
         out.write(uncompressed);
         out.close();
     }
