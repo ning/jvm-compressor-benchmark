@@ -1,5 +1,8 @@
 Directories here represent sets of freely available benchmark file test sets:
 
-* maximumcompression: 10 test files from [http://www.maximumcompression.com]
 * calgary: 18 test files from [http://corpus.canterbury.ac.nz/descriptions/#calgary]
 * canterbury: 11 test files from [http://corpus.canterbury.ac.nz/descriptions/#cantrbry]
+* maximumcompression: 10 test files from [http://www.maximumcompression.com]
+* quicklz: 5 test files [http://www.quicklz.com/bench.html]; left
+  out "NotTheMusic.mp4" as it does not compress, skews decomp speed
+  (and is already represented by other tests)

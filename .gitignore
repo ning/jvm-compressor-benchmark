@@ -3,6 +3,7 @@
 .project
 .settings
 build
+eclipse
 
 # And japex outputs
-reports
+reports*
