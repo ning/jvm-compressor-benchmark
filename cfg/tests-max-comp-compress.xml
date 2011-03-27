@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Test suite for JVM compressors"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p></div></description>
+
+    <!-- Drivers -->
+    <xi:include href="drivers-all.xml" />
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='C:A10.jpg' />
+<testCase name='C:AcroRd32.exe' />
+<testCase name='C:FP.LOG' />
+<testCase name='C:FlashMX.pdf' />
+<testCase name='C:MSO97.DLL' />
+<testCase name='C:english.dic' />
+<testCase name='C:ohs.doc' />
+<testCase name='C:rafale.bmp' />
+<testCase name='C:vcfiu.hlp' />
+<testCase name='C:world95.txt' />
+
+</testSuite>
