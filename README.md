@@ -13,10 +13,10 @@ For more complete description, checkout out project Wiki page: [https://github.c
 
 Currently following codecs are included in distribution:
 
-* LZF from [https://github.com/ning/compress] (block and streaming modes)
-* QuickLZ from [http://www.quicklz.com/] (block mode)
-* Gzip: both JDK, and JCraft ones (streaming mode)
-* Bzip2 from commons-compression (streaming mode)
+* [LZF](https://github.com/ning/compress) (block and streaming modes)
+* [QuickLZ](http://www.quicklz.com/) (block mode)
+* Gzip: JDK, [JCraft](http://www.jcraft.com/jzlib/) (streaming mode)
+* [Bzip2 from commons-compression](http://commons.apache.org/compress/) (streaming mode)
 
 (for more details on what is NOT included, check out Wiki page at [https://github.com/ning/jvm-compressor-benchmark/wiki](Wiki))
 
@@ -24,14 +24,13 @@ Currently following codecs are included in distribution:
 
 We have tried to make use of existing de-facto standard test suites, including:
 
-* [http://corpus.canterbury.ac.nz/descriptions/#calgary](Calgary corpus): 18 test files from
-* [http://corpus.canterbury.ac.nz/descriptions/#cantrbry](Canterbury corpus): 11 test files
-* [http://www.maximumcompression.com](Maximum Compression): 10 test files
-* [http://www.quicklz.com/bench.html](QuickLZ): 5 test files
+* [Calgary corpus](http://corpus.canterbury.ac.nz/descriptions/#calgary]: 18 test files from
+* [Canterbury corpus](http://corpus.canterbury.ac.nz/descriptions/#cantrbry]: 11 test files
+* [Maximum Compression](http://www.maximumcompression.com): 10 test files
+* [QuickLZ](http://www.quicklz.com/bench.html): 5 test files
 
 # Getting involved
 
-To access source, just clone project from [https://github.com/ning/jvm-compressor-benchmark](jvm-compressor-benchmark@GitHub)
+To access source, just clone [project](https://github.com/ning/jvm-compressor-benchmark)
 
-To participate in discussions of benchmark suite, results, and other things related to compression performance, please join our discussion group at http://groups.google.com/group/jvm-compressor-benchmark
-
+To participate in discussions of benchmark suite, results, and other things related to compression performance, please join our [discussion group](http://groups.google.com/group/jvm-compressor-benchmark)
