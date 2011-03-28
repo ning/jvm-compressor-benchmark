@@ -1,0 +1,1068 @@
+<testSuiteReport name="Test suite for JVM compressors" xmlns="http://www.sun.com/japex/testSuiteReport">
+<description xmlns="http://www.sun.com/japex/testSuite">
+
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</description>  <chartType>barchart</chartType>
+  <configFile>tests-max-comp.xml</configFile>
+  <dateTime>27 Mar 2011/16:25:02 PDT</dateTime>
+  <hostName>TS-MacMini.local</hostName>
+  <inputDir>testdata/maximumcompression</inputDir>
+  <numberOfCpus>2</numberOfCpus>
+  <numberOfThreads>1</numberOfThreads>
+  <osArchitecture>x86_64</osArchitecture>
+  <osName>Mac OS X</osName>
+  <plotDrivers>false</plotDrivers>
+  <plotGroupSize>5</plotGroupSize>
+  <reportsDirectory>reports/maxcomp</reportsDirectory>
+  <resultAxis>normal</resultAxis>
+  <resultAxisX>normal</resultAxisX>
+  <resultUnit>TPS</resultUnit>
+  <resultUnitX>Size%</resultUnitX>
+  <runTime>30</runTime>
+  <runsPerDriver>1</runsPerDriver>
+  <singleClassLoader>false</singleClassLoader>
+  <version>1.2.2</version>
+  <vmInfo>Apple Inc. 19.1-b02-334</vmInfo>
+  <warmupTime>7</warmupTime>
+  <warmupsPerDriver>0</warmupsPerDriver>
+  <driver name="LZF/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for LZF, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>239.851</resultAritMean>
+    <resultAritMeanX>58.239</resultAritMeanX>
+    <resultGeomMean>165.709</resultGeomMean>
+    <resultGeomMeanX>51.433</resultGeomMeanX>
+    <resultHarmMean>128.061</resultHarmMean>
+    <resultHarmMeanX>43.29</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>2111</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>56.593</resultValue>
+      <resultValueX>100.008</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>605</resultIterations>
+      <resultTime>29.994</resultTime>
+      <resultValue>74.46</resultValue>
+      <resultValueX>61.752</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>363</resultIterations>
+      <resultTime>29.998</resultTime>
+      <resultValue>237.929</resultValue>
+      <resultValueX>14.069</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>420</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>60.512</resultValue>
+      <resultValueX>89.136</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>517</resultIterations>
+      <resultTime>29.986</resultTime>
+      <resultValue>62.192</resultValue>
+      <resultValueX>75.167</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>752</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>97.35</resultValue>
+      <resultValueX>40.626</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>1107</resultIterations>
+      <resultTime>29.977</resultTime>
+      <resultValue>146.794</resultValue>
+      <resultValueX>32.029</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>607</resultIterations>
+      <resultTime>30.003</resultTime>
+      <resultValue>80.06</resultValue>
+      <resultValueX>53.207</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>860</resultIterations>
+      <resultTime>29.995</resultTime>
+      <resultValue>112.692</resultValue>
+      <resultValueX>37.054</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>770</resultIterations>
+      <resultTime>29.983</resultTime>
+      <resultValue>73.196</resultValue>
+      <resultValueX>58.387</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>49000</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>999.9</resultValue>
+      <resultValueX>100.008</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>1413</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>174.007</resultValue>
+      <resultValueX>61.752</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>479</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>314.263</resultValue>
+      <resultValueX>14.069</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>2816</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>405.626</resultValue>
+      <resultValueX>89.136</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>1343</resultIterations>
+      <resultTime>29.973</resultTime>
+      <resultValue>161.625</resultValue>
+      <resultValueX>75.167</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>1347</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>174.308</resultValue>
+      <resultValueX>40.626</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>2730</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>362.186</resultValue>
+      <resultValueX>32.029</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>1286</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>169.771</resultValue>
+      <resultValueX>53.207</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>1544</resultIterations>
+      <resultTime>29.98</resultTime>
+      <resultValue>202.422</resultValue>
+      <resultValueX>37.054</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1630</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>155.044</resultValue>
+      <resultValueX>58.387</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>49115</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>999.9</resultValue>
+      <resultValueX>100.008</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1639</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>155.902</resultValue>
+      <resultValueX>58.387</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for LZF, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>257.127</resultAritMean>
+    <resultAritMeanX>58.239</resultAritMeanX>
+    <resultGeomMean>176.085</resultGeomMean>
+    <resultGeomMeanX>51.433</resultGeomMeanX>
+    <resultHarmMean>133.929</resultHarmMean>
+    <resultHarmMeanX>43.29</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>2180</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>58.431</resultValue>
+      <resultValueX>100.008</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>633</resultIterations>
+      <resultTime>29.979</resultTime>
+      <resultValue>77.945</resultValue>
+      <resultValueX>61.752</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>368</resultIterations>
+      <resultTime>29.952</resultTime>
+      <resultValue>241.57</resultValue>
+      <resultValueX>14.069</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>445</resultIterations>
+      <resultTime>29.999</resultTime>
+      <resultValue>64.041</resultValue>
+      <resultValueX>89.136</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>547</resultIterations>
+      <resultTime>29.995</resultTime>
+      <resultValue>65.783</resultValue>
+      <resultValueX>75.167</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>756</resultIterations>
+      <resultTime>29.98</resultTime>
+      <resultValue>97.817</resultValue>
+      <resultValueX>40.626</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>1132</resultIterations>
+      <resultTime>29.986</resultTime>
+      <resultValue>150.066</resultValue>
+      <resultValueX>32.029</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>625</resultIterations>
+      <resultTime>29.994</resultTime>
+      <resultValue>82.458</resultValue>
+      <resultValueX>53.207</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>880</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>115.389</resultValue>
+      <resultValueX>37.054</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>787</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>74.84</resultValue>
+      <resultValueX>58.387</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>120038</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>999.9</resultValue>
+      <resultValueX>100.008</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>1460</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>179.825</resultValue>
+      <resultValueX>61.752</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>697</resultIterations>
+      <resultTime>29.985</resultTime>
+      <resultValue>457.036</resultValue>
+      <resultValueX>14.069</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>3563</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>513.346</resultValue>
+      <resultValueX>89.136</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>1375</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>165.541</resultValue>
+      <resultValueX>75.167</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>1417</resultIterations>
+      <resultTime>29.978</resultTime>
+      <resultValue>183.352</resultValue>
+      <resultValueX>40.626</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>3117</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>413.498</resultValue>
+      <resultValueX>32.029</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>1349</resultIterations>
+      <resultTime>29.96</resultTime>
+      <resultValue>178.182</resultValue>
+      <resultValueX>53.207</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>1666</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>218.503</resultValue>
+      <resultValueX>37.054</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1688</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>160.559</resultValue>
+      <resultValueX>58.387</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>115495</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>999.9</resultValue>
+      <resultValueX>100.008</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1670</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>158.812</resultValue>
+      <resultValueX>58.387</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L1/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for QuickLZ (level 1), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver1</driverClass>
+    <resultAritMean>180.319</resultAritMean>
+    <resultAritMeanX>56.275</resultAritMeanX>
+    <resultGeomMean>113.559</resultGeomMean>
+    <resultGeomMeanX>47.273</resultGeomMeanX>
+    <resultHarmMean>88.583</resultHarmMean>
+    <resultHarmMeanX>36.067</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>1525</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>40.874</resultValue>
+      <resultValueX>100.001</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>479</resultIterations>
+      <resultTime>29.987</resultTime>
+      <resultValue>58.966</resultValue>
+      <resultValueX>58.864</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>259</resultIterations>
+      <resultTime>30.03</resultTime>
+      <resultValue>169.578</resultValue>
+      <resultValueX>9.265</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>308</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>44.375</resultValue>
+      <resultValueX>100</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>399</resultIterations>
+      <resultTime>30.014</resultTime>
+      <resultValue>47.953</resultValue>
+      <resultValueX>73.409</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>693</resultIterations>
+      <resultTime>29.993</resultTime>
+      <resultValue>89.627</resultValue>
+      <resultValueX>40.024</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>727</resultIterations>
+      <resultTime>30.005</resultTime>
+      <resultValue>96.314</resultValue>
+      <resultValueX>28.601</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>542</resultIterations>
+      <resultTime>29.993</resultTime>
+      <resultValue>71.509</resultValue>
+      <resultValueX>55.881</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>787</resultIterations>
+      <resultTime>29.998</resultTime>
+      <resultValue>103.116</resultValue>
+      <resultValueX>30.859</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>740</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>70.362</resultValue>
+      <resultValueX>48.081</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>30473</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>817.08</resultValue>
+      <resultValueX>100.001</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>631</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>77.727</resultValue>
+      <resultValueX>58.864</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>345</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>226.353</resultValue>
+      <resultValueX>9.265</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>3893</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>560.926</resultValue>
+      <resultValueX>100</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>535</resultIterations>
+      <resultTime>29.979</resultTime>
+      <resultValue>64.373</resultValue>
+      <resultValueX>73.409</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>773</resultIterations>
+      <resultTime>29.977</resultTime>
+      <resultValue>100.028</resultValue>
+      <resultValueX>40.024</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>1020</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>135.297</resultValue>
+      <resultValueX>28.601</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>608</resultIterations>
+      <resultTime>30.003</resultTime>
+      <resultValue>80.19</resultValue>
+      <resultValueX>55.881</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>933</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>122.344</resultValue>
+      <resultValueX>30.859</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>907</resultIterations>
+      <resultTime>29.978</resultTime>
+      <resultValue>86.232</resultValue>
+      <resultValueX>48.081</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>30473</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>817.085</resultValue>
+      <resultValueX>100.001</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>912</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>86.718</resultValue>
+      <resultValueX>48.081</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L3/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for QuickLZ (level 3), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver3</driverClass>
+    <resultAritMean>165.507</resultAritMean>
+    <resultAritMeanX>50.658</resultAritMeanX>
+    <resultGeomMean>62.977</resultGeomMean>
+    <resultGeomMeanX>41.23</resultGeomMeanX>
+    <resultHarmMean>29.551</resultHarmMean>
+    <resultHarmMeanX>31.471</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>465</resultIterations>
+      <resultTime>30.005</resultTime>
+      <resultValue>12.451</resultValue>
+      <resultValueX>100.001</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>110</resultIterations>
+      <resultTime>30.03</resultTime>
+      <resultValue>13.522</resultValue>
+      <resultValueX>52.073</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>38</resultIterations>
+      <resultTime>30.1</resultTime>
+      <resultValue>24.822</resultValue>
+      <resultValueX>8.589</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>87</resultIterations>
+      <resultTime>30.067</resultTime>
+      <resultValue>12.492</resultValue>
+      <resultValueX>100</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>98</resultIterations>
+      <resultTime>30.062</resultTime>
+      <resultValue>11.759</resultValue>
+      <resultValueX>65.653</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>107</resultIterations>
+      <resultTime>30.23</resultTime>
+      <resultValue>13.73</resultValue>
+      <resultValueX>35.502</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>144</resultIterations>
+      <resultTime>30.011</resultTime>
+      <resultValue>19.074</resultValue>
+      <resultValueX>25.717</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>106</resultIterations>
+      <resultTime>30.178</resultTime>
+      <resultValue>13.899</resultValue>
+      <resultValueX>42.061</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>155</resultIterations>
+      <resultTime>30.013</resultTime>
+      <resultValue>20.299</resultValue>
+      <resultValueX>24.883</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>166</resultIterations>
+      <resultTime>30.015</resultTime>
+      <resultValue>15.763</resultValue>
+      <resultValueX>35.169</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>30617</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>820.965</resultValue>
+      <resultValueX>100.001</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>776</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>95.57</resultValue>
+      <resultValueX>52.073</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>411</resultIterations>
+      <resultTime>30.001</resultTime>
+      <resultValue>269.359</resultValue>
+      <resultValueX>8.589</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>3889</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>560.302</resultValue>
+      <resultValueX>100</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>659</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>79.338</resultValue>
+      <resultValueX>65.653</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>951</resultIterations>
+      <resultTime>29.984</resultTime>
+      <resultValue>123.031</resultValue>
+      <resultValueX>35.502</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>1306</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>173.255</resultValue>
+      <resultValueX>25.717</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>862</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>113.801</resultValue>
+      <resultValueX>42.061</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>1237</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>162.21</resultValue>
+      <resultValueX>24.883</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1395</resultIterations>
+      <resultTime>29.978</resultTime>
+      <resultValue>132.63</resultValue>
+      <resultValueX>35.169</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>30582</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>820.016</resultValue>
+      <resultValueX>100.001</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1397</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>132.874</resultValue>
+      <resultValueX>35.169</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/JDK/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.gzip.JDKGzipDriver</driverClass>
+    <resultAritMean>110.096</resultAritMean>
+    <resultAritMeanX>44.458</resultAritMeanX>
+    <resultGeomMean>57.651</resultGeomMean>
+    <resultGeomMeanX>34.951</resultGeomMeanX>
+    <resultHarmMean>27.847</resultHarmMean>
+    <resultHarmMeanX>26.092</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>651</resultIterations>
+      <resultTime>30.004</resultTime>
+      <resultValue>17.432</resultValue>
+      <resultValueX>99.92</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>100</resultIterations>
+      <resultTime>30.162</resultTime>
+      <resultValue>12.239</resultValue>
+      <resultValueX>44.756</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>67</resultIterations>
+      <resultTime>30.039</resultTime>
+      <resultValue>43.855</resultValue>
+      <resultValueX>7.03</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>114</resultIterations>
+      <resultTime>30.083</resultTime>
+      <resultValue>16.36</resultValue>
+      <resultValueX>84.658</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>89</resultIterations>
+      <resultTime>30.13</resultTime>
+      <resultValue>10.655</resultValue>
+      <resultValueX>57.887</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>75</resultIterations>
+      <resultTime>30.004</resultTime>
+      <resultValue>9.696</resultValue>
+      <resultValueX>25.801</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>209</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>27.72</resultValue>
+      <resultValueX>24.21</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>62</resultIterations>
+      <resultTime>30.29</resultTime>
+      <resultValue>8.1</resultValue>
+      <resultValueX>30.406</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>117</resultIterations>
+      <resultTime>30.042</resultTime>
+      <resultValue>15.308</resultValue>
+      <resultValueX>20.565</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>150</resultIterations>
+      <resultTime>30.147</resultTime>
+      <resultValue>14.181</resultValue>
+      <resultValueX>29.23</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>8734</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>234.185</resultValue>
+      <resultValueX>99.92</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>866</resultIterations>
+      <resultTime>29.988</resultTime>
+      <resultValue>106.601</resultValue>
+      <resultValueX>44.756</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>621</resultIterations>
+      <resultTime>29.995</resultTime>
+      <resultValue>407.069</resultValue>
+      <resultValueX>7.03</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>1008</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>145.209</resultValue>
+      <resultValueX>84.658</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>729</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>87.724</resultValue>
+      <resultValueX>57.887</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>1175</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>152.118</resultValue>
+      <resultValueX>25.801</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>1741</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>230.985</resultValue>
+      <resultValueX>24.21</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>1100</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>145.217</resultValue>
+      <resultValueX>30.406</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>1497</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>196.298</resultValue>
+      <resultValueX>20.565</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1599</resultIterations>
+      <resultTime>29.973</resultTime>
+      <resultValue>152.048</resultValue>
+      <resultValueX>29.23</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>8874</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>237.932</resultValue>
+      <resultValueX>99.92</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>1590</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>151.182</resultValue>
+      <resultValueX>29.23</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/jzlib/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for JCraft's jzlib (gzip), streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jzlib/*.jar</classPath>
+    <driverClass>com.ning.jcbm.gzip.JCraftGzipDriver</driverClass>
+    <resultAritMean>57.04</resultAritMean>
+    <resultAritMeanX>44.762</resultAritMeanX>
+    <resultGeomMean>37.41</resultGeomMean>
+    <resultGeomMeanX>35.431</resultGeomMeanX>
+    <resultHarmMean>24.702</resultHarmMean>
+    <resultHarmMeanX>26.737</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>464</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>12.436</resultValue>
+      <resultValueX>99.92</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>92</resultIterations>
+      <resultTime>30.119</resultTime>
+      <resultValue>11.276</resultValue>
+      <resultValueX>44.85</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>68</resultIterations>
+      <resultTime>30.211</resultTime>
+      <resultValue>44.256</resultValue>
+      <resultValueX>7.359</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>85</resultIterations>
+      <resultTime>30.1</resultTime>
+      <resultValue>12.192</resultValue>
+      <resultValueX>84.723</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>80</resultIterations>
+      <resultTime>30.146</resultTime>
+      <resultValue>9.573</resultValue>
+      <resultValueX>58.032</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>104</resultIterations>
+      <resultTime>30.199</resultTime>
+      <resultValue>13.359</resultValue>
+      <resultValueX>25.778</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>178</resultIterations>
+      <resultTime>29.997</resultTime>
+      <resultValue>23.588</resultValue>
+      <resultValueX>24.61</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>75</resultIterations>
+      <resultTime>30.141</resultTime>
+      <resultValue>9.847</resultValue>
+      <resultValueX>31.217</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>134</resultIterations>
+      <resultTime>29.978</resultTime>
+      <resultValue>17.569</resultValue>
+      <resultValueX>20.97</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>147</resultIterations>
+      <resultTime>30.093</resultTime>
+      <resultValue>13.923</resultValue>
+      <resultValueX>29.979</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>4712</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>126.351</resultValue>
+      <resultValueX>99.92</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>383</resultIterations>
+      <resultTime>29.999</resultTime>
+      <resultValue>47.129</resultValue>
+      <resultValueX>44.85</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>350</resultIterations>
+      <resultTime>30.021</resultTime>
+      <resultValue>229.23</resultValue>
+      <resultValueX>7.359</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>390</resultIterations>
+      <resultTime>29.985</resultTime>
+      <resultValue>56.151</resultValue>
+      <resultValueX>84.723</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>314</resultIterations>
+      <resultTime>29.981</resultTime>
+      <resultValue>37.779</resultValue>
+      <resultValueX>58.032</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>536</resultIterations>
+      <resultTime>29.992</resultTime>
+      <resultValue>69.323</resultValue>
+      <resultValueX>25.778</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>688</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>91.267</resultValue>
+      <resultValueX>24.61</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>495</resultIterations>
+      <resultTime>29.979</resultTime>
+      <resultValue>65.339</resultValue>
+      <resultValueX>31.217</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>726</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>95.222</resultValue>
+      <resultValueX>20.97</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>750</resultIterations>
+      <resultTime>29.987</resultTime>
+      <resultValue>71.284</resultValue>
+      <resultValueX>29.979</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>4709</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>126.269</resultValue>
+      <resultValueX>99.92</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>752</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>71.51</resultValue>
+      <resultValueX>29.979</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="BZip2/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for Commons-compress BZip2 implementation</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jakarta/*.jar</classPath>
+    <driverClass>com.ning.jcbm.bzip2.BZip2Driver</driverClass>
+    <resultAritMean>7.359</resultAritMean>
+    <resultAritMeanX>41.485</resultAritMeanX>
+    <resultGeomMean>5.503</resultGeomMean>
+    <resultGeomMeanX>29.544</resultGeomMeanX>
+    <resultHarmMean>3.923</resultHarmMean>
+    <resultHarmMeanX>17.935</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:A10.jpg">
+      <resultIterations>134</resultIterations>
+      <resultTime>30.083</resultTime>
+      <resultValue>3.579</resultValue>
+      <resultValueX>99.376</resultValueX>
+    </testCase>
+    <testCase name="C:AcroRd32.exe">
+      <resultIterations>38</resultIterations>
+      <resultTime>30.431</resultTime>
+      <resultValue>4.61</resultValue>
+      <resultValueX>43.9</resultValueX>
+    </testCase>
+    <testCase name="C:FP.LOG">
+      <resultIterations>4</resultIterations>
+      <resultTime>37.224</resultTime>
+      <resultValue>2.113</resultValue>
+      <resultValueX>3.51</resultValueX>
+    </testCase>
+    <testCase name="C:FlashMX.pdf">
+      <resultIterations>27</resultIterations>
+      <resultTime>30.902</resultTime>
+      <resultValue>3.772</resultValue>
+      <resultValueX>84.275</resultValueX>
+    </testCase>
+    <testCase name="C:MSO97.DLL">
+      <resultIterations>35</resultIterations>
+      <resultTime>30.261</resultTime>
+      <resultValue>4.172</resultValue>
+      <resultValueX>55.787</resultValueX>
+    </testCase>
+    <testCase name="C:english.dic">
+      <resultIterations>39</resultIterations>
+      <resultTime>30.085</resultTime>
+      <resultValue>5.028</resultValue>
+      <resultValueX>30.027</resultValueX>
+    </testCase>
+    <testCase name="C:ohs.doc">
+      <resultIterations>10</resultIterations>
+      <resultTime>32.543</resultTime>
+      <resultValue>1.221</resultValue>
+      <resultValueX>22.058</resultValueX>
+    </testCase>
+    <testCase name="C:rafale.bmp">
+      <resultIterations>26</resultIterations>
+      <resultTime>30.24</resultTime>
+      <resultValue>3.402</resultValue>
+      <resultValueX>21.44</resultValueX>
+    </testCase>
+    <testCase name="C:vcfiu.hlp">
+      <resultIterations>22</resultIterations>
+      <resultTime>31.216</resultTime>
+      <resultValue>2.77</resultValue>
+      <resultValueX>17.304</resultValueX>
+    </testCase>
+    <testCase name="C:world95.txt">
+      <resultIterations>44</resultIterations>
+      <resultTime>30.379</resultTime>
+      <resultValue>4.128</resultValue>
+      <resultValueX>19.316</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>208</resultIterations>
+      <resultTime>29.993</resultTime>
+      <resultValue>5.572</resultValue>
+      <resultValueX>99.376</resultValueX>
+    </testCase>
+    <testCase name="U:AcroRd32.exe">
+      <resultIterations>81</resultIterations>
+      <resultTime>30.269</resultTime>
+      <resultValue>9.878</resultValue>
+      <resultValueX>43.9</resultValueX>
+    </testCase>
+    <testCase name="U:FP.LOG">
+      <resultIterations>36</resultIterations>
+      <resultTime>30.427</resultTime>
+      <resultValue>23.264</resultValue>
+      <resultValueX>3.51</resultValueX>
+    </testCase>
+    <testCase name="U:FlashMX.pdf">
+      <resultIterations>46</resultIterations>
+      <resultTime>30.231</resultTime>
+      <resultValue>6.569</resultValue>
+      <resultValueX>84.275</resultValueX>
+    </testCase>
+    <testCase name="U:MSO97.DLL">
+      <resultIterations>68</resultIterations>
+      <resultTime>30.168</resultTime>
+      <resultValue>8.131</resultValue>
+      <resultValueX>55.787</resultValueX>
+    </testCase>
+    <testCase name="U:english.dic">
+      <resultIterations>107</resultIterations>
+      <resultTime>30.122</resultTime>
+      <resultValue>13.779</resultValue>
+      <resultValueX>30.027</resultValueX>
+    </testCase>
+    <testCase name="U:ohs.doc">
+      <resultIterations>98</resultIterations>
+      <resultTime>30.068</resultTime>
+      <resultValue>12.956</resultValue>
+      <resultValueX>22.058</resultValueX>
+    </testCase>
+    <testCase name="U:rafale.bmp">
+      <resultIterations>98</resultIterations>
+      <resultTime>30.126</resultTime>
+      <resultValue>12.873</resultValue>
+      <resultValueX>21.44</resultValueX>
+    </testCase>
+    <testCase name="U:vcfiu.hlp">
+      <resultIterations>130</resultIterations>
+      <resultTime>30.044</resultTime>
+      <resultValue>17.007</resultValue>
+      <resultValueX>17.304</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>110</resultIterations>
+      <resultTime>30.048</resultTime>
+      <resultValue>10.434</resultValue>
+      <resultValueX>19.316</resultValueX>
+    </testCase>
+    <testCase name="U:A10.jpg">
+      <resultIterations>213</resultIterations>
+      <resultTime>30.029</resultTime>
+      <resultValue>5.699</resultValue>
+      <resultValueX>99.376</resultValueX>
+    </testCase>
+    <testCase name="U:world95.txt">
+      <resultIterations>66</resultIterations>
+      <resultTime>199.874</resultTime>
+      <resultValue>0.941</resultValue>
+      <resultValueX>19.316</resultValueX>
+    </testCase>
+  </driver>
+</testSuiteReport>
