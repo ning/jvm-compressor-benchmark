@@ -7,6 +7,13 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
+  <driver name="Snappy/block" normal="false">
+        <description><div xmlns=""><p>Test driver for Snappy-java, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/snappy/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+  </driver>
+
   <!-- Normalize or not? Makes sense for throughput; but not so much for
        compression rate
     -->

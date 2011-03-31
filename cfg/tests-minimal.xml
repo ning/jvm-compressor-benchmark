@@ -8,7 +8,7 @@
 Micro-benchmark for testing performance of compressors on JVM platform
 </p></div></description>
 
-    <!-- Drivers; only use two, so embed -->
+    <!-- Drivers; only use couple, so embed -->
 
     <driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
        xmlns:xi="http://www.w3.org/2001/XInclude">

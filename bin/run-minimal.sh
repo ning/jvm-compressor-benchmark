@@ -3,7 +3,7 @@
 echo "About to run minimal sanity test on 2 input files, couple of codecs"
 
 java -server -cp lib/japex/\* \
- -Xmx128M \
+ -Xmx256M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=5 \
