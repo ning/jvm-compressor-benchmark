@@ -3,7 +3,6 @@ package com.ning.jcbm.snappy;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.ByteBuffer;
 
 import com.ning.jcbm.DriverBase;
 
@@ -17,44 +16,40 @@ public class SnappyDriver extends DriverBase
 
     protected byte[] compressBlock(byte[] uncompressed) throws IOException
     {
-        ByteBuffer input = ByteBuffer.allocateDirect(uncompressed.length);
-        input.put(uncompressed);
-        input.flip();
-        int maxLen = Snappy.maxCompressedLength(uncompressed.length);
-        ByteBuffer compressed = ByteBuffer.allocateDirect(maxLen);
-        int actual = Snappy.compress(input, compressed);
-        byte[] result = new byte[actual];
-        compressed.get(result, 0, actual);
-        return result;
-    }
-
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
-    {
-        ByteBuffer input = ByteBuffer.allocateDirect(compressed.length);
-        input.put(compressed);
-        input.flip();
         try {
-            int uncompLen = Snappy.uncompressedLength(input);
-            ByteBuffer output = ByteBuffer.allocateDirect(uncompLen);
-            int actual = Snappy.uncompress(input, output);
-            byte[] result = new byte[actual];
-            output.get(result, 0, actual);
-            return result;
+            return Snappy.compress(uncompressed);
         } catch (SnappyException e) {
             throw new IOException(e);
         }
     }
 
-    /* Streaming operation not supported directly yet; add support if
-     * and when lib supports it directly.
-     */
+    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    {
+        try {
+            return Snappy.uncompress(compressed);
+        } catch (SnappyException e) {
+            throw new IOException(e);
+        }
+    }
 
-    protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException {
-        throw new UnsupportedOperationException();
+    protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
+    {
+        SnappyOutputStream out = new SnappyOutputStream(rawOut);
+        out.write(uncompressed);
+        out.close();
     }
     
-    protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException {
-        throw new UnsupportedOperationException();
-    }
+    protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
+    {
+        SnappyInputStream in = new SnappyInputStream(compIn);
 
+        int total = 0;
+        int count;
+        
+        while ((count = in.read(inputBuffer)) >= 0) {
+            total += count;
+        }
+        in.close();
+        return total;
+    }
 }

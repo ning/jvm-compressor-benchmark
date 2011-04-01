@@ -16,12 +16,13 @@ public abstract class DriverBase extends JapexDriverBase
      *    comp/uncomp speeds in gigabytes. This is problematic mostly just for graphs,
      *    since outliers stretch stuff. So, let's just cap to some max value.
      *    
-     *    For now, 1gig/sec can serve as boundary (highest so far seen was 2.5G/s)
+     *    For now, 0.5 gig/sec can serve as boundary (highest so far seen was 2.5G/s);
+     *    no compressible test case has produced such speeds. Will tune as necessary
      */
     
-    final static double MAX_COMPRESS_THROUGHPUT = 999.9;
+    final static double MAX_COMPRESS_THROUGHPUT = 499.9;
 
-    final static double MAX_UNCOMPRESS_THROUGHPUT = 999.9;
+    final static double MAX_UNCOMPRESS_THROUGHPUT = 499.9;
     
     protected final String _driverName;
     

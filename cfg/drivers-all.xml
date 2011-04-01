@@ -13,9 +13,16 @@
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
+  <driver name="Snappy(JNI)/stream" normal="false">
+        <description><div xmlns=""><p>Test driver for Snappy-java, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/snappy/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+  </driver>
 
   <!-- Normalize or not? Makes sense for throughput; but not so much for
-       compression rate
+       compression rate; hence, use "raw" values
     -->
   <driver name="LZF/block" normal="false">
         <description><div xmlns=""><p>Test driver for LZF, block mode</p></div></description>
