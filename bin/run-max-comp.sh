@@ -3,9 +3,9 @@
 echo "About to run test with 'maximum compression' test data"
 
 # Nothing big stored in memory, heap can remain modest 
-# Since there are 10 input files, 2 modes (comp/uncomp),
-# group by 5
-java -server -cp lib/japex/\* \
+# Since there are 10 input files, 2 modes (comp/uncomp), group by 5
+
+java -server -cp lib/japex/\*   \
  -Xmx128M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
