@@ -1,0 +1,1216 @@
+<testSuiteReport name="Test suite for JVM compressors" xmlns="http://www.sun.com/japex/testSuiteReport">
+<description xmlns="http://www.sun.com/japex/testSuite">
+
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</description>  <chartType>barchart</chartType>
+  <configFile>tests-canterbury.xml</configFile>
+  <dateTime>03 Apr 2011/23:11:08 PDT</dateTime>
+  <hostName>TS-MacMini.local</hostName>
+  <inputDir>testdata/canterbury</inputDir>
+  <numberOfCpus>2</numberOfCpus>
+  <numberOfThreads>1</numberOfThreads>
+  <osArchitecture>x86_64</osArchitecture>
+  <osName>Mac OS X</osName>
+  <plotDrivers>false</plotDrivers>
+  <plotGroupSize>6</plotGroupSize>
+  <reportsDirectory>reports/canterbury</reportsDirectory>
+  <resultAxis>normal</resultAxis>
+  <resultAxisX>normal</resultAxisX>
+  <resultUnit>TPS</resultUnit>
+  <resultUnitX>Size%</resultUnitX>
+  <runTime>30</runTime>
+  <runsPerDriver>1</runsPerDriver>
+  <singleClassLoader>false</singleClassLoader>
+  <version>1.2.2</version>
+  <vmInfo>Apple Inc. 19.1-b02-334</vmInfo>
+  <warmupTime>7</warmupTime>
+  <warmupsPerDriver>0</warmupsPerDriver>
+  <driver name="Snappy(JNI)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for Snappy-java, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/snappy/*.jar</classPath>
+    <driverClass>com.ning.jcbm.snappy.SnappyDriver</driverClass>
+    <resultAritMean>250.749</resultAritMean>
+    <resultAritMeanX>50.82</resultAritMeanX>
+    <resultGeomMean>192.67</resultGeomMean>
+    <resultGeomMeanX>48.41</resultGeomMeanX>
+    <resultHarmMean>145.856</resultHarmMean>
+    <resultHarmMeanX>44.947</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>14977</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>72.503</resultValue>
+      <resultValueX>59.81</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>17742</resultIterations>
+      <resultTime>29.951</resultTime>
+      <resultValue>70.718</resultValue>
+      <resultValueX>64.074</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>119776</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>93.798</resultValue>
+      <resultValueX>48.116</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>260493</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>92.451</resultValue>
+      <resultValueX>42.404</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>790179</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>93.587</resultValue>
+      <resultValueX>48.374</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>3975</resultIterations>
+      <resultTime>29.952</resultTime>
+      <resultValue>130.331</resultValue>
+      <resultValueX>41.344</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>5588</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>75.902</resultValue>
+      <resultValueX>57.108</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>4409</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>67.621</resultValue>
+      <resultValueX>68.347</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>13498</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>220.477</resultValue>
+      <resultValueX>18.21</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>78611</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>95.682</resultValue>
+      <resultValueX>51.875</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>620457</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>83.476</resultValue>
+      <resultValueX>59.357</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>71542</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>346.317</resultValue>
+      <resultValueX>59.81</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>82946</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>330.496</resultValue>
+      <resultValueX>64.074</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>541988</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>424.419</resultValue>
+      <resultValueX>48.116</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>1194488</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>423.926</resultValue>
+      <resultValueX>42.404</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>3548545</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>420.27</resultValue>
+      <resultValueX>48.374</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>13013</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>426.519</resultValue>
+      <resultValueX>41.344</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>26893</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>365.287</resultValue>
+      <resultValueX>57.108</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>20360</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>312.253</resultValue>
+      <resultValueX>68.347</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>36458</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>595.553</resultValue>
+      <resultValueX>18.21</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>323086</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>393.249</resultValue>
+      <resultValueX>51.875</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>2836649</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>381.653</resultValue>
+      <resultValueX>59.357</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for LZF, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>152.167</resultAritMean>
+    <resultAritMeanX>49.284</resultAritMeanX>
+    <resultGeomMean>140.486</resultGeomMean>
+    <resultGeomMeanX>46.876</resultGeomMeanX>
+    <resultHarmMean>130.044</resultHarmMean>
+    <resultHarmMeanX>43.104</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>17003</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>82.307</resultValue>
+      <resultValueX>56.217</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>20129</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>80.2</resultValue>
+      <resultValueX>59.172</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>128188</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>100.381</resultValue>
+      <resultValueX>48.632</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>325156</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>115.398</resultValue>
+      <resultValueX>42.448</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>968295</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>114.681</resultValue>
+      <resultValueX>47.89</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>4359</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>142.866</resultValue>
+      <resultValueX>40.738</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>6196</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>84.153</resultValue>
+      <resultValueX>54.464</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>5026</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>77.084</resultValue>
+      <resultValueX>62.431</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>13263</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>216.659</resultValue>
+      <resultValueX>16.283</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>76477</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>93.085</resultValue>
+      <resultValueX>55.267</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>716720</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>96.428</resultValue>
+      <resultValueX>58.576</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>31577</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>152.86</resultValue>
+      <resultValueX>56.217</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>37781</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>150.531</resultValue>
+      <resultValueX>59.172</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>218942</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>171.45</resultValue>
+      <resultValueX>48.632</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>538000</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>190.932</resultValue>
+      <resultValueX>42.448</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>1896992</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>224.678</resultValue>
+      <resultValueX>47.89</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>8525</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>279.411</resultValue>
+      <resultValueX>40.738</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>11357</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>154.262</resultValue>
+      <resultValueX>54.464</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>9765</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>149.765</resultValue>
+      <resultValueX>62.431</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>18362</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>299.938</resultValue>
+      <resultValueX>16.283</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>141859</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>172.662</resultValue>
+      <resultValueX>55.267</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>1471139</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>197.933</resultValue>
+      <resultValueX>58.576</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for LZF, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>158.249</resultAritMean>
+    <resultAritMeanX>49.284</resultAritMeanX>
+    <resultGeomMean>144.992</resultGeomMean>
+    <resultGeomMeanX>46.876</resultGeomMeanX>
+    <resultHarmMean>133.46</resultHarmMean>
+    <resultHarmMeanX>43.104</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>17306</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>83.779</resultValue>
+      <resultValueX>56.217</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>20820</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>82.952</resultValue>
+      <resultValueX>59.172</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>127894</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>100.155</resultValue>
+      <resultValueX>48.632</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>316536</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>112.338</resultValue>
+      <resultValueX>42.448</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>952715</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>112.839</resultValue>
+      <resultValueX>47.89</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>4646</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>152.256</resultValue>
+      <resultValueX>40.738</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>6344</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>86.167</resultValue>
+      <resultValueX>54.464</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>5205</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>79.825</resultValue>
+      <resultValueX>62.431</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>13428</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>219.346</resultValue>
+      <resultValueX>16.283</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>75902</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>92.388</resultValue>
+      <resultValueX>55.267</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>727550</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>97.887</resultValue>
+      <resultValueX>58.576</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>33205</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>160.738</resultValue>
+      <resultValueX>56.217</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>40576</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>161.675</resultValue>
+      <resultValueX>59.172</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>231386</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>181.199</resultValue>
+      <resultValueX>48.632</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>565215</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>200.592</resultValue>
+      <resultValueX>42.448</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>1800644</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>213.265</resultValue>
+      <resultValueX>47.89</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>9283</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>304.254</resultValue>
+      <resultValueX>40.738</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>12151</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>165.038</resultValue>
+      <resultValueX>54.464</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>10393</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>159.396</resultValue>
+      <resultValueX>62.431</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>20776</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>339.38</resultValue>
+      <resultValueX>16.283</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>153144</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>186.398</resultValue>
+      <resultValueX>55.267</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>1409216</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>189.602</resultValue>
+      <resultValueX>58.576</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L1/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for QuickLZ (level 1), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver1</driverClass>
+    <resultAritMean>75.481</resultAritMean>
+    <resultAritMeanX>46.877</resultAritMeanX>
+    <resultGeomMean>64.51</resultGeomMean>
+    <resultGeomMeanX>44.467</resultGeomMeanX>
+    <resultHarmMean>50.652</resultHarmMean>
+    <resultHarmMeanX>41.081</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>12635</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>61.165</resultValue>
+      <resultValueX>54.898</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>14650</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>58.371</resultValue>
+      <resultValueX>57.899</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>53950</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>42.249</resultValue>
+      <resultValueX>45.994</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>85955</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>30.506</resultValue>
+      <resultValueX>42.305</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>111039</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>13.151</resultValue>
+      <resultValueX>47.702</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>3244</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>106.295</resultValue>
+      <resultValueX>30.163</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>5005</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>67.975</resultValue>
+      <resultValueX>51.901</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>4051</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>62.125</resultValue>
+      <resultValueX>61.238</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>8419</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>137.514</resultValue>
+      <resultValueX>16.852</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>42202</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>51.367</resultValue>
+      <resultValueX>48.217</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>104114</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>14.008</resultValue>
+      <resultValueX>58.481</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>16104</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>77.956</resultValue>
+      <resultValueX>54.898</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>18998</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>75.693</resultValue>
+      <resultValueX>57.899</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>107291</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>84.018</resultValue>
+      <resultValueX>45.994</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>243150</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>86.293</resultValue>
+      <resultValueX>42.305</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>586876</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>69.508</resultValue>
+      <resultValueX>47.702</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>4224</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>138.424</resultValue>
+      <resultValueX>30.163</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>5988</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>81.335</resultValue>
+      <resultValueX>51.901</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>4831</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>74.093</resultValue>
+      <resultValueX>61.238</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>10988</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>179.48</resultValue>
+      <resultValueX>16.852</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>70872</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>86.261</resultValue>
+      <resultValueX>48.217</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>466785</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>62.802</resultValue>
+      <resultValueX>58.481</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L3/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for QuickLZ (level 3), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver3</driverClass>
+    <resultAritMean>66.93</resultAritMean>
+    <resultAritMeanX>41.294</resultAritMeanX>
+    <resultGeomMean>40.218</resultGeomMean>
+    <resultGeomMeanX>39.393</resultGeomMeanX>
+    <resultHarmMean>24.49</resultHarmMean>
+    <resultHarmMeanX>36.611</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>2756</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>13.341</resultValue>
+      <resultValueX>46.73</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>3270</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>13.028</resultValue>
+      <resultValueX>51.222</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>22134</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>17.333</resultValue>
+      <resultValueX>40.377</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>42326</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>15.022</resultValue>
+      <resultValueX>34.996</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>77145</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>9.137</resultValue>
+      <resultValueX>41.602</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>525</resultIterations>
+      <resultTime>29.999</resultTime>
+      <resultValue>17.186</resultValue>
+      <resultValueX>34.142</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>993</resultIterations>
+      <resultTime>29.986</resultTime>
+      <resultValue>13.477</resultValue>
+      <resultValueX>43.398</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>769</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>11.793</resultValue>
+      <resultValueX>54.016</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>1738</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>28.38</resultValue>
+      <resultValueX>14.781</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>14739</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>17.939</resultValue>
+      <resultValueX>40.902</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>72591</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>9.767</resultValue>
+      <resultValueX>52.07</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>20762</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>100.504</resultValue>
+      <resultValueX>46.73</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>23562</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>93.88</resultValue>
+      <resultValueX>51.222</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>136859</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>107.172</resultValue>
+      <resultValueX>40.377</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>315751</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>112.06</resultValue>
+      <resultValueX>34.996</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>730962</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>86.574</resultValue>
+      <resultValueX>41.602</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>5532</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>181.302</resultValue>
+      <resultValueX>34.142</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>7849</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>106.607</resultValue>
+      <resultValueX>43.398</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>6141</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>94.175</resultValue>
+      <resultValueX>54.016</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>14728</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>240.584</resultValue>
+      <resultValueX>14.781</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>86061</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>104.748</resultValue>
+      <resultValueX>40.902</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>583142</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>78.457</resultValue>
+      <resultValueX>52.07</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/JDK/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.gzip.JDKGzipDriver</driverClass>
+    <resultAritMean>78.807</resultAritMean>
+    <resultAritMeanX>31.632</resultAritMeanX>
+    <resultGeomMean>44.936</resultGeomMean>
+    <resultGeomMeanX>29.918</resultGeomMeanX>
+    <resultHarmMean>24.775</resultHarmMean>
+    <resultHarmMeanX>27.481</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>2054</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>9.94</resultValue>
+      <resultValueX>35.767</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>2262</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>9.012</resultValue>
+      <resultValueX>39.057</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>28563</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>22.367</resultValue>
+      <resultValueX>32.333</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>67678</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>24.018</resultValue>
+      <resultValueX>27.946</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>195251</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>23.125</resultValue>
+      <resultValueX>32.679</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>446</resultIterations>
+      <resultTime>30.009</resultTime>
+      <resultValue>14.595</resultValue>
+      <resultValueX>19.809</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>742</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>10.077</resultValue>
+      <resultValueX>33.954</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>495</resultIterations>
+      <resultTime>29.996</resultTime>
+      <resultValue>7.583</resultValue>
+      <resultValueX>40.521</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>1573</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>25.696</resultValue>
+      <resultValueX>11.001</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>10577</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>12.874</resultValue>
+      <resultValueX>33.954</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>165650</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>22.287</resultValue>
+      <resultValueX>40.927</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>26057</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>126.137</resultValue>
+      <resultValueX>35.767</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>29189</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>116.3</resultValue>
+      <resultValueX>39.057</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>169627</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>132.836</resultValue>
+      <resultValueX>32.333</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>389626</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>138.275</resultValue>
+      <resultValueX>27.946</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>801519</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>94.931</resultValue>
+      <resultValueX>32.679</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>6583</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>215.74</resultValue>
+      <resultValueX>19.809</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>9774</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>132.754</resultValue>
+      <resultValueX>33.954</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>7313</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>112.166</resultValue>
+      <resultValueX>40.521</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>16230</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>265.113</resultValue>
+      <resultValueX>11.001</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>107155</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>130.425</resultValue>
+      <resultValueX>33.954</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>650360</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>87.502</resultValue>
+      <resultValueX>40.927</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/jzlib/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for JCraft's jzlib (gzip), streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jzlib/*.jar</classPath>
+    <driverClass>com.ning.jcbm.gzip.JCraftGzipDriver</driverClass>
+    <resultAritMean>39.406</resultAritMean>
+    <resultAritMeanX>31.958</resultAritMeanX>
+    <resultGeomMean>28.051</resultGeomMean>
+    <resultGeomMeanX>30.228</resultGeomMeanX>
+    <resultHarmMean>20.519</resultHarmMean>
+    <resultHarmMeanX>27.783</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>2302</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>11.14</resultValue>
+      <resultValueX>36.568</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>2542</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>10.127</resultValue>
+      <resultValueX>39.641</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>21145</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>16.559</resultValue>
+      <resultValueX>32.52</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>42970</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>15.25</resultValue>
+      <resultValueX>28.161</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>85285</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>10.101</resultValue>
+      <resultValueX>32.679</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>569</resultIterations>
+      <resultTime>29.982</resultTime>
+      <resultValue>18.637</resultValue>
+      <resultValueX>19.977</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>850</resultIterations>
+      <resultTime>29.986</resultTime>
+      <resultValue>11.537</resultValue>
+      <resultValueX>34.492</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>593</resultIterations>
+      <resultTime>29.989</resultTime>
+      <resultValue>9.087</resultValue>
+      <resultValueX>41.337</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>1733</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>28.296</resultValue>
+      <resultValueX>11.178</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>10423</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>12.686</resultValue>
+      <resultValueX>34.059</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>75959</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>10.22</resultValue>
+      <resultValueX>40.927</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>11945</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>57.822</resultValue>
+      <resultValueX>36.568</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>13440</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>53.551</resultValue>
+      <resultValueX>39.641</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>75044</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>58.767</resultValue>
+      <resultValueX>32.52</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>162854</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>57.797</resultValue>
+      <resultValueX>28.161</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>316829</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>37.525</resultValue>
+      <resultValueX>32.679</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>2869</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>94.037</resultValue>
+      <resultValueX>19.977</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>4564</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>61.991</resultValue>
+      <resultValueX>34.492</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>3415</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>52.367</resultValue>
+      <resultValueX>41.337</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>9126</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>149.071</resultValue>
+      <resultValueX>11.178</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>45715</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>55.642</resultValue>
+      <resultValueX>34.059</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>258141</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>34.731</resultValue>
+      <resultValueX>40.927</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="BZip2/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Test driver for Commons-compress BZip2 implementation</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jakarta/*.jar</classPath>
+    <driverClass>com.ning.jcbm.bzip2.BZip2Driver</driverClass>
+    <resultAritMean>9.985</resultAritMean>
+    <resultAritMeanX>28.177</resultAritMeanX>
+    <resultGeomMean>7.357</resultGeomMean>
+    <resultGeomMeanX>26.1</resultGeomMeanX>
+    <resultHarmMean>5.009</resultHarmMean>
+    <resultHarmMeanX>23.301</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="C:alice29.txt">
+      <resultIterations>994</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>4.811</resultValue>
+      <resultValueX>28.429</resultValueX>
+    </testCase>
+    <testCase name="C:asyoulik.txt">
+      <resultIterations>1209</resultIterations>
+      <resultTime>29.984</resultTime>
+      <resultValue>4.814</resultValue>
+      <resultValueX>31.644</resultValueX>
+    </testCase>
+    <testCase name="C:cp.html">
+      <resultIterations>4544</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>3.558</resultValue>
+      <resultValueX>31.008</resultValueX>
+    </testCase>
+    <testCase name="C:fields.c">
+      <resultIterations>7221</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>2.563</resultValue>
+      <resultValueX>27.256</resultValueX>
+    </testCase>
+    <testCase name="C:grammar.lsp">
+      <resultIterations>10158</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>1.203</resultValue>
+      <resultValueX>34.507</resultValueX>
+    </testCase>
+    <testCase name="C:kennedy.xls">
+      <resultIterations>144</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>4.718</resultValue>
+      <resultValueX>11.988</resultValueX>
+    </testCase>
+    <testCase name="C:lcet10.txt">
+      <resultIterations>389</resultIterations>
+      <resultTime>30.023</resultTime>
+      <resultValue>5.273</resultValue>
+      <resultValueX>27.343</resultValueX>
+    </testCase>
+    <testCase name="C:plrabn12.txt">
+      <resultIterations>331</resultIterations>
+      <resultTime>30.026</resultTime>
+      <resultValue>5.066</resultValue>
+      <resultValueX>32.6</resultValueX>
+    </testCase>
+    <testCase name="C:ptt5">
+      <resultIterations>777</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>12.692</resultValue>
+      <resultValueX>9.696</resultValueX>
+    </testCase>
+    <testCase name="C:sum">
+      <resultIterations>3028</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>3.685</resultValue>
+      <resultValueX>33.768</resultValueX>
+    </testCase>
+    <testCase name="C:xargs.1">
+      <resultIterations>10353</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>1.393</resultValue>
+      <resultValueX>41.708</resultValueX>
+    </testCase>
+    <testCase name="U:alice29.txt">
+      <resultIterations>3039</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>14.708</resultValue>
+      <resultValueX>28.429</resultValueX>
+    </testCase>
+    <testCase name="U:asyoulik.txt">
+      <resultIterations>3485</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>13.884</resultValue>
+      <resultValueX>31.644</resultValueX>
+    </testCase>
+    <testCase name="U:cp.html">
+      <resultIterations>16752</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>13.118</resultValue>
+      <resultValueX>31.008</resultValueX>
+    </testCase>
+    <testCase name="U:fields.c">
+      <resultIterations>36149</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>12.83</resultValue>
+      <resultValueX>27.256</resultValueX>
+    </testCase>
+    <testCase name="U:grammar.lsp">
+      <resultIterations>77630</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>9.195</resultValue>
+      <resultValueX>34.507</resultValueX>
+    </testCase>
+    <testCase name="U:kennedy.xls">
+      <resultIterations>727</resultIterations>
+      <resultTime>29.993</resultTime>
+      <resultValue>23.804</resultValue>
+      <resultValueX>11.988</resultValueX>
+    </testCase>
+    <testCase name="U:lcet10.txt">
+      <resultIterations>1123</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>15.251</resultValue>
+      <resultValueX>27.343</resultValueX>
+    </testCase>
+    <testCase name="U:plrabn12.txt">
+      <resultIterations>881</resultIterations>
+      <resultTime>29.989</resultTime>
+      <resultValue>13.5</resultValue>
+      <resultValueX>32.6</resultValueX>
+    </testCase>
+    <testCase name="U:ptt5">
+      <resultIterations>1956</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>31.946</resultValue>
+      <resultValueX>9.696</resultValueX>
+    </testCase>
+    <testCase name="U:sum">
+      <resultIterations>10552</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>12.844</resultValue>
+      <resultValueX>33.768</resultValueX>
+    </testCase>
+    <testCase name="U:xargs.1">
+      <resultIterations>65531</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>8.817</resultValue>
+      <resultValueX>41.708</resultValueX>
+    </testCase>
+  </driver>
+</testSuiteReport>
