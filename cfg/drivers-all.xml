@@ -11,16 +11,14 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
 
-<!-- 02-Apr-2011, tatu: due to JNI issues, can only include one Snappy test
-
   <driver name="Snappy(JNI)/block" normal="false">
         <description><div xmlns=""><p>Test driver for Snappy-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
 
--->
-
+<!-- 02-Apr-2011, tatu: due to JNI issues, can only include one Snappy test
   <driver name="Snappy(JNI)/stream" normal="false">
         <description><div xmlns=""><p>Test driver for Snappy-java, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -28,6 +26,7 @@
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
+-->
 
   <!-- Normalize or not? Makes sense for throughput; but not so much for
        compression rate; hence, use "raw" values
