@@ -7,7 +7,10 @@ import com.ning.jcbm.DriverBase;
 public class LzmaDriver extends DriverBase
 {
     static final int DEFAULT_ALGORITHM = 2;
-    static final int DEFAULT_DICTIONARY_SIZE = (1 << 21); // default; 2 megs
+    
+    // what would be useful defaults? Should probably depend on input size?
+    static final int MAX_DICTIONARY_SIZE = (1 << 21); // default; 2 megs
+
     static final int DEFAULT_MATCH_FINDER = 1;
     static final int DEFAULT_FAST_BYTES = 128;
     
@@ -29,7 +32,18 @@ public class LzmaDriver extends DriverBase
         boolean eos = true; // what does this mean? that size is not known?
         SevenZip.Compression.LZMA.Encoder encoder = new SevenZip.Compression.LZMA.Encoder();
         if (!encoder.SetAlgorithm(DEFAULT_ALGORITHM)) throw new IllegalArgumentException();
-        if (!encoder.SetDictionarySize(DEFAULT_DICTIONARY_SIZE)) throw new IllegalArgumentException();
+        
+        // Let's actually try to determine somewhat optimal size; starting with 4k
+        int dictSize = (1 << 12);
+        int uncompLen = uncompressed.length;
+        while (dictSize < uncompLen) {
+            dictSize += dictSize;
+            if (dictSize >= MAX_DICTIONARY_SIZE) {
+                break;
+            }
+        }
+        
+        if (!encoder.SetDictionarySize(dictSize)) throw new IllegalArgumentException();
         if (!encoder.SetNumFastBytes(DEFAULT_FAST_BYTES)) throw new IllegalArgumentException();
         if (!encoder.SetMatchFinder(DEFAULT_MATCH_FINDER)) throw new IllegalArgumentException();
         if (!encoder.SetLcLpPb(Lc, Lp, Pb)) throw new IllegalArgumentException();
