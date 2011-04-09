@@ -18,6 +18,7 @@ Currently following codecs are included in distribution:
 * Gzip: JDK, [JCraft](http://www.jcraft.com/jzlib/) (streaming mode)
 * [Bzip2 from commons-compression](http://commons.apache.org/compress/) (streaming mode)
 * [Snappy](http://code.google.com/p/snappy-java/) (Java JNI wrapper over [native Snappy](http://code.google.com/p/snappy/))
+* [LZMA](http://www.7-zip.org/sdk.html) by 7zip (block mode)
 
 (for more details on what is NOT included, check out Wiki page at [https://github.com/ning/jvm-compressor-benchmark/wiki](Wiki))
 
