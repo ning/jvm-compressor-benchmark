@@ -36,3 +36,9 @@ We have tried to make use of existing de-facto standard test suites, including:
 To access source, just clone [project](https://github.com/ning/jvm-compressor-benchmark)
 
 To participate in discussions of benchmark suite, results, and other things related to compression performance, please join our [discussion group](http://groups.google.com/group/jvm-compressor-benchmark)
+
+# License
+
+Benchmark code is licensed under Apache License 2.0.
+
+Note that as usual, license only covers (re)distribution of code, and does not apply to your own use of code (i.e. running tests locally), which you can do regardless of licensing.
