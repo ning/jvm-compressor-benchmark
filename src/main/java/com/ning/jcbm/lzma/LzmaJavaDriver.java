@@ -1,9 +1,6 @@
 package com.ning.jcbm.lzma;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 import lzma.streams.LzmaInputStream;
 import lzma.streams.LzmaOutputStream;
@@ -37,14 +34,12 @@ public class LzmaJavaDriver extends DriverBase
     {
         LzmaOutputStream compressedOut = new LzmaOutputStream.Builder(
                 // do we really need compressed stream here? probably not, it's ByteArrayOutputStream
-                //new BufferedOutputStream(new FileOutputStream(compressed)))
+                //new BufferedOutputStream(rawOut))
                 rawOut)
-        // how about other settings? are defaults ok?
-        /*
+        // how about other settings? are defaults ok? If not, these are suggestions from project page:
                 .useMaximalDictionarySize()
                 .useEndMarkerMode(true)
                 .useBT4MatchFinder()
-                */
                 .build();
         compressedOut.write(uncompressed);
         compressedOut.close();
