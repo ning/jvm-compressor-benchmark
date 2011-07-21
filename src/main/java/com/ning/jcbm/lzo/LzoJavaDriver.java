@@ -23,10 +23,13 @@ public class LzoJavaDriver extends DriverBase
     
     protected byte[] compressBlock(byte[] uncompressed) throws IOException
     {
+    // 21-Jul-2011, tatu: While this seems to work, we get hit by an OOME afterwards... strange
+        /*
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
-        /* Looks like we need to allocate a big buffer, and see how much data
-         * we get... definitely C-style interface
-         */
+        // Looks like we need to allocate a big buffer, and see how much data
+        // we get... definitely C-style interface
+        //
+
         int origLength = uncompressed.length;
         byte[] output = new byte[origLength + compressor.getCompressionOverhead(origLength)];
         lzo_uintp lengthPointer = new lzo_uintp(origLength); // ugh....
@@ -36,6 +39,9 @@ public class LzoJavaDriver extends DriverBase
             throw new IOException("Error code "+resultCode+" from compressor");
         }
         return Arrays.copyOf(output, lengthPointer.value);
+        */
+
+        return compressBlockUsingStream(uncompressed);
     }
 
     protected byte[] uncompressBlock(byte[] compressed) throws IOException
