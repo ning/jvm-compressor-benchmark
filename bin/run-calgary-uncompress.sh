@@ -9,8 +9,8 @@ java -server -cp lib/japex/\* \
  -Xmx400M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
- -Djapex.warmupTime=3 \
- -Djapex.runTime=4 \
+ -Djapex.warmupTime=7 \
+ -Djapex.runTime=30 \
  -Djapex.numberOfThreads=1 \
  -Djapex.reportsDirectory=reports/calgary-uncompress \
  -Djapex.plotGroupSize=6 \
@@ -19,6 +19,3 @@ java -server -cp lib/japex/\* \
  cfg/tests-calgary-uncompress.xml
 
 echo "Done!";
-
-# -Djapex.warmupTime=7 \
-# -Djapex.runTime=30 \
