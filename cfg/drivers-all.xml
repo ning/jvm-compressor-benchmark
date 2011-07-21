@@ -9,7 +9,7 @@
 <driverGroup name="javaDrivers"
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
->
+>  
   <driver name="Snappy(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
@@ -26,6 +26,13 @@
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
 -->
+  <driver name="LZO-java/stream">
+        <description><div xmlns=""><p>LZO-java, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
+  </driver>
 
   <!-- Normalize or not? Makes sense for throughput; but not so much for
        compression rate; hence, use "raw" values
@@ -77,10 +84,18 @@
         <param name="japex.classPath" value="lib/jakarta/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
   </driver>
-  <driver name="LZMA/block">
+  <driver name="LZMA-orig/block">
         <description><div xmlns=""><p>7Zip's LZMA, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzma/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaDriver" />
   </driver>
+  <driver name="LZMA-java/stream">
+        <description><div xmlns=""><p>LZMA-java, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzma-java/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaJavaDriver" />
+  </driver>
+
 </driverGroup>

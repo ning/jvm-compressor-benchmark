@@ -5,6 +5,7 @@
   <property name="dir.lib" value="${basedir}/lib"/>
   <property name="dir.bin" value="${basedir}/bin"/>
   <property name="dir.src.java" value="${basedir}/src/main/java"/>
+  <property name="dir.build" value="${basedir}/build"/>
   <property name="dir.build.classes" value="${basedir}/build/classes"/>
   <!-- Distribution -->
   <property name="dir.dist" location="${basedir}/dist" />

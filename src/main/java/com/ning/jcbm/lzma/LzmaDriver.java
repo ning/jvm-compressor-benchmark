@@ -4,6 +4,10 @@ import java.io.*;
 
 import com.ning.jcbm.DriverBase;
 
+/**
+ * Driver that uses original conversion done by LZMA author.
+ * Codec is not supported any more (AFAIK).
+ */
 public class LzmaDriver extends DriverBase
 {
     static final int DEFAULT_ALGORITHM = 2;

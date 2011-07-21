@@ -44,5 +44,4 @@ public class BZip2Driver  extends DriverBase
         }
         return total;
     }
-
 }
