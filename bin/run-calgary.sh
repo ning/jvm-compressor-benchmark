@@ -7,7 +7,7 @@ echo "About to run test on Calgary corpus files"
 # group by 6 (9 gets bit too crowded)
 
 java -server -cp lib/japex/\* \
- -Xmx128M \
+ -Xmx400M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \

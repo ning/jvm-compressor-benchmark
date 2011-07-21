@@ -1,6 +1,7 @@
 package com.ning.jcbm.lzo;
 
 import java.io.*;
+import java.util.Arrays;
 
 import org.anarres.lzo.*;
 
@@ -20,11 +21,29 @@ public class LzoJavaDriver extends DriverBase
 
     // No native Block API; but need some impl for test framework
     
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException {
-        return compressBlockUsingStream(uncompressed);
+    protected byte[] compressBlock(byte[] uncompressed) throws IOException
+    {
+        LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
+        /* Looks like we need to allocate a big buffer, and see how much data
+         * we get... definitely C-style interface
+         */
+        int origLength = uncompressed.length;
+        byte[] output = new byte[origLength + compressor.getCompressionOverhead(origLength)];
+        lzo_uintp lengthPointer = new lzo_uintp(origLength); // ugh....
+        int resultCode = compressor.compress(uncompressed, 0, origLength,
+                output, 0, lengthPointer);
+        if (resultCode != LzoTransformer.LZO_E_OK) {
+            throw new IOException("Error code "+resultCode+" from compressor");
+        }
+        return Arrays.copyOf(output, lengthPointer.value);
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException {
+    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    {
+        /* Alas, we can't really support true block decompression since we
+         * would need to know the uncompressed length a priori as codec
+         * does not seem able to auto-detect it.
+         */
         LzoDecompressor decompressor = LzoLibrary.getInstance().newDecompressor(DEFAULT_ALGORITHM, null);
         LzoInputStream uncompressed = new LzoInputStream(new ByteArrayInputStream(compressed), decompressor);
         return uncompressBlockUsingStream(uncompressed);
