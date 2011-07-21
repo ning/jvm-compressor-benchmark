@@ -37,9 +37,11 @@ public class LzmaJavaDriver extends DriverBase
                 //new BufferedOutputStream(rawOut))
                 rawOut)
         // how about other settings? are defaults ok? If not, these are suggestions from project page:
+        /*
                 .useMaximalDictionarySize()
                 .useEndMarkerMode(true)
                 .useBT4MatchFinder()
+                */
                 .build();
         compressedOut.write(uncompressed);
         compressedOut.close();
@@ -57,6 +59,7 @@ public class LzmaJavaDriver extends DriverBase
         while ((count = compressedIn.read(inputBuffer)) >= 0) {
             total += count;
         }
+        compressedIn.close();
         return total;
     }
  

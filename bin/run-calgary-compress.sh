@@ -6,11 +6,11 @@ echo "About to run compress test on Calgary corpus files"
 # group by 6 (9 gets bit too crowded)
 
 java -server -cp lib/japex/\* \
- -Xmx128M \
+ -Xmx400M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
- -Djapex.warmupTime=7 \
- -Djapex.runTime=30 \
+ -Djapex.warmupTime=3 \
+ -Djapex.runTime=4 \
  -Djapex.numberOfThreads=1 \
  -Djapex.reportsDirectory=reports/calgary-compress \
  -Djapex.plotGroupSize=6 \
@@ -19,3 +19,6 @@ java -server -cp lib/japex/\* \
  cfg/tests-calgary-compress.xml
 
 echo "Done!";
+
+# -Djapex.warmupTime=7 \
+# -Djapex.runTime=30 \
