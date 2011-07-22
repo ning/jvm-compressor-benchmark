@@ -58,7 +58,10 @@ public class LzoJavaDriver extends DriverBase
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
-        LzoOutputStream compressedOut = new LzoOutputStream(rawOut, compressor, 256);
+        /* what would be good buffer size? 256 from tests is tiny; plus, does this limit
+         * chunk/block length? Let's try 8k first.
+         */
+        LzoOutputStream compressedOut = new LzoOutputStream(rawOut, compressor, 8000);
         compressedOut.write(uncompressed);
         compressedOut.close();
     }
