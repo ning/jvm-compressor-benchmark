@@ -59,9 +59,9 @@ public class LzoJavaDriver extends DriverBase
     {
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
         /* what would be good buffer size? 256 from tests is tiny; plus, does this limit
-         * chunk/block length? Let's try 8k first.
+         * chunk/block length? Let's try 16k blocks
          */
-        LzoOutputStream compressedOut = new LzoOutputStream(rawOut, compressor, 8000);
+        LzoOutputStream compressedOut = new LzoOutputStream(rawOut, compressor, 16000);
         compressedOut.write(uncompressed);
         compressedOut.close();
     }
