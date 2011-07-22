@@ -19,9 +19,9 @@ Currently following codecs are included in distribution:
 * [Bzip2 from commons-compression](http://commons.apache.org/compress/) (streaming mode)
 * [Snappy](http://code.google.com/p/snappy-java/) (Java JNI wrapper over [native Snappy](http://code.google.com/p/snappy/))
 * LZMA:
- * [LZMA by 7zip](http://www.7-zip.org/sdk.html) (block mode)
- * [LZMA-java](https://github.com/jponge/lzma-java) (streaming)
-  * note: new (2011/7) addition,  not yet included in results
+   * [LZMA by 7zip](http://www.7-zip.org/sdk.html) (block mode)
+   * [LZMA-java](https://github.com/jponge/lzma-java) (streaming)
+       * note: new (2011/7) addition,  not yet included in results
 * [LZO-java](https://github.com/Karmasphere/lzo-java) (streaming, may add block)
  * note: new (2011/7) addition,  not yet included in results
 
