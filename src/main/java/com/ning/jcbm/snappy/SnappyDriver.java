@@ -16,20 +16,12 @@ public class SnappyDriver extends DriverBase
 
     protected byte[] compressBlock(byte[] uncompressed) throws IOException
     {
-        try {
-            return Snappy.compress(uncompressed);
-        } catch (SnappyException e) {
-            throw new IOException(e);
-        }
+        return Snappy.compress(uncompressed);
     }
 
     protected byte[] uncompressBlock(byte[] compressed) throws IOException
     {
-        try {
-            return Snappy.uncompress(compressed);
-        } catch (SnappyException e) {
-            throw new IOException(e);
-        }
+        return Snappy.uncompress(compressed);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
