@@ -13,12 +13,11 @@ Micro-benchmark for testing performance of compressors on JVM platform
     <driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <driver name="LZMA-java/stream">
-        <description><div xmlns=""><p>LZMA-java, streaming</p></div></description>
-        <param name="streaming" value="true" />
+  <driver name="Snappy(JNI)/block" normal="false">
+        <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzma-java/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaJavaDriver" />
+        <param name="japex.classPath" value="lib/snappy/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
 
   <driver name="LZO-java/stream">
@@ -44,6 +43,14 @@ Micro-benchmark for testing performance of compressors on JVM platform
         <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
   </driver>
 
+  <driver name="LZMA-java/stream">
+        <description><div xmlns=""><p>LZMA-java, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzma-java/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaJavaDriver" />
+  </driver>
+
 <!--  
   <driver name="LZF/stream">
         <description><div xmlns=""><p>Test driver for LZF, streaming</p></div></description>
@@ -67,8 +74,10 @@ Micro-benchmark for testing performance of compressors on JVM platform
 
 <testCase name='C:alice29.txt' />
 <testCase name='C:kennedy.xls' />
+<testCase name='C:sum' />
 
 <testCase name='U:alice29.txt' />
 <testCase name='U:kennedy.xls' />
+<testCase name='U:sum' />
 
 </testSuite>
