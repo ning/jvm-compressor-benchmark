@@ -23,27 +23,37 @@ public class LzoJavaDriver extends DriverBase
     
     protected byte[] compressBlock(byte[] uncompressed) throws IOException
     {
-    // 21-Jul-2011, tatu: While this seems to work, we get hit by an OOME afterwards... strange
-        /*
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
         // Looks like we need to allocate a big buffer, and see how much data
         // we get... definitely C-style interface
         //
 
         int origLength = uncompressed.length;
-        byte[] output = new byte[origLength + compressor.getCompressionOverhead(origLength)];
+        byte[] output = new byte[8 + origLength + compressor.getCompressionOverhead(origLength)];
         lzo_uintp lengthPointer = new lzo_uintp(origLength); // ugh....
         int resultCode = compressor.compress(uncompressed, 0, origLength,
-                output, 0, lengthPointer);
+                output, 8, lengthPointer);
         if (resultCode != LzoTransformer.LZO_E_OK) {
             throw new IOException("Error code "+resultCode+" from compressor");
         }
-        return Arrays.copyOf(output, lengthPointer.value);
-        */
+        // Hmmh. Is 'value' length, or offset? Looks like length...
+        int compLength = lengthPointer.value;
 
-        return compressBlockUsingStream(uncompressed);
+        writeInt32(output, 0, origLength);
+        writeInt32(output, 4, compLength);
+        return Arrays.copyOf(output, compLength+8);
+
+//        return compressBlockUsingStream(uncompressed);
     }
 
+    private final void writeInt32(byte[] buffer, int offset, int value)
+    {
+        buffer[offset++] = (byte) (value >> 24);
+        buffer[offset++] = (byte) (value >> 16);
+        buffer[offset++] = (byte) (value >> 8);
+        buffer[offset] = (byte) value;
+    }
+    
     protected byte[] uncompressBlock(byte[] compressed) throws IOException
     {
         /* Alas, we can't really support true block decompression since we

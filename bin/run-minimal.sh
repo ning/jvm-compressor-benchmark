@@ -1,9 +1,9 @@
 #!/bin/sh
  
-echo "About to run minimal sanity test on 2 input files, couple of codecs"
+echo "About to run minimal sanity test on 3 input files, couple of codecs"
 
 java -server -cp lib/japex/\* \
- -Xmx256M \
+ -Xmx400M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=5 \

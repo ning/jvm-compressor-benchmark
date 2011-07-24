@@ -13,19 +13,25 @@ Micro-benchmark for testing performance of compressors on JVM platform
     <driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <driver name="Snappy(JNI)/block" normal="false">
-        <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
+  <driver name="LZO-java/block">
+        <description><div xmlns=""><p>LZO-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/snappy/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
   </driver>
-
   <driver name="LZO-java/stream">
         <description><div xmlns=""><p>LZO-java, streaming</p></div></description>
         <param name="streaming" value="true" />
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
+  </driver>
+
+  <driver name="Snappy(JNI)/block" normal="false">
+        <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/snappy/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
 
   <driver name="LZF/block" >

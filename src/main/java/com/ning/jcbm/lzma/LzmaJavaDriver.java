@@ -42,8 +42,10 @@ public class LzmaJavaDriver extends DriverBase
                 .useEndMarkerMode(true)
                 .useBT4MatchFinder()
                 */
-        // huge dictionary uses memory, slow; let's try smallest one first
-            .useMinimalDictionarySize()
+        // huge dictionary uses memory, slow; minimal is useless. Medium is (1 << 15), Max (1 << 28),
+        // default (1 << 23)
+            .useMediumDictionarySize()
+            .useMediumFastBytes()
                 .build();
         compressedOut.write(uncompressed);
         compressedOut.close();
