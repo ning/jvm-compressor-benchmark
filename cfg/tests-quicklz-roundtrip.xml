@@ -13,16 +13,10 @@ Micro-benchmark for testing performance of compressors on JVM platform
 
     <!-- Test cases: name has to match with filename -->
 
-<testCase name='C:flower.bmp' />
-<testCase name='C:gdb.exe' />
-<testCase name='C:northwind.mdf' />
-<testCase name='C:plaintext.txt' />
-<testCase name='C:proteins.txt' />
-
-<testCase name='U:flower.bmp' />
-<testCase name='U:gdb.exe' />
-<testCase name='U:northwind.mdf' />
-<testCase name='U:plaintext.txt' />
-<testCase name='U:proteins.txt' />
+<testCase name='R:flower.bmp' />
+<testCase name='R:gdb.exe' />
+<testCase name='R:northwind.mdf' />
+<testCase name='R:plaintext.txt' />
+<testCase name='R:proteins.txt' />
 
 </testSuite>

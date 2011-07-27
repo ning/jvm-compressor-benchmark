@@ -13,42 +13,23 @@ Micro-benchmark for testing performance of compressors on JVM platform
 
     <!-- Test cases: name has to match with filename -->
 
-<testCase name='C:bib' />
-<testCase name='C:book1' />
-<testCase name='C:book2' />
-<testCase name='C:geo' />
-<testCase name='C:news' />
-<testCase name='C:obj1' />
-<testCase name='C:obj2' />
-<testCase name='C:paper1' />
-<testCase name='C:paper2' />
-<testCase name='C:paper3' />
-<testCase name='C:paper4' />
-<testCase name='C:paper5' />
-<testCase name='C:paper6' />
-<testCase name='C:pic' />
-<testCase name='C:progc' />
-<testCase name='C:progl' />
-<testCase name='C:progp' />
-<testCase name='C:trans' />
-
-<testCase name='U:bib' />
-<testCase name='U:book1' />
-<testCase name='U:book2' />
-<testCase name='U:geo' />
-<testCase name='U:news' />
-<testCase name='U:obj1' />
-<testCase name='U:obj2' />
-<testCase name='U:paper1' />
-<testCase name='U:paper2' />
-<testCase name='U:paper3' />
-<testCase name='U:paper4' />
-<testCase name='U:paper5' />
-<testCase name='U:paper6' />
-<testCase name='U:pic' />
-<testCase name='U:progc' />
-<testCase name='U:progl' />
-<testCase name='U:progp' />
-<testCase name='U:trans' />
+<testCase name='R:bib' />
+<testCase name='R:book1' />
+<testCase name='R:book2' />
+<testCase name='R:geo' />
+<testCase name='R:news' />
+<testCase name='R:obj1' />
+<testCase name='R:obj2' />
+<testCase name='R:paper1' />
+<testCase name='R:paper2' />
+<testCase name='R:paper3' />
+<testCase name='R:paper4' />
+<testCase name='R:paper5' />
+<testCase name='R:paper6' />
+<testCase name='R:pic' />
+<testCase name='R:progc' />
+<testCase name='R:progl' />
+<testCase name='R:progp' />
+<testCase name='R:trans' />
 
 </testSuite>
