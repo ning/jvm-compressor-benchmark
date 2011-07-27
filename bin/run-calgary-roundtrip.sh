@@ -7,16 +7,16 @@ echo "About to run test on Calgary corpus files"
 # group by 6 (9 gets bit too crowded)
 
 java -server -cp lib/japex/\* \
- -Xmx400M \
+ -Xmx256M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
  -Djapex.runTime=30 \
  -Djapex.numberOfThreads=1 \
- -Djapex.reportsDirectory=reports/calgary \
+ -Djapex.reportsDirectory=reports/calgary-roundtrip \
  -Djapex.plotGroupSize=6 \
  -Djapex.inputDir="testdata/calgary" \
  com.sun.japex.Japex \
- cfg/tests-calgary.xml
+ cfg/tests-calgary-roundtrip.xml
 
 echo "Done!";

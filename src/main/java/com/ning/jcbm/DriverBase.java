@@ -23,6 +23,8 @@ public abstract class DriverBase extends JapexDriverBase
     final static double MAX_COMPRESS_THROUGHPUT = 499.9;
 
     final static double MAX_UNCOMPRESS_THROUGHPUT = 499.9;
+
+    final static double MAX_BOTH_THROUGHPUT = 299.9;
     
     protected final String _driverName;
     
@@ -108,8 +110,10 @@ public abstract class DriverBase extends JapexDriverBase
             _operation = Operation.COMPRESS;
         } else if (operStr.startsWith("U")) {
             _operation = Operation.UNCOMPRESS;            
+        } else if (operStr.startsWith("R")) {
+            _operation = Operation.ROUNDTRIP;            
         } else {
-            throw new IllegalArgumentException("Invalid 'operation' part of name, '"+operStr+"': should start with 'C' or 'U'");
+            throw new IllegalArgumentException("Invalid 'operation' part of name, '"+operStr+"': should start with 'C', 'U' or 'R'");
         }
         _inputFile = new File(_inputDir, filename); 
         try {
@@ -137,7 +141,8 @@ public abstract class DriverBase extends JapexDriverBase
         _totalLength = 0;
 
         try {
-            if (_operation == Operation.COMPRESS) {
+            switch (_operation) {
+            case COMPRESS:
                 if (_streaming) {
                     DevNullOutputStream out = new DevNullOutputStream();
                     compressToStream(_uncompressed, out);
@@ -147,13 +152,28 @@ public abstract class DriverBase extends JapexDriverBase
                     byte[] stuff = compressBlock(_uncompressed);
                     _totalLength = stuff.length;
                 }
-            } else { // uncompress
+                break;
+            case UNCOMPRESS:
                 if (_streaming) {
                     ByteArrayInputStream in = new ByteArrayInputStream(_compressed);
                     _totalLength = uncompressFromStream(in, _inputBuffer);
                     in.close();
                 } else {
                     byte[] stuff = uncompressBlock(_compressed);
+                    _totalLength = stuff.length;
+                }
+                break;
+            default:
+                if (_streaming) { // just use bogus stream here too
+                    DevNullOutputStream out = new DevNullOutputStream();
+                    compressToStream(_uncompressed, out);
+                    out.close();
+                    ByteArrayInputStream in = new ByteArrayInputStream(_compressed);
+                    _totalLength = uncompressFromStream(in, _inputBuffer);
+                    in.close();
+                } else {
+                    byte[] stuff = compressBlock(_uncompressed);
+                    stuff = uncompressBlock(stuff);
                     _totalLength = stuff.length;
                 }
             }
@@ -182,7 +202,14 @@ public abstract class DriverBase extends JapexDriverBase
         double throughputMBps = itersPerSec * _uncompressed.length / (1024.0 * 1024.0);
 
         // truncate outliers (see javadocs for MAX values)
-        double MAX = (_operation == Operation.COMPRESS) ? MAX_COMPRESS_THROUGHPUT : MAX_UNCOMPRESS_THROUGHPUT;
+        double MAX;
+        if (_operation == Operation.COMPRESS) {
+            MAX = MAX_COMPRESS_THROUGHPUT;
+        } else if (_operation == Operation.UNCOMPRESS) {
+            MAX = MAX_UNCOMPRESS_THROUGHPUT;
+        } else {
+            MAX = MAX_BOTH_THROUGHPUT;
+        }
         if (throughputMBps > MAX) {
             throughputMBps = MAX;
         }

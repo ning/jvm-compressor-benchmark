@@ -6,16 +6,16 @@ echo "About to run test with 'maximum compression' test data"
 # Since there are 10 input files, 2 modes (comp/uncomp), group by 5
 
 java -server -cp lib/japex/\*   \
- -Xmx128M \
+ -Xmx256M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
  -Djapex.runTime=30 \
  -Djapex.numberOfThreads=1 \
- -Djapex.reportsDirectory=reports/maxcomp \
+ -Djapex.reportsDirectory=reports/maxcomp-roundtrip \
  -Djapex.plotGroupSize=5 \
  -Djapex.inputDir="testdata/maximumcompression" \
  com.sun.japex.Japex \
- cfg/tests-max-comp.xml
+ cfg/tests-max-comp-roundtrip.xml
 
 echo "Done!";

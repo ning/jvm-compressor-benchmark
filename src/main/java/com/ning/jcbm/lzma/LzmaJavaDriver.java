@@ -21,16 +21,16 @@ public class LzmaJavaDriver extends DriverBase
 
     // No native Block API; but need some impl for test framework
     
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException {
+    public byte[] compressBlock(byte[] uncompressed) throws IOException {
         return compressBlockUsingStream(uncompressed);
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException {
+    public byte[] uncompressBlock(byte[] compressed) throws IOException {
         return uncompressBlockUsingStream(
                 new LzmaInputStream(new ByteArrayInputStream(compressed), getDecoder()));
     }
 
-    protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
+    public void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
         LzmaOutputStream compressedOut = new LzmaOutputStream.Builder(
                 // do we really need compressed stream here? probably not, it's ByteArrayOutputStream
@@ -51,7 +51,7 @@ public class LzmaJavaDriver extends DriverBase
         compressedOut.close();
     }
     
-    protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
+    public int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
         // as above, we get a ByteArrayInputStream so no buffering needed:
         // (but would reuse of Decoder help?)

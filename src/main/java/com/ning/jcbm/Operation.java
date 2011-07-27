@@ -6,6 +6,7 @@ package com.ning.jcbm;
  */
 public enum Operation {
     COMPRESS,
-    UNCOMPRESS
+    UNCOMPRESS,
+    ROUNDTRIP
     ;
 }
