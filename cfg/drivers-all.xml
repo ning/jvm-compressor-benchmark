@@ -17,7 +17,7 @@
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
 
-<!-- 02-Apr-2011, tatu: due to JNI issues, can only include one Snappy test
+
   <driver name="Snappy(JNI)/stream" normal="false">
         <description><div xmlns=""><p>Snappy-java, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -25,7 +25,7 @@
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
--->
+
   <driver name="LZO-java/block">
         <description><div xmlns=""><p>LZO-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
