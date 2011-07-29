@@ -1,0 +1,487 @@
+<testSuiteReport name="Test suite for JVM compressors" xmlns="http://www.sun.com/japex/testSuiteReport">
+<description xmlns="http://www.sun.com/japex/testSuite">
+
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</description>  <chartType>barchart</chartType>
+  <configFile>tests-quicklz-roundtrip.xml</configFile>
+  <dateTime>26 Jul 2011/22:12:16 PDT</dateTime>
+  <hostName>TS-MacMini.local</hostName>
+  <inputDir>testdata/quicklz</inputDir>
+  <numberOfCpus>2</numberOfCpus>
+  <numberOfThreads>1</numberOfThreads>
+  <osArchitecture>x86_64</osArchitecture>
+  <osName>Mac OS X</osName>
+  <plotDrivers>false</plotDrivers>
+  <plotGroupSize>5</plotGroupSize>
+  <reportsDirectory>reports/quicklz-roundtrip</reportsDirectory>
+  <resultAxis>normal</resultAxis>
+  <resultAxisX>normal</resultAxisX>
+  <resultUnit>TPS</resultUnit>
+  <runTime>30</runTime>
+  <runsPerDriver>1</runsPerDriver>
+  <singleClassLoader>false</singleClassLoader>
+  <version>1.2.2</version>
+  <vmInfo>Apple Inc. 20.1-b02-384</vmInfo>
+  <warmupTime>7</warmupTime>
+  <warmupsPerDriver>0</warmupsPerDriver>
+  <driver name="Snappy(JNI)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-java, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/snappy/*.jar</classPath>
+    <driverClass>com.ning.jcbm.snappy.SnappyDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="LZO-java/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzo-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzo.LzoJavaDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="LZO-java/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzo-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzo.LzoJavaDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="LZF/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="LZF/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L1/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 1), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver1</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L3/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver3</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="Gzip/JDK/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.gzip.JDKGzipDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="Gzip/jzlib/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JCraft's jzlib (gzip), streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jzlib/*.jar</classPath>
+    <driverClass>com.ning.jcbm.gzip.JCraftGzipDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="BZip2/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jakarta/*.jar</classPath>
+    <driverClass>com.ning.jcbm.bzip2.BZip2Driver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="LZMA-orig/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzma/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzma.LzmaDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+  <driver name="LZMA-java/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZMA-java, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzma-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzma.LzmaJavaDriver</driverClass>
+    <resultAritMean>NaN</resultAritMean>
+    <resultGeomMean>NaN</resultGeomMean>
+    <resultHarmMean>NaN</resultHarmMean>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>0</resultIterations>
+      <resultTime>NaN</resultTime>
+      <resultValue>NaN</resultValue>
+    </testCase>
+  </driver>
+</testSuiteReport>

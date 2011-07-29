@@ -1,0 +1,584 @@
+<testSuiteReport name="Test suite for JVM compressors" xmlns="http://www.sun.com/japex/testSuiteReport">
+<description xmlns="http://www.sun.com/japex/testSuite">
+
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</description>  <chartType>barchart</chartType>
+  <configFile>tests-quicklz-roundtrip.xml</configFile>
+  <dateTime>26 Jul 2011/22:13:04 PDT</dateTime>
+  <hostName>TS-MacMini.local</hostName>
+  <inputDir>testdata/quicklz</inputDir>
+  <numberOfCpus>2</numberOfCpus>
+  <numberOfThreads>1</numberOfThreads>
+  <osArchitecture>x86_64</osArchitecture>
+  <osName>Mac OS X</osName>
+  <plotDrivers>false</plotDrivers>
+  <plotGroupSize>5</plotGroupSize>
+  <reportsDirectory>reports/quicklz-roundtrip</reportsDirectory>
+  <resultAxis>normal</resultAxis>
+  <resultAxisX>normal</resultAxisX>
+  <resultUnit>TPS</resultUnit>
+  <resultUnitX>Size%</resultUnitX>
+  <runTime>30</runTime>
+  <runsPerDriver>1</runsPerDriver>
+  <singleClassLoader>false</singleClassLoader>
+  <version>1.2.2</version>
+  <vmInfo>Apple Inc. 20.1-b02-384</vmInfo>
+  <warmupTime>7</warmupTime>
+  <warmupsPerDriver>0</warmupsPerDriver>
+  <driver name="Snappy(JNI)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-java, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/snappy/*.jar</classPath>
+    <driverClass>com.ning.jcbm.snappy.SnappyDriver</driverClass>
+    <resultAritMean>84.026</resultAritMean>
+    <resultAritMeanX>52.952</resultAritMeanX>
+    <resultGeomMean>81.159</resultGeomMean>
+    <resultGeomMeanX>48.834</resultGeomMeanX>
+    <resultHarmMean>78.957</resultHarmMean>
+    <resultHarmMeanX>45.036</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>369</resultIterations>
+      <resultTime>30.015</resultTime>
+      <resultValue>69.442</resultValue>
+      <resultValueX>90.657</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>252</resultIterations>
+      <resultTime>30.042</resultTime>
+      <resultValue>70.977</resultValue>
+      <resultValueX>51.066</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>1517</resultIterations>
+      <resultTime>29.97</resultTime>
+      <resultValue>132.871</resultValue>
+      <resultValueX>26.392</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>756</resultIterations>
+      <resultTime>29.986</resultTime>
+      <resultValue>69.716</resultValue>
+      <resultValueX>56.197</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>334</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>77.124</resultValue>
+      <resultValueX>40.448</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZO-java/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzo-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzo.LzoJavaDriver</driverClass>
+    <resultAritMean>57.299</resultAritMean>
+    <resultAritMeanX>52.794</resultAritMeanX>
+    <resultGeomMean>49.164</resultGeomMean>
+    <resultGeomMeanX>47.237</resultGeomMeanX>
+    <resultHarmMean>43.696</resultHarmMean>
+    <resultHarmMeanX>42.466</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>657</resultIterations>
+      <resultTime>29.979</resultTime>
+      <resultValue>123.788</resultValue>
+      <resultValueX>100.255</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>138</resultIterations>
+      <resultTime>30.143</resultTime>
+      <resultValue>38.739</resultValue>
+      <resultValueX>48.129</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>696</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>60.95</resultValue>
+      <resultValueX>23.41</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>377</resultIterations>
+      <resultTime>30.048</resultTime>
+      <resultValue>34.693</resultValue>
+      <resultValueX>52.578</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>123</resultIterations>
+      <resultTime>30.043</resultTime>
+      <resultValue>28.326</resultValue>
+      <resultValueX>39.599</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZO-java/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzo-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzo.LzoJavaDriver</driverClass>
+    <resultAritMean>68.72</resultAritMean>
+    <resultAritMeanX>52.794</resultAritMeanX>
+    <resultGeomMean>62.459</resultGeomMean>
+    <resultGeomMeanX>47.237</resultGeomMeanX>
+    <resultHarmMean>57.372</resultHarmMean>
+    <resultHarmMeanX>42.466</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>643</resultIterations>
+      <resultTime>29.946</resultTime>
+      <resultValue>121.284</resultValue>
+      <resultValueX>100.255</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>189</resultIterations>
+      <resultTime>30.044</resultTime>
+      <resultValue>53.23</resultValue>
+      <resultValueX>48.129</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>985</resultIterations>
+      <resultTime>29.983</resultTime>
+      <resultValue>86.237</resultValue>
+      <resultValueX>23.41</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>481</resultIterations>
+      <resultTime>29.993</resultTime>
+      <resultValue>44.345</resultValue>
+      <resultValueX>52.578</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>167</resultIterations>
+      <resultTime>30.009</resultTime>
+      <resultValue>38.502</resultValue>
+      <resultValueX>39.599</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>59.741</resultAritMean>
+    <resultAritMeanX>52.702</resultAritMeanX>
+    <resultGeomMean>54.017</resultGeomMean>
+    <resultGeomMeanX>48.56</resultGeomMeanX>
+    <resultHarmMean>48.313</resultHarmMean>
+    <resultHarmMeanX>44.623</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>135</resultIterations>
+      <resultTime>30.219</resultTime>
+      <resultValue>25.234</resultValue>
+      <resultValueX>87.959</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>167</resultIterations>
+      <resultTime>30.003</resultTime>
+      <resultValue>47.098</resultValue>
+      <resultValueX>51.894</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>1151</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>100.823</resultValue>
+      <resultValueX>25.897</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>571</resultIterations>
+      <resultTime>29.992</resultTime>
+      <resultValue>52.645</resultValue>
+      <resultValueX>59.122</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>316</resultIterations>
+      <resultTime>29.989</resultTime>
+      <resultValue>72.903</resultValue>
+      <resultValueX>38.637</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>68.157</resultAritMean>
+    <resultAritMeanX>52.702</resultAritMeanX>
+    <resultGeomMean>65.441</resultGeomMean>
+    <resultGeomMeanX>48.56</resultGeomMeanX>
+    <resultHarmMean>63.032</resultHarmMean>
+    <resultHarmMeanX>44.623</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>246</resultIterations>
+      <resultTime>29.992</resultTime>
+      <resultValue>46.329</resultValue>
+      <resultValueX>87.959</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>220</resultIterations>
+      <resultTime>30.073</resultTime>
+      <resultValue>61.901</resultValue>
+      <resultValueX>51.894</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>1179</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>103.284</resultValue>
+      <resultValueX>25.897</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>579</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>53.423</resultValue>
+      <resultValueX>59.122</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>329</resultIterations>
+      <resultTime>30.01</resultTime>
+      <resultValue>75.848</resultValue>
+      <resultValueX>38.637</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L1/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 1), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver1</driverClass>
+    <resultAritMean>44.11</resultAritMean>
+    <resultAritMeanX>47.811</resultAritMeanX>
+    <resultGeomMean>41.77</resultGeomMean>
+    <resultGeomMeanX>43.485</resultGeomMeanX>
+    <resultHarmMean>39.422</resultHarmMean>
+    <resultHarmMeanX>39.615</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>129</resultIterations>
+      <resultTime>30.023</resultTime>
+      <resultValue>24.27</resultValue>
+      <resultValueX>85.832</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>143</resultIterations>
+      <resultTime>30.129</resultTime>
+      <resultValue>40.16</resultValue>
+      <resultValueX>45.717</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>758</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>66.41</resultValue>
+      <resultValueX>22.551</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>412</resultIterations>
+      <resultTime>30.019</resultTime>
+      <resultValue>37.951</resultValue>
+      <resultValueX>49.348</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>225</resultIterations>
+      <resultTime>30.075</resultTime>
+      <resultValue>51.76</resultValue>
+      <resultValueX>35.608</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L3/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver3</driverClass>
+    <resultAritMean>14.29</resultAritMean>
+    <resultAritMeanX>39.945</resultAritMeanX>
+    <resultGeomMean>13.971</resultGeomMean>
+    <resultGeomMeanX>36.555</resultGeomMeanX>
+    <resultHarmMean>13.674</resultHarmMean>
+    <resultHarmMeanX>33.565</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>55</resultIterations>
+      <resultTime>30.082</resultTime>
+      <resultValue>10.327</resultValue>
+      <resultValueX>71.76</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>48</resultIterations>
+      <resultTime>30.507</resultTime>
+      <resultValue>13.314</resultValue>
+      <resultValueX>40.151</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>228</resultIterations>
+      <resultTime>29.998</resultTime>
+      <resultValue>19.952</resultValue>
+      <resultValueX>19.417</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>151</resultIterations>
+      <resultTime>30.13</resultTime>
+      <resultValue>13.858</resultValue>
+      <resultValueX>35.879</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>61</resultIterations>
+      <resultTime>30.146</resultTime>
+      <resultValue>14</resultValue>
+      <resultValueX>32.517</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/JDK/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.gzip.JDKGzipDriver</driverClass>
+    <resultAritMean>13.784</resultAritMean>
+    <resultAritMeanX>33.241</resultAritMeanX>
+    <resultGeomMean>13.436</resultGeomMean>
+    <resultGeomMeanX>29.912</resultGeomMeanX>
+    <resultHarmMean>13.141</resultHarmMean>
+    <resultHarmMeanX>27.17</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>71</resultIterations>
+      <resultTime>30.244</resultTime>
+      <resultValue>13.26</resultValue>
+      <resultValueX>63.107</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>40</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>11.294</resultValue>
+      <resultValueX>33.493</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>230</resultIterations>
+      <resultTime>29.996</resultTime>
+      <resultValue>20.128</resultValue>
+      <resultValueX>15.799</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>146</resultIterations>
+      <resultTime>30.164</resultTime>
+      <resultValue>13.384</resultValue>
+      <resultValueX>29.476</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>47</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>10.853</resultValue>
+      <resultValueX>24.328</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/jzlib/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JCraft's jzlib (gzip), streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jzlib/*.jar</classPath>
+    <driverClass>com.ning.jcbm.gzip.JCraftGzipDriver</driverClass>
+    <resultAritMean>12.908</resultAritMean>
+    <resultAritMeanX>33.517</resultAritMeanX>
+    <resultGeomMean>12.458</resultGeomMean>
+    <resultGeomMeanX>30.223</resultGeomMeanX>
+    <resultHarmMean>12.061</resultHarmMean>
+    <resultHarmMeanX>27.476</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>47</resultIterations>
+      <resultTime>30.276</resultTime>
+      <resultValue>8.769</resultValue>
+      <resultValueX>63.111</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>40</resultIterations>
+      <resultTime>30.407</resultTime>
+      <resultValue>11.131</resultValue>
+      <resultValueX>33.813</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>224</resultIterations>
+      <resultTime>30.072</resultTime>
+      <resultValue>19.553</resultValue>
+      <resultValueX>15.922</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>133</resultIterations>
+      <resultTime>30.099</resultTime>
+      <resultValue>12.219</resultValue>
+      <resultValueX>29.994</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>56</resultIterations>
+      <resultTime>30.107</resultTime>
+      <resultValue>12.869</resultValue>
+      <resultValueX>24.745</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="BZip2/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jakarta/*.jar</classPath>
+    <driverClass>com.ning.jcbm.bzip2.BZip2Driver</driverClass>
+    <resultAritMean>4.218</resultAritMean>
+    <resultAritMeanX>25.953</resultAritMeanX>
+    <resultGeomMean>4.162</resultGeomMean>
+    <resultGeomMeanX>23.926</resultGeomMeanX>
+    <resultHarmMean>4.114</resultHarmMean>
+    <resultHarmMeanX>22.113</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>20</resultIterations>
+      <resultTime>30.899</resultTime>
+      <resultValue>3.656</resultValue>
+      <resultValueX>43.284</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>14</resultIterations>
+      <resultTime>31.291</resultTime>
+      <resultValue>3.786</resultValue>
+      <resultValueX>30.994</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>65</resultIterations>
+      <resultTime>30.1</resultTime>
+      <resultValue>5.669</resultValue>
+      <resultValueX>14.168</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>43</resultIterations>
+      <resultTime>30.269</resultTime>
+      <resultValue>3.928</resultValue>
+      <resultValueX>24.445</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>18</resultIterations>
+      <resultTime>30.738</resultTime>
+      <resultValue>4.051</resultValue>
+      <resultValueX>16.875</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZMA-orig/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzma/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzma.LzmaDriver</driverClass>
+    <resultAritMean>0.759</resultAritMean>
+    <resultAritMeanX>21.946</resultAritMeanX>
+    <resultGeomMean>0.729</resultGeomMean>
+    <resultGeomMeanX>19.076</resultGeomMeanX>
+    <resultHarmMean>0.698</resultHarmMean>
+    <resultHarmMeanX>17.02</resultHarmMeanX>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>5</resultIterations>
+      <resultTime>34.072</resultTime>
+      <resultValue>0.829</resultValue>
+      <resultValueX>46.066</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>3</resultIterations>
+      <resultTime>33.102</resultTime>
+      <resultValue>0.767</resultValue>
+      <resultValueX>20.829</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>13</resultIterations>
+      <resultTime>31.138</resultTime>
+      <resultValue>1.096</resultValue>
+      <resultValueX>10.675</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>8</resultIterations>
+      <resultTime>33.872</resultTime>
+      <resultValue>0.653</resultValue>
+      <resultValueX>19.529</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>2</resultIterations>
+      <resultTime>30.57</resultTime>
+      <resultValue>0.453</resultValue>
+      <resultValueX>12.63</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZMA-java/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZMA-java, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzma-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzma.LzmaJavaDriver</driverClass>
+    <resultAritMean>1.202</resultAritMean>
+    <resultAritMeanX>25.851</resultAritMeanX>
+    <resultGeomMean>1.162</resultGeomMean>
+    <resultGeomMeanX>22.856</resultGeomMeanX>
+    <resultHarmMean>1.118</resultHarmMean>
+    <resultHarmMeanX>20.405</resultHarmMeanX>
+    <streaming xmlns="">true</streaming>
+    <testCase name="R:flower.bmp">
+      <resultIterations>7</resultIterations>
+      <resultTime>31.473</resultTime>
+      <resultValue>1.256</resultValue>
+      <resultValueX>49.73</resultValueX>
+    </testCase>
+    <testCase name="R:gdb.exe">
+      <resultIterations>4</resultIterations>
+      <resultTime>31.748</resultTime>
+      <resultValue>1.066</resultValue>
+      <resultValueX>25.751</resultValueX>
+    </testCase>
+    <testCase name="R:northwind.mdf">
+      <resultIterations>19</resultIterations>
+      <resultTime>30.291</resultTime>
+      <resultValue>1.647</resultValue>
+      <resultValueX>12.212</resultValueX>
+    </testCase>
+    <testCase name="R:plaintext.txt">
+      <resultIterations>15</resultIterations>
+      <resultTime>31.669</resultTime>
+      <resultValue>1.31</resultValue>
+      <resultValueX>26.524</resultValueX>
+    </testCase>
+    <testCase name="R:proteins.txt">
+      <resultIterations>4</resultIterations>
+      <resultTime>37.794</resultTime>
+      <resultValue>0.732</resultValue>
+      <resultValueX>15.036</resultValueX>
+    </testCase>
+  </driver>
+</testSuiteReport>

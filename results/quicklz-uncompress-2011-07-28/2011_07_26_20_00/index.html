@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:extrep="http://www.sun.com/japex/extendedTestSuiteReport" xmlns:suite="http://www.sun.com/japex/testSuite" xmlns:rep="http://www.sun.com/japex/testSuiteReport" xmlns="http://www.w3.org/1999/xhtml">
+<link href="report.css" type="text/css" rel="stylesheet"/>
+<body>
+<table border="0" cellpadding="2">
+<tr>
+<td valign="middle" width="90">
+<p>
+<a href="https://japex.dev.java.net">
+<img src="small_japex.gif" align="middle" border="0"/>
+</a>
+</p>
+</td>
+<td valign="middle">
+<h1>Japex Report: Test suite for JVM compressors</h1>
+</td>
+</tr>
+</table>
+<h2>Description</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</div>
+<h2>Global Parameters</h2>
+<ul>
+<li>configFile: <a href="tests-quicklz-uncompress.xml">tests-quicklz-uncompress.xml</a>
+</li>
+<li>chartType: barchart</li>
+<li>dateTime: 26 Jul 2011/20:00:34 PDT</li>
+<li>hostName: TS-MacMini.local</li>
+<li>inputDir: testdata/quicklz</li>
+<li>numberOfCpus: 2</li>
+<li>numberOfThreads: 1</li>
+<li>osArchitecture: x86_64</li>
+<li>osName: Mac OS X</li>
+<li>plotDrivers: false</li>
+<li>plotGroupSize: 5</li>
+<li>reportsDirectory: reports/quicklz-uncompress</li>
+<li>resultAxis: normal</li>
+<li>resultAxisX: normal</li>
+<li>resultUnit: TPS</li>
+<li>resultUnitX: Size%</li>
+<li>runTime: 30</li>
+<li>runsPerDriver: 1</li>
+<li>singleClassLoader: false</li>
+<li>version: 1.2.2</li>
+<li>vmInfo: Apple Inc. 20.1-b02-384</li>
+<li>warmupTime: 7</li>
+<li>warmupsPerDriver: 0</li>
+</ul>
+<h2>Result Summary 
+        (TPS)</h2>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th width="15%">
+<b>driver</b>
+</th>
+<th>
+<b>resultAritMean</b>
+</th>
+<th>
+<b>resultAritMeanX</b>
+</th>
+<th>
+<b>resultGeomMean</b>
+</th>
+<th>
+<b>resultGeomMeanX</b>
+</th>
+<th>
+<b>resultHarmMean</b>
+</th>
+<th>
+<b>resultHarmMeanX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Snappy(JNI)/block</td>
+<td align="right">
+<nobr>390.497</nobr>
+</td>
+<td align="right">
+<nobr>52.952</nobr>
+</td>
+<td align="right">
+<nobr>385.749</nobr>
+</td>
+<td align="right">
+<nobr>48.834</nobr>
+</td>
+<td align="right">
+<nobr>381.297</nobr>
+</td>
+<td align="right">
+<nobr>45.036</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZO-java/block</td>
+<td align="right">
+<nobr>87.81</nobr>
+</td>
+<td align="right">
+<nobr>52.794</nobr>
+</td>
+<td align="right">
+<nobr>86.084</nobr>
+</td>
+<td align="right">
+<nobr>47.237</nobr>
+</td>
+<td align="right">
+<nobr>84.331</nobr>
+</td>
+<td align="right">
+<nobr>42.466</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZO-java/stream</td>
+<td align="right">
+<nobr>189.833</nobr>
+</td>
+<td align="right">
+<nobr>52.794</nobr>
+</td>
+<td align="right">
+<nobr>169.872</nobr>
+</td>
+<td align="right">
+<nobr>47.237</nobr>
+</td>
+<td align="right">
+<nobr>152.955</nobr>
+</td>
+<td align="right">
+<nobr>42.466</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/block</td>
+<td align="right">
+<nobr>191.279</nobr>
+</td>
+<td align="right">
+<nobr>52.702</nobr>
+</td>
+<td align="right">
+<nobr>187.573</nobr>
+</td>
+<td align="right">
+<nobr>48.56</nobr>
+</td>
+<td align="right">
+<nobr>184.248</nobr>
+</td>
+<td align="right">
+<nobr>44.623</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/stream</td>
+<td align="right">
+<nobr>210.994</nobr>
+</td>
+<td align="right">
+<nobr>52.702</nobr>
+</td>
+<td align="right">
+<nobr>205.958</nobr>
+</td>
+<td align="right">
+<nobr>48.56</nobr>
+</td>
+<td align="right">
+<nobr>201.4</nobr>
+</td>
+<td align="right">
+<nobr>44.623</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">QuickLZ/L1/block</td>
+<td align="right">
+<nobr>93.268</nobr>
+</td>
+<td align="right">
+<nobr>47.811</nobr>
+</td>
+<td align="right">
+<nobr>88.258</nobr>
+</td>
+<td align="right">
+<nobr>43.485</nobr>
+</td>
+<td align="right">
+<nobr>83.614</nobr>
+</td>
+<td align="right">
+<nobr>39.615</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">QuickLZ/L3/block</td>
+<td align="right">
+<nobr>132.24</nobr>
+</td>
+<td align="right">
+<nobr>39.945</nobr>
+</td>
+<td align="right">
+<nobr>126.64</nobr>
+</td>
+<td align="right">
+<nobr>36.555</nobr>
+</td>
+<td align="right">
+<nobr>120.889</nobr>
+</td>
+<td align="right">
+<nobr>33.565</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Gzip/JDK/stream</td>
+<td align="right">
+<nobr>154.278</nobr>
+</td>
+<td align="right">
+<nobr>33.241</nobr>
+</td>
+<td align="right">
+<nobr>146.726</nobr>
+</td>
+<td align="right">
+<nobr>29.912</nobr>
+</td>
+<td align="right">
+<nobr>138.742</nobr>
+</td>
+<td align="right">
+<nobr>27.17</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Gzip/jzlib/stream</td>
+<td align="right">
+<nobr>77.716</nobr>
+</td>
+<td align="right">
+<nobr>33.517</nobr>
+</td>
+<td align="right">
+<nobr>73.125</nobr>
+</td>
+<td align="right">
+<nobr>30.223</nobr>
+</td>
+<td align="right">
+<nobr>68.416</nobr>
+</td>
+<td align="right">
+<nobr>27.476</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">BZip2/stream</td>
+<td align="right">
+<nobr>19.959</nobr>
+</td>
+<td align="right">
+<nobr>25.953</nobr>
+</td>
+<td align="right">
+<nobr>19.315</nobr>
+</td>
+<td align="right">
+<nobr>23.926</nobr>
+</td>
+<td align="right">
+<nobr>18.691</nobr>
+</td>
+<td align="right">
+<nobr>22.113</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZMA-orig/block</td>
+<td align="right">
+<nobr>22.832</nobr>
+</td>
+<td align="right">
+<nobr>21.946</nobr>
+</td>
+<td align="right">
+<nobr>21.546</nobr>
+</td>
+<td align="right">
+<nobr>19.076</nobr>
+</td>
+<td align="right">
+<nobr>20.15</nobr>
+</td>
+<td align="right">
+<nobr>17.02</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZMA-java/stream</td>
+<td align="right">
+<nobr>15.679</nobr>
+</td>
+<td align="right">
+<nobr>25.851</nobr>
+</td>
+<td align="right">
+<nobr>14.955</nobr>
+</td>
+<td align="right">
+<nobr>22.856</nobr>
+</td>
+<td align="right">
+<nobr>14.188</nobr>
+</td>
+<td align="right">
+<nobr>20.405</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<br/>
+<center>
+<img src="result.jpg"/>
+</center>
+<br/>
+<br/>
+<h2>Driver: Snappy(JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/snappy/*.jar</li>
+<li>driverClass: com.ning.jcbm.snappy.SnappyDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>1760</nobr>
+</td>
+<td align="right">
+<nobr>29.967</nobr>
+</td>
+<td align="right">
+<nobr>331.742</nobr>
+</td>
+<td align="right">
+<nobr>90.657</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>1157</nobr>
+</td>
+<td align="right">
+<nobr>29.979</nobr>
+</td>
+<td align="right">
+<nobr>326.566</nobr>
+</td>
+<td align="right">
+<nobr>51.066</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>6138</nobr>
+</td>
+<td align="right">
+<nobr>29.96</nobr>
+</td>
+<td align="right">
+<nobr>499.9</nobr>
+</td>
+<td align="right">
+<nobr>26.392</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>4281</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>395.039</nobr>
+</td>
+<td align="right">
+<nobr>56.197</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>1729</nobr>
+</td>
+<td align="right">
+<nobr>29.963</nobr>
+</td>
+<td align="right">
+<nobr>399.237</nobr>
+</td>
+<td align="right">
+<nobr>40.448</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZO-java/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzo-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzo.LzoJavaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>551</nobr>
+</td>
+<td align="right">
+<nobr>29.989</nobr>
+</td>
+<td align="right">
+<nobr>103.78</nobr>
+</td>
+<td align="right">
+<nobr>100.255</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>235</nobr>
+</td>
+<td align="right">
+<nobr>30.069</nobr>
+</td>
+<td align="right">
+<nobr>66.131</nobr>
+</td>
+<td align="right">
+<nobr>48.129</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>1221</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>106.933</nobr>
+</td>
+<td align="right">
+<nobr>23.41</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>1006</nobr>
+</td>
+<td align="right">
+<nobr>29.987</nobr>
+</td>
+<td align="right">
+<nobr>92.766</nobr>
+</td>
+<td align="right">
+<nobr>52.578</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>301</nobr>
+</td>
+<td align="right">
+<nobr>29.991</nobr>
+</td>
+<td align="right">
+<nobr>69.437</nobr>
+</td>
+<td align="right">
+<nobr>39.599</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZO-java/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzo-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzo.LzoJavaDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>1782</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>335.877</nobr>
+</td>
+<td align="right">
+<nobr>100.255</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>321</nobr>
+</td>
+<td align="right">
+<nobr>30.011</nobr>
+</td>
+<td align="right">
+<nobr>90.507</nobr>
+</td>
+<td align="right">
+<nobr>48.129</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>2846</nobr>
+</td>
+<td align="right">
+<nobr>29.963</nobr>
+</td>
+<td align="right">
+<nobr>249.33</nobr>
+</td>
+<td align="right">
+<nobr>23.41</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>1421</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>131.125</nobr>
+</td>
+<td align="right">
+<nobr>52.578</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>617</nobr>
+</td>
+<td align="right">
+<nobr>29.993</nobr>
+</td>
+<td align="right">
+<nobr>142.326</nobr>
+</td>
+<td align="right">
+<nobr>39.599</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>923</nobr>
+</td>
+<td align="right">
+<nobr>29.975</nobr>
+</td>
+<td align="right">
+<nobr>173.927</nobr>
+</td>
+<td align="right">
+<nobr>87.959</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>596</nobr>
+</td>
+<td align="right">
+<nobr>29.955</nobr>
+</td>
+<td align="right">
+<nobr>168.358</nobr>
+</td>
+<td align="right">
+<nobr>51.894</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>2999</nobr>
+</td>
+<td align="right">
+<nobr>29.955</nobr>
+</td>
+<td align="right">
+<nobr>262.81</nobr>
+</td>
+<td align="right">
+<nobr>25.897</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>1621</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>149.567</nobr>
+</td>
+<td align="right">
+<nobr>59.122</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>874</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>201.734</nobr>
+</td>
+<td align="right">
+<nobr>38.637</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>959</nobr>
+</td>
+<td align="right">
+<nobr>29.947</nobr>
+</td>
+<td align="right">
+<nobr>180.88</nobr>
+</td>
+<td align="right">
+<nobr>87.959</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>671</nobr>
+</td>
+<td align="right">
+<nobr>29.986</nobr>
+</td>
+<td align="right">
+<nobr>189.344</nobr>
+</td>
+<td align="right">
+<nobr>51.894</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>3362</nobr>
+</td>
+<td align="right">
+<nobr>29.957</nobr>
+</td>
+<td align="right">
+<nobr>294.596</nobr>
+</td>
+<td align="right">
+<nobr>25.897</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>1720</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>158.698</nobr>
+</td>
+<td align="right">
+<nobr>59.122</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>1002</nobr>
+</td>
+<td align="right">
+<nobr>29.952</nobr>
+</td>
+<td align="right">
+<nobr>231.45</nobr>
+</td>
+<td align="right">
+<nobr>38.637</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: QuickLZ/L1/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 1), block mode
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.quicklz.QuickLZDriver1</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>301</nobr>
+</td>
+<td align="right">
+<nobr>30.041</nobr>
+</td>
+<td align="right">
+<nobr>56.596</nobr>
+</td>
+<td align="right">
+<nobr>85.832</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>242</nobr>
+</td>
+<td align="right">
+<nobr>30.061</nobr>
+</td>
+<td align="right">
+<nobr>68.119</nobr>
+</td>
+<td align="right">
+<nobr>45.717</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>1621</nobr>
+</td>
+<td align="right">
+<nobr>29.961</nobr>
+</td>
+<td align="right">
+<nobr>142.024</nobr>
+</td>
+<td align="right">
+<nobr>22.551</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>937</nobr>
+</td>
+<td align="right">
+<nobr>29.991</nobr>
+</td>
+<td align="right">
+<nobr>86.391</nobr>
+</td>
+<td align="right">
+<nobr>49.348</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>491</nobr>
+</td>
+<td align="right">
+<nobr>30.006</nobr>
+</td>
+<td align="right">
+<nobr>113.212</nobr>
+</td>
+<td align="right">
+<nobr>35.608</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: QuickLZ/L3/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.quicklz.QuickLZDriver3</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>410</nobr>
+</td>
+<td align="right">
+<nobr>30.002</nobr>
+</td>
+<td align="right">
+<nobr>77.19</nobr>
+</td>
+<td align="right">
+<nobr>71.76</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>400</nobr>
+</td>
+<td align="right">
+<nobr>29.998</nobr>
+</td>
+<td align="right">
+<nobr>112.828</nobr>
+</td>
+<td align="right">
+<nobr>40.151</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>2187</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>191.558</nobr>
+</td>
+<td align="right">
+<nobr>19.417</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>1463</nobr>
+</td>
+<td align="right">
+<nobr>29.962</nobr>
+</td>
+<td align="right">
+<nobr>135.019</nobr>
+</td>
+<td align="right">
+<nobr>35.879</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>627</nobr>
+</td>
+<td align="right">
+<nobr>29.999</nobr>
+</td>
+<td align="right">
+<nobr>144.603</nobr>
+</td>
+<td align="right">
+<nobr>32.517</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Gzip/JDK/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.gzip.JDKGzipDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>445</nobr>
+</td>
+<td align="right">
+<nobr>29.985</nobr>
+</td>
+<td align="right">
+<nobr>83.827</nobr>
+</td>
+<td align="right">
+<nobr>63.107</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>486</nobr>
+</td>
+<td align="right">
+<nobr>29.984</nobr>
+</td>
+<td align="right">
+<nobr>137.151</nobr>
+</td>
+<td align="right">
+<nobr>33.493</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>2589</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>226.766</nobr>
+</td>
+<td align="right">
+<nobr>15.799</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>1644</nobr>
+</td>
+<td align="right">
+<nobr>29.965</nobr>
+</td>
+<td align="right">
+<nobr>151.71</nobr>
+</td>
+<td align="right">
+<nobr>29.476</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>745</nobr>
+</td>
+<td align="right">
+<nobr>29.979</nobr>
+</td>
+<td align="right">
+<nobr>171.935</nobr>
+</td>
+<td align="right">
+<nobr>24.328</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Gzip/jzlib/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JCraft's jzlib (gzip), streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/jzlib/*.jar</li>
+<li>driverClass: com.ning.jcbm.gzip.JCraftGzipDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>214</nobr>
+</td>
+<td align="right">
+<nobr>30.055</nobr>
+</td>
+<td align="right">
+<nobr>40.219</nobr>
+</td>
+<td align="right">
+<nobr>63.111</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>234</nobr>
+</td>
+<td align="right">
+<nobr>30.004</nobr>
+</td>
+<td align="right">
+<nobr>65.992</nobr>
+</td>
+<td align="right">
+<nobr>33.813</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>1371</nobr>
+</td>
+<td align="right">
+<nobr>29.976</nobr>
+</td>
+<td align="right">
+<nobr>120.058</nobr>
+</td>
+<td align="right">
+<nobr>15.922</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>826</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>76.209</nobr>
+</td>
+<td align="right">
+<nobr>29.994</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>373</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>86.103</nobr>
+</td>
+<td align="right">
+<nobr>24.745</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: BZip2/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/jakarta/*.jar</li>
+<li>driverClass: com.ning.jcbm.bzip2.BZip2Driver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>71</nobr>
+</td>
+<td align="right">
+<nobr>30.179</nobr>
+</td>
+<td align="right">
+<nobr>13.289</nobr>
+</td>
+<td align="right">
+<nobr>43.284</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>59</nobr>
+</td>
+<td align="right">
+<nobr>30.16</nobr>
+</td>
+<td align="right">
+<nobr>16.553</nobr>
+</td>
+<td align="right">
+<nobr>30.994</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>319</nobr>
+</td>
+<td align="right">
+<nobr>29.977</nobr>
+</td>
+<td align="right">
+<nobr>27.934</nobr>
+</td>
+<td align="right">
+<nobr>14.168</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>207</nobr>
+</td>
+<td align="right">
+<nobr>30.067</nobr>
+</td>
+<td align="right">
+<nobr>19.037</nobr>
+</td>
+<td align="right">
+<nobr>24.445</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>100</nobr>
+</td>
+<td align="right">
+<nobr>30.105</nobr>
+</td>
+<td align="right">
+<nobr>22.982</nobr>
+</td>
+<td align="right">
+<nobr>16.875</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZMA-orig/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzma/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzma.LzmaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>62</nobr>
+</td>
+<td align="right">
+<nobr>30.207</nobr>
+</td>
+<td align="right">
+<nobr>11.594</nobr>
+</td>
+<td align="right">
+<nobr>46.066</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>72</nobr>
+</td>
+<td align="right">
+<nobr>30.371</nobr>
+</td>
+<td align="right">
+<nobr>20.06</nobr>
+</td>
+<td align="right">
+<nobr>20.829</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>387</nobr>
+</td>
+<td align="right">
+<nobr>30.002</nobr>
+</td>
+<td align="right">
+<nobr>33.86</nobr>
+</td>
+<td align="right">
+<nobr>10.675</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>279</nobr>
+</td>
+<td align="right">
+<nobr>29.999</nobr>
+</td>
+<td align="right">
+<nobr>25.717</nobr>
+</td>
+<td align="right">
+<nobr>19.529</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>100</nobr>
+</td>
+<td align="right">
+<nobr>30.176</nobr>
+</td>
+<td align="right">
+<nobr>22.927</nobr>
+</td>
+<td align="right">
+<nobr>12.63</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZMA-java/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZMA-java, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzma-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzma.LzmaJavaDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:flower.bmp</td>
+<td align="right">
+<nobr>46</nobr>
+</td>
+<td align="right">
+<nobr>30.06</nobr>
+</td>
+<td align="right">
+<nobr>8.644</nobr>
+</td>
+<td align="right">
+<nobr>49.73</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:gdb.exe</td>
+<td align="right">
+<nobr>52</nobr>
+</td>
+<td align="right">
+<nobr>30.178</nobr>
+</td>
+<td align="right">
+<nobr>14.58</nobr>
+</td>
+<td align="right">
+<nobr>25.751</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:northwind.mdf</td>
+<td align="right">
+<nobr>263</nobr>
+</td>
+<td align="right">
+<nobr>30.006</nobr>
+</td>
+<td align="right">
+<nobr>23.008</nobr>
+</td>
+<td align="right">
+<nobr>12.212</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plaintext.txt</td>
+<td align="right">
+<nobr>166</nobr>
+</td>
+<td align="right">
+<nobr>30.058</nobr>
+</td>
+<td align="right">
+<nobr>15.271</nobr>
+</td>
+<td align="right">
+<nobr>26.524</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:proteins.txt</td>
+<td align="right">
+<nobr>74</nobr>
+</td>
+<td align="right">
+<nobr>30.306</nobr>
+</td>
+<td align="right">
+<nobr>16.894</nobr>
+</td>
+<td align="right">
+<nobr>15.036</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Results Per Test</h2>
+<br/>
+<center>
+<img src="testcase0.jpg"/>
+</center>
+<br/>
+<br/>
+<br/>
+<small>
+<hr/>
+<font size="-2">
+                        Generated using <a href="https://japex.dev.java.net">Japex</a> version 
+                        1.2.2</font>
+</small>
+</body>
+</html>

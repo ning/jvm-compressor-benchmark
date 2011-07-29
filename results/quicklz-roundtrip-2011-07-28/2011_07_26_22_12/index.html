@@ -1,0 +1,1693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:extrep="http://www.sun.com/japex/extendedTestSuiteReport" xmlns:suite="http://www.sun.com/japex/testSuite" xmlns:rep="http://www.sun.com/japex/testSuiteReport" xmlns="http://www.w3.org/1999/xhtml">
+<link href="report.css" type="text/css" rel="stylesheet"/>
+<body>
+<table border="0" cellpadding="2">
+<tr>
+<td valign="middle" width="90">
+<p>
+<a href="https://japex.dev.java.net">
+<img src="small_japex.gif" align="middle" border="0"/>
+</a>
+</p>
+</td>
+<td valign="middle">
+<h1>Japex Report: Test suite for JVM compressors</h1>
+</td>
+</tr>
+</table>
+<h2>Description</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</div>
+<h2>Global Parameters</h2>
+<ul>
+<li>configFile: <a href="tests-quicklz-roundtrip.xml">tests-quicklz-roundtrip.xml</a>
+</li>
+<li>chartType: barchart</li>
+<li>dateTime: 26 Jul 2011/22:12:16 PDT</li>
+<li>hostName: TS-MacMini.local</li>
+<li>inputDir: testdata/quicklz</li>
+<li>numberOfCpus: 2</li>
+<li>numberOfThreads: 1</li>
+<li>osArchitecture: x86_64</li>
+<li>osName: Mac OS X</li>
+<li>plotDrivers: false</li>
+<li>plotGroupSize: 5</li>
+<li>reportsDirectory: reports/quicklz-roundtrip</li>
+<li>resultAxis: normal</li>
+<li>resultAxisX: normal</li>
+<li>resultUnit: TPS</li>
+<li>runTime: 30</li>
+<li>runsPerDriver: 1</li>
+<li>singleClassLoader: false</li>
+<li>version: 1.2.2</li>
+<li>vmInfo: Apple Inc. 20.1-b02-384</li>
+<li>warmupTime: 7</li>
+<li>warmupsPerDriver: 0</li>
+</ul>
+<h2>Result Summary 
+        (TPS)</h2>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th width="15%">
+<b>driver</b>
+</th>
+<th>
+<b>resultAritMean</b>
+</th>
+<th>
+<b>resultGeomMean</b>
+</th>
+<th>
+<b>resultHarmMean</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Snappy(JNI)/block</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZO-java/block</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZO-java/stream</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/block</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/stream</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">QuickLZ/L1/block</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">QuickLZ/L3/block</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Gzip/JDK/stream</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Gzip/jzlib/stream</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">BZip2/stream</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZMA-orig/block</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZMA-java/stream</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<br/>
+<center>
+<img src="result.jpg"/>
+</center>
+<br/>
+<br/>
+<h2>Driver: Snappy(JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/snappy/*.jar</li>
+<li>driverClass: com.ning.jcbm.snappy.SnappyDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZO-java/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzo-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzo.LzoJavaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZO-java/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzo-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzo.LzoJavaDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: QuickLZ/L1/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 1), block mode
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.quicklz.QuickLZDriver1</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: QuickLZ/L3/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.quicklz.QuickLZDriver3</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Gzip/JDK/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.gzip.JDKGzipDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Gzip/jzlib/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JCraft's jzlib (gzip), streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/jzlib/*.jar</li>
+<li>driverClass: com.ning.jcbm.gzip.JCraftGzipDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: BZip2/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/jakarta/*.jar</li>
+<li>driverClass: com.ning.jcbm.bzip2.BZip2Driver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZMA-orig/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzma/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzma.LzmaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZMA-java/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZMA-java, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzma-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzma.LzmaJavaDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">R:flower.bmp</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:gdb.exe</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:northwind.mdf</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:plaintext.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">R:proteins.txt</td>
+<td align="right">
+<nobr>0</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+<td align="right">
+<nobr>
+<font color="red">NaN</font>
+</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Results Per Test</h2>
+<br/>
+<center>
+<img src="testcase0.jpg"/>
+</center>
+<br/>
+<br/>
+<br/>
+<small>
+<hr/>
+<font size="-2">
+                        Generated using <a href="https://japex.dev.java.net">Japex</a> version 
+                        1.2.2</font>
+</small>
+</body>
+</html>
