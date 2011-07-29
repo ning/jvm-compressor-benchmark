@@ -2,8 +2,8 @@
 
 <!-- Definition of all JVM compressor codecs
 
-
-     NOTE: snappy comes from Japex class loader, not included here (to avoid JNI issues)
+     Trying to order from fastest to lowest, which also generally is from
+     least to most compressing codec
   -->
 
 <driverGroup name="javaDrivers"
@@ -16,28 +16,12 @@
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
   </driver>
-
-
   <driver name="Snappy(JNI)/stream" normal="false">
         <description><div xmlns=""><p>Snappy-java, streaming</p></div></description>
         <param name="streaming" value="true" />
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
-  </driver>
-
-  <driver name="LZO-java/block">
-        <description><div xmlns=""><p>LZO-java, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
-  </driver>
-  <driver name="LZO-java/stream">
-        <description><div xmlns=""><p>LZO-java, streaming</p></div></description>
-        <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
   </driver>
 
   <!-- Normalize or not? Makes sense for throughput; but not so much for
@@ -56,6 +40,21 @@
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
+
+  <driver name="LZO-java/block">
+        <description><div xmlns=""><p>LZO-java, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
+  </driver>
+  <driver name="LZO-java/stream">
+        <description><div xmlns=""><p>LZO-java, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
+  </driver>
+
   <driver name="QuickLZ/L1/block">
         <description><div xmlns=""><p>QuickLZ (level 1), block mode
 </p></div></description>
