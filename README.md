@@ -1,6 +1,6 @@
 # Overview
 
-This project is focus on building a comprehensive benchamrk for comparing time and space efficiency of open source compression codecs on JVM platform.
+This project is focus on building a comprehensive benchmark for comparing time and space efficiency of open source compression codecs on JVM platform.
 Codecs to include need to be accesible from Java (and thereby from any JVM language) via either pure Java interface or JNI; and need to support either basic block mode (byte array in, byte array out), or streaming code (InputStream in, OutputStream out).
 
 Benchmark suite is based on [Japex framework](http://japex.java.net/).
