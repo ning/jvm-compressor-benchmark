@@ -4,6 +4,12 @@
 .settings
 build
 eclipse
+.idea
+.idea/*
+*.iml
+*.ipr
+*.iws
+dist
 
 # And japex outputs
 reports*
