@@ -29,6 +29,14 @@
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
 
+  <driver name="Snappy(iq80)/block" normal="false">
+        <description><div xmlns=""><p>Snappy-iq80, block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/iq80-snappy/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.iq80snappy.Iq80SnappyDriver"/>
+  </driver>
+
   <!-- Normalize or not? Makes sense for throughput; but not so much for
        compression rate; hence, use "raw" values
     -->
