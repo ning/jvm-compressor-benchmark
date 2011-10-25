@@ -18,8 +18,9 @@
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
   <!-- 28-Jul-2011, tatu: JNI loading was supposed to work with 1.0.3, but still having
-          issues here...
+          issues here, so need keep commented out
     -->
+  <!--
   <driver name="Snappy(JNI)/stream" normal="false">
         <description><div xmlns=""><p>Snappy-java, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -28,6 +29,7 @@
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
+-->
 
   <driver name="Snappy(iq80)/block" normal="false">
         <description><div xmlns=""><p>Snappy-iq80, block mode</p></div>
