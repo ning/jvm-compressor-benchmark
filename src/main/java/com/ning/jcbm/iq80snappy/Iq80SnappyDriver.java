@@ -8,6 +8,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
 
+/**
+ * Driver for pure-Java Snappy codec from
+ * [https://github.com/dain/snappy].
+ */
 public class Iq80SnappyDriver extends DriverBase
 {
     public Iq80SnappyDriver()
