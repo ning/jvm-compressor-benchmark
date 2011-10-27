@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definition of all JVM compressor codecs
+
+     Trying to order from fastest to lowest, which also generally is from
+     least to most compressing codec
+  -->
+
+<driverGroup name="javaDrivers"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+  <driver name="LZF/current/block" normal="false">
+        <description><div xmlns=""><p>LZF, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+<!--
+  <driver name="LZF/current/stream">
+        <description><div xmlns=""><p>LZF, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+-->
+  <driver name="LZF/NEW/block" normal="false">
+        <description><div xmlns=""><p>LZF, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf-new/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+<!--
+  <driver name="LZF/NEW/stream">
+        <description><div xmlns=""><p>LZF, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf-new/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+-->
+</driverGroup>

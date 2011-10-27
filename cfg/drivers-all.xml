@@ -15,9 +15,10 @@
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+        <param name="japex.singleClassLoader" value="true"/>
   </driver>
   <!-- 28-Jul-2011, tatu: JNI loading was supposed to work with 1.0.3, but still having
-          issues here...
+          issues here, so need keep commented out
     -->
   <!--
   <driver name="Snappy(JNI)/stream" normal="false">
@@ -26,8 +27,17 @@
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+        <param name="japex.singleClassLoader" value="true"/>
   </driver>
-  -->
+-->
+
+  <driver name="Snappy(iq80)/block" normal="false">
+        <description><div xmlns=""><p>Snappy-iq80, block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/iq80-snappy/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.iq80snappy.Iq80SnappyDriver"/>
+  </driver>
 
   <!-- Normalize or not? Makes sense for throughput; but not so much for
        compression rate; hence, use "raw" values
