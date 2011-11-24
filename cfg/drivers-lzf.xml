@@ -16,6 +16,8 @@
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
+
+
 <!--
   <driver name="LZF/current/stream">
         <description><div xmlns=""><p>LZF, streaming</p></div></description>
@@ -25,13 +27,13 @@
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 -->
+<!--
   <driver name="LZF/NEW/block" normal="false">
         <description><div xmlns=""><p>LZF, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf-new/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
-<!--
   <driver name="LZF/NEW/stream">
         <description><div xmlns=""><p>LZF, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -40,4 +42,12 @@
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 -->
+
+  <driver name="LZF/Voldemort/block" normal="false">
+        <description><div xmlns=""><p>LZF/V, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.voldemort.VoldemortLZFDriver" />
+  </driver>
+
 </driverGroup>
