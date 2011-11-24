@@ -1,9 +1,6 @@
 #!/bin/sh
  
-echo "About to run compress test on Calgary corpus files"
-
-# Since there are 18 input files
-# group by 6 (9 gets bit too crowded)
+echo "About to run uncompress test for LZF impls on Calgary corpus files"
 
 java -server -cp lib/japex/\* \
  -Xmx400M \
@@ -12,11 +9,11 @@ java -server -cp lib/japex/\* \
  -Djapex.warmupTime=7 \
  -Djapex.runTime=30 \
  -Djapex.numberOfThreads=1 \
- -Djapex.reportsDirectory=reports/lzfs \
+ -Djapex.reportsDirectory=reports/lzfs-compress \
  -Djapex.plotGroupSize=6 \
  -Djapex.inputDir="testdata/calgary" \
  com.sun.japex.Japex \
- tests-lzf.xml
+ cfg/tests-lzf-compress.xml
 
 echo "Done!";
 

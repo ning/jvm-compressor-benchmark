@@ -1,15 +1,21 @@
-# build stuff, ant, eclipse
+# use glob syntax.
+syntax: glob
+*.class
+*~
+*.bak
+*.off
+*.old
+.DS_Store
+
+# building
+target
+
+# Eclipse
 .classpath
 .project
 .settings
-build
-eclipse
-.idea
-.idea/*
+
+# IDEA
 *.iml
 *.ipr
 *.iws
-dist
-
-# And japex outputs
-reports*

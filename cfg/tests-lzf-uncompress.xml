@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Test suite for JVM compressors"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p></div></description>
+
+    <!-- Drivers -->
+    <xi:include href="drivers-lzf.xml" />
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='U:bib' />
+<testCase name='U:book1' />
+<testCase name='U:book2' />
+<testCase name='U:geo' />
+<testCase name='U:news' />
+<testCase name='U:obj1' />
+<testCase name='U:obj2' />
+<testCase name='U:paper1' />
+<testCase name='U:paper2' />
+<testCase name='U:paper3' />
+<testCase name='U:paper4' />
+<testCase name='U:paper5' />
+<testCase name='U:paper6' />
+<testCase name='U:pic' />
+<testCase name='U:progc' />
+<testCase name='U:progl' />
+<testCase name='U:progp' />
+<testCase name='U:trans' />
+
+</testSuite>
