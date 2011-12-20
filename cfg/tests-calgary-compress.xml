@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<testSuite name="Test suite for JVM compressors"
+<testSuite name="Compression test using Calgary corpus data set"
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
     <description><div xmlns=""><p>
-Micro-benchmark for testing performance of compressors on JVM platform
+Compression test using Calgary corpus data set
 </p></div></description>
 
     <!-- Drivers -->

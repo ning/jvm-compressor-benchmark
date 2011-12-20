@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Decompression test using Silesia data set"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Decompress test using Silesia data set
+</p></div></description>
+
+    <!-- Drivers -->
+    <xi:include href="drivers-all.xml" />
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='U:dickens' />
+<testCase name='U:mozilla' />
+<testCase name='U:mr' />
+<testCase name='U:nci' />
+<testCase name='U:ooffice' />
+<testCase name='U:osdb' />
+<testCase name='U:reymont' />
+<testCase name='U:samba' />
+<testCase name='U:sao' />
+<testCase name='U:webster' />
+<testCase name='U:x-ray' />
+<testCase name='U:xml' />
+
+</testSuite>

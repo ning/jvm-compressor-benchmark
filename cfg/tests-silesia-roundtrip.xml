@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Round-trip (compress+uncompress) test using Silesia data set"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Round-trip (compress+decompress) test using Silesia data set
+</p></div></description>
+
+    <!-- Drivers -->
+    <xi:include href="drivers-all.xml" />
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='R:dickens' />
+<testCase name='R:mozilla' />
+<testCase name='R:mr' />
+<testCase name='R:nci' />
+<testCase name='R:ooffice' />
+<testCase name='R:osdb' />
+<testCase name='R:reymont' />
+<testCase name='R:samba' />
+<testCase name='R:sao' />
+<testCase name='R:webster' />
+<testCase name='R:x-ray' />
+<testCase name='R:xml' />
+
+</testSuite>
