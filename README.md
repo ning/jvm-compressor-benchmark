@@ -35,6 +35,7 @@ We have tried to make use of existing de-facto standard test suites, including:
 * [Canterbury corpus](http://corpus.canterbury.ac.nz/descriptions/#cantrbry): 11 test files
 * [Maximum Compression](http://www.maximumcompression.com): 10 test files
 * [QuickLZ](http://www.quicklz.com/bench.html): 5 test files
+* [Silesia](http://sun.aei.polsl.pl/~sdeor/index.php?page=silesia): 12 test files
 
 # Getting involved
 

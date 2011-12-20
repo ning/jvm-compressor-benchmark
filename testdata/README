@@ -6,3 +6,4 @@ Directories here represent sets of freely available benchmark file test sets:
 * quicklz: 5 test files [http://www.quicklz.com/bench.html]; left
   out "NotTheMusic.mp4" as it does not compress, skews decomp speed
   (and is already represented by other tests)
+* silesia: 12 test files [http://sun.aei.polsl.pl/~sdeor/index.php?page=silesia]
