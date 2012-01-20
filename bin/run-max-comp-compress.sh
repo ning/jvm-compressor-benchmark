@@ -5,6 +5,7 @@ echo "About to run compress-only test with 'maximum compression' test data"
 # Nothing big stored in memory, heap can remain modest 
 # Since there are 10 input files, group by 5
 java -server -cp lib/japex/\*  \
+ -Djava.library.path=lib/jni \
  -Xmx256M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \

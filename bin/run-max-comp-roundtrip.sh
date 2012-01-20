@@ -7,6 +7,7 @@ echo "About to run test with 'maximum compression' test data"
 
 java -server -cp lib/japex/\*   \
  -Xmx256M \
+ -Djava.library.path=lib/jni \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
