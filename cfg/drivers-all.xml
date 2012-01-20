@@ -10,6 +10,13 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
+  <driver name="LZ4(JNI)/block" normal="false">
+        <description><div xmlns=""><p>LZ4/JNI, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4-jni/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver" />
+  </driver>
+
   <driver name="Snappy(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
