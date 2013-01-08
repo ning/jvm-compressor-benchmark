@@ -19,6 +19,22 @@
         <param name="java.library.path" value="lib/lz4-jni" />
   </driver>
 
+  <driver name="LZ4/block" normal="false">
+        <description><div xmlns=""><p>LZ4, block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4Driver"/>
+  </driver>
+
+  <driver name="LZ4 HC/block" normal="false">
+        <description><div xmlns=""><p>LZ4 HC, block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcDriver"/>
+  </driver>
+
   <driver name="Snappy(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
