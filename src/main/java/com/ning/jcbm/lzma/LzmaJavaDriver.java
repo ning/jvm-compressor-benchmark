@@ -21,13 +21,13 @@ public class LzmaJavaDriver extends DriverBase
 
     // No native Block API; but need some impl for test framework
     
-    public byte[] compressBlock(byte[] uncompressed) throws IOException {
-        return compressBlockUsingStream(uncompressed);
+    public int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException {
+        return compressBlockUsingStream(uncompressed, compressBuffer);
     }
 
-    public byte[] uncompressBlock(byte[] compressed) throws IOException {
+    public int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException {
         return uncompressBlockUsingStream(
-                new LzmaInputStream(new ByteArrayInputStream(compressed), getDecoder()));
+                new LzmaInputStream(new ByteArrayInputStream(compressed), getDecoder()), uncompressBuffer);
     }
 
     public void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException

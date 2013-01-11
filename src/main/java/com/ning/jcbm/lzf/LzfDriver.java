@@ -15,14 +15,17 @@ public class LzfDriver extends DriverBase
         super("LZF");
     }
 
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
-        return LZFEncoder.encode(uncompressed);
+        // TODO: compress in place?
+        byte[] compressed = LZFEncoder.encode(uncompressed);
+        System.arraycopy(compressed, 0, compressBuffer, 0, compressed.length);
+        return compressed.length;
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
-        return LZFDecoder.decode(compressed);
+        return LZFDecoder.decode(compressed, 0, compressed.length, uncompressBuffer);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)

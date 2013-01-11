@@ -26,13 +26,13 @@ public class JDKGzipDriver extends DriverBase
     
     // No native Block API; but need some impl for test framework
     
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException {
-        return compressBlockUsingStream(uncompressed);
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException {
+        return compressBlockUsingStream(uncompressed, compressBuffer);
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException {
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException {
         _inflater.reset();
-        return uncompressBlockUsingStream(new InflaterInputStream(new ByteArrayInputStream(compressed), _inflater));
+        return uncompressBlockUsingStream(new InflaterInputStream(new ByteArrayInputStream(compressed), _inflater), uncompressBuffer);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException

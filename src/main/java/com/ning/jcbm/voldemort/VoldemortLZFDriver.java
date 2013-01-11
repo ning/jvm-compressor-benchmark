@@ -13,14 +13,18 @@ public class VoldemortLZFDriver extends DriverBase
         super("LZF");
     }
 
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
-        return VoldemortLZFEncoder.encode(uncompressed);
+        byte[] compressed = VoldemortLZFEncoder.encode(uncompressed);
+        System.arraycopy(compressed, 0, compressBuffer, 0, compressed.length);
+        return compressed.length;
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
-        return VoldemortLZFDecoder.decode(compressed);
+        byte[] decompressed = VoldemortLZFDecoder.decode(compressed);
+        System.arraycopy(decompressed, 0, uncompressBuffer, 0, decompressed.length);
+        return decompressed.length;
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)
