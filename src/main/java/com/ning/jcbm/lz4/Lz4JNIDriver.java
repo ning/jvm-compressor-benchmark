@@ -18,15 +18,20 @@ public class Lz4JNIDriver extends DriverBase
         super("LZ4/JNI");
         _codec = new Lz4Compression();
     }
-    
-    protected byte[] compressBlock(byte[] src) throws IOException
-    {
-        return _codec.CompressSimple(src);
+
+    @Override
+    protected int maxCompressedLength(int length) {
+        return _codec.MaxCompressedSize(length);
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int compressBlock(byte[] src, byte[] compressBuffer) throws IOException
     {
-        return _codec.DecompressSimple(compressed);
+        return _codec.Compress(src, 0, src.length, compressBuffer, 0);
+    }
+
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
+    {
+        return _codec.Decompress(compressed, 0, compressed.length, uncompressBuffer, 0);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)

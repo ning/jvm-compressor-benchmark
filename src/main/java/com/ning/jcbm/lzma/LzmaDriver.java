@@ -1,7 +1,11 @@
 package com.ning.jcbm.lzma;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
+import com.ning.jcbm.ByteArrayOutputStream;
 import com.ning.jcbm.DriverBase;
 
 /**
@@ -27,11 +31,10 @@ public class LzmaDriver extends DriverBase
     }
 
     @Override
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
         ByteArrayInputStream inStream = new ByteArrayInputStream(uncompressed);
-        // as a wild guess, use 50% compression
-        ByteArrayOutputStream outStream = new ByteArrayOutputStream(10 + (uncompressed.length >> 1));
+        ByteArrayOutputStream outStream = new ByteArrayOutputStream(compressBuffer);
 
         boolean eos = true; // what does this mean? that size is not known?
         SevenZip.Compression.LZMA.Encoder encoder = new SevenZip.Compression.LZMA.Encoder();
@@ -57,13 +60,12 @@ public class LzmaDriver extends DriverBase
             outStream.write(0xFF);
         }
         encoder.Code(inStream, outStream, -1, -1, null);
-        byte[] result = outStream.toByteArray();
         
-        return result;
+        return outStream.length();
     }
 
     @Override
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
         ByteArrayInputStream inStream = new ByteArrayInputStream(compressed);
         int propertiesSize = 5;
@@ -83,17 +85,12 @@ public class LzmaDriver extends DriverBase
             }
             outSize = (outSize << 8) + (v & 0xFF);
         }
-        ByteArrayOutputStream outStream;
-        if (outSize <= 0L) { // if not known, assume 50% compression (i.e. 2x expansion)
-            outStream = new ByteArrayOutputStream(compressed.length << 1);
-        } else {
-            outStream = new ByteArrayOutputStream((int) outSize);
-        }
+        ByteArrayOutputStream outStream = new ByteArrayOutputStream(uncompressBuffer);
         
         if (!decoder.Code(inStream, outStream, outSize)) {
             throw new IOException("Error in data stream");
         }
-        return outStream.toByteArray();
+        return outStream.length();
     }
 
         

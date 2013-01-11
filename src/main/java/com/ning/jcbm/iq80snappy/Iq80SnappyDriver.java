@@ -6,7 +6,6 @@ import org.iq80.snappy.Snappy;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Arrays;
 
 /**
  * Driver for pure-Java Snappy codec from
@@ -19,19 +18,21 @@ public class Iq80SnappyDriver extends DriverBase
         super("iq80.Snappy");
     }
 
-    protected byte[] compressBlock(byte[] uncompressed)
-            throws IOException
-    {
-        byte[] compressed = new byte[Snappy.maxCompressedLength(uncompressed.length)];
-        int compressedSize = Snappy.compress(uncompressed, 0, uncompressed.length, compressed, 0);
-        return Arrays.copyOf(compressed, compressedSize);
+    @Override
+    protected int maxCompressedLength(int length) {
+        return Snappy.maxCompressedLength(length);
     }
 
-    protected byte[] uncompressBlock(byte[] compressed)
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer)
             throws IOException
     {
-        byte[] uncompressed = Snappy.uncompress(compressed, 0, compressed.length);
-        return uncompressed;
+        return Snappy.compress(uncompressed, 0, uncompressed.length, compressBuffer, 0);
+    }
+
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer)
+            throws IOException
+    {
+        return Snappy.uncompress(compressed, 0, compressed.length, uncompressBuffer, 0);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)
