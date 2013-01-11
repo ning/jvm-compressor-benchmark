@@ -1,7 +1,6 @@
 package com.ning.jcbm.lzo;
 
 import java.io.*;
-import java.util.Arrays;
 
 import org.anarres.lzo.*;
 
@@ -19,9 +18,15 @@ public class LzoJavaDriver extends DriverBase
         super("LZO-java");
     }
 
+    @Override
+    protected int maxCompressedLength(int length) {
+        LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
+        return 8 + length + compressor.getCompressionOverhead(length);
+    }
+
     // No native Block API; but need some impl for test framework
     
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
         // Looks like we need to allocate a big buffer, and see how much data
@@ -29,21 +34,18 @@ public class LzoJavaDriver extends DriverBase
         //
 
         int origLength = uncompressed.length;
-        byte[] output = new byte[8 + origLength + compressor.getCompressionOverhead(origLength)];
         lzo_uintp lengthPointer = new lzo_uintp(origLength); // ugh....
         int resultCode = compressor.compress(uncompressed, 0, origLength,
-                output, 8, lengthPointer);
+                compressBuffer, 8, lengthPointer);
         if (resultCode != LzoTransformer.LZO_E_OK) {
             throw new IOException("Error code "+resultCode+" from compressor");
         }
         // Hmmh. Is 'value' length, or offset? Looks like length...
         int compLength = lengthPointer.value;
 
-        writeInt32(output, 0, origLength);
-        writeInt32(output, 4, compLength);
-        return Arrays.copyOf(output, compLength+8);
-
-//        return compressBlockUsingStream(uncompressed);
+        writeInt32(compressBuffer, 0, origLength);
+        writeInt32(compressBuffer, 4, compLength);
+        return compLength+8;
     }
 
     private final void writeInt32(byte[] buffer, int offset, int value)
@@ -54,7 +56,7 @@ public class LzoJavaDriver extends DriverBase
         buffer[offset] = (byte) value;
     }
     
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
         /* Alas, we can't really support true block decompression since we
          * would need to know the uncompressed length a priori as codec
@@ -62,7 +64,7 @@ public class LzoJavaDriver extends DriverBase
          */
         LzoDecompressor decompressor = LzoLibrary.getInstance().newDecompressor(DEFAULT_ALGORITHM, null);
         LzoInputStream uncompressed = new LzoInputStream(new ByteArrayInputStream(compressed), decompressor);
-        return uncompressBlockUsingStream(uncompressed);
+        return uncompressBlockUsingStream(uncompressed, uncompressBuffer);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException

@@ -3,7 +3,6 @@ package com.ning.jcbm.lz4;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Arrays;
 
 import net.jpountz.lz4.LZ4Compressor;
 import net.jpountz.lz4.LZ4Decompressor;
@@ -27,32 +26,33 @@ public abstract class AbstractLz4Driver extends DriverBase {
     }
 
     @Override
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException {
-        final int decompressedLength = uncompressed.length;
-        final int maxCompressedLength = compressor.maxCompressedLength(decompressedLength);
-        final byte[] compressed = new byte[4 + maxCompressedLength];
-        compressed[0] = (byte) decompressedLength;
-        compressed[1] = (byte) (decompressedLength >>> 8);
-        compressed[2] = (byte) (decompressedLength >>> 16);
-        compressed[3] = (byte) (decompressedLength >>> 24);
-        final int compressedLength = compressor.compress(
-                uncompressed, 0, decompressedLength,
-                compressed, 4, maxCompressedLength);
-        return Arrays.copyOf(compressed, 4 + compressedLength);
+    protected int maxCompressedLength(int length) {
+        return 4 + compressor.maxCompressedLength(length);
     }
 
     @Override
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException {
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException {
+        final int decompressedLength = uncompressed.length;
+        compressBuffer[0] = (byte) decompressedLength;
+        compressBuffer[1] = (byte) (decompressedLength >>> 8);
+        compressBuffer[2] = (byte) (decompressedLength >>> 16);
+        compressBuffer[3] = (byte) (decompressedLength >>> 24);
+        return 4 + compressor.compress(
+                uncompressed, 0, decompressedLength,
+                compressBuffer, 4, compressBuffer.length - 4);
+    }
+
+    @Override
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException {
         assert compressed.length > 4;
         final int decompressedLength =
                 (compressed[0] & 0xFF)
                 | ((compressed[1] & 0xFF) << 8)
                 | ((compressed[2] & 0xFF) << 16)
                 | ((compressed[3] & 0xFF) << 24);
-        final byte[] restored = new byte[decompressedLength];
-        final int compressedLength = DECOMPRESSOR.decompress(compressed, 4, restored, 0, decompressedLength);
+        final int compressedLength = DECOMPRESSOR.decompress(compressed, 4, uncompressBuffer, 0, decompressedLength);
         assert compressedLength == compressed.length;
-        return restored;
+        return decompressedLength;
     }
 
     @Override

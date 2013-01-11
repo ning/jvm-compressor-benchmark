@@ -16,14 +16,18 @@ public class QuickLZDriverBase extends DriverBase
         _compressionLevel = level;
     }
 
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
-        return QuickLZ.compress(uncompressed, _compressionLevel);
+        byte[] compressed = QuickLZ.compress(uncompressed, _compressionLevel);
+        System.arraycopy(compressed, 0, compressBuffer, 0, compressed.length);
+        return compressed.length;
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
-        return QuickLZ.decompress(compressed);
+        byte[] decompressed = QuickLZ.decompress(compressed);
+        System.arraycopy(decompressed, 0, uncompressBuffer, 0, decompressed.length);
+        return decompressed.length;
     }
 
     /* Streaming operation not supported directly; let's not try faking it

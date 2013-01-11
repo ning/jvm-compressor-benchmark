@@ -14,14 +14,19 @@ public class SnappyDriver extends DriverBase
         super("Snappy");
     }
 
-    protected byte[] compressBlock(byte[] uncompressed) throws IOException
-    {
-        return Snappy.compress(uncompressed);
+    @Override
+    protected int maxCompressedLength(int length) {
+        return Snappy.maxCompressedLength(length);
     }
 
-    protected byte[] uncompressBlock(byte[] compressed) throws IOException
+    protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
-        return Snappy.uncompress(compressed);
+        return Snappy.compress(uncompressed, 0, uncompressed.length, compressBuffer, 0);
+    }
+
+    protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
+    {
+        return Snappy.uncompress(compressed, 0, compressed.length, uncompressBuffer, 0);
     }
 
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
