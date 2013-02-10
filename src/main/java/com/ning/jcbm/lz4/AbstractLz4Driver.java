@@ -6,7 +6,6 @@ import java.io.OutputStream;
 
 import net.jpountz.lz4.LZ4Compressor;
 import net.jpountz.lz4.LZ4Decompressor;
-import net.jpountz.lz4.LZ4Factory;
 
 import com.ning.jcbm.DriverBase;
 
@@ -15,14 +14,13 @@ import com.ning.jcbm.DriverBase;
  */
 public abstract class AbstractLz4Driver extends DriverBase {
 
-    protected static LZ4Factory LZ4_FACTORY = LZ4Factory.fastestInstance();
-    private static final LZ4Decompressor DECOMPRESSOR = LZ4_FACTORY.decompressor();
-
     private final LZ4Compressor compressor;
+    private final LZ4Decompressor decompressor;
 
-    protected AbstractLz4Driver(String name, LZ4Compressor compressor) {
+    protected AbstractLz4Driver(String name, LZ4Compressor compressor, LZ4Decompressor decompressor) {
         super(name);
         this.compressor = compressor;
+        this.decompressor = decompressor;
     }
 
     @Override
@@ -50,7 +48,7 @@ public abstract class AbstractLz4Driver extends DriverBase {
                 | ((compressed[1] & 0xFF) << 8)
                 | ((compressed[2] & 0xFF) << 16)
                 | ((compressed[3] & 0xFF) << 24);
-        final int compressedLength = DECOMPRESSOR.decompress(compressed, 4, uncompressBuffer, 0, decompressedLength);
+        final int compressedLength = decompressor.decompress(compressed, 4, uncompressBuffer, 0, decompressedLength);
         assert compressedLength == compressed.length;
         return decompressedLength;
     }

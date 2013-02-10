@@ -10,30 +10,56 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
-  <driver name="LZ4(JNI)/block" normal="false">
-        <description><div xmlns=""><p>LZ4/JNI, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4-jni/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver" />
-        <!-- is this enough? -->
-        <param name="java.library.path" value="lib/lz4-jni" />
-  </driver>
-
-  <driver name="LZ4/block" normal="false">
-        <description><div xmlns=""><p>LZ4, block mode</p></div>
+  <driver name="LZ4 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>LZ4 (JNI), block mode</p></div>
         </description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lz4/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4Driver"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver"/>
   </driver>
 
-  <driver name="LZ4 HC/block" normal="false">
-        <description><div xmlns=""><p>LZ4 HC, block mode</p></div>
+  <driver name="LZ4 HC (JNI)/block" normal="false">
+        <description><div xmlns=""><p>LZ4 HC (JNI), block mode</p></div>
         </description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lz4/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcDriver"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJNIDriver"/>
   </driver>
+
+  <driver name="LZ4 (Java+Unsafe)/block" normal="false">
+        <description><div xmlns=""><p>LZ4 (Java+Unsafe), block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JavaUnsafeDriver"/>
+  </driver>
+
+  <driver name="LZ4 HC (Java+Unsafe)/block" normal="false">
+        <description><div xmlns=""><p>LZ4 HC (Java+Unsafe), block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJavaUnsafeDriver"/>
+  </driver>
+
+<!--
+  Disabled because most people would likely use the unsafe impl instead.
+
+  <driver name="LZ4 (Java)/block" normal="false">
+        <description><div xmlns=""><p>LZ4 (Java), block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JavaDriver"/>
+  </driver>
+
+  <driver name="LZ4 HC (Java)/block" normal="false">
+        <description><div xmlns=""><p>LZ4 HC (Java), block mode</p></div>
+        </description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJavaDriver"/>
+  </driver>-->
 
   <driver name="Snappy(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
