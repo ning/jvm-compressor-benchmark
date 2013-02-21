@@ -17,10 +17,10 @@ public class LzfDriver extends DriverBase
 
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
-        // TODO: compress in place?
-        byte[] compressed = LZFEncoder.encode(uncompressed);
-        System.arraycopy(compressed, 0, compressBuffer, 0, compressed.length);
-        return compressed.length;
+        // uses new "appendEncoded" in 0.9.7:
+        int outPtr = LZFEncoder.appendEncoded(uncompressed, 0, uncompressed.length,
+                compressBuffer, 0);
+        return outPtr;
     }
 
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
@@ -47,7 +47,7 @@ public class LzfDriver extends DriverBase
         while ((count = in.read(inputBuffer)) >= 0) {
             total += count;
         }
-	in.close();
+        in.close();
         return total;
     }
 }

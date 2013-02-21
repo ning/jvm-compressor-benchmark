@@ -1,6 +1,6 @@
 #!/bin/sh
  
-echo "About to run uncompress test for LZF impls on Calgary corpus files"
+echo "About to run Compress test for LZF impls on Calgary corpus files"
 
 java -server -cp lib/japex/\* \
  -Xmx400M \
