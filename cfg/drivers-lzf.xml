@@ -20,7 +20,7 @@
   <driver name="LZF-safe/block" normal="false">
         <description><div xmlns=""><p>LZF-safe, block</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzf-new/*.jar"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfSafeDriver" />
   </driver>
 
