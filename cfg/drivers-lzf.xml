@@ -11,13 +11,13 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
 
-  <driver name="LZF/fast/block" normal="false">
+  <driver name="LZF-fast/block" normal="false">
         <description><div xmlns=""><p>LZF, block</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
-  <driver name="LZF/safe/block" normal="false">
+  <driver name="LZF-safe/block" normal="false">
         <description><div xmlns=""><p>LZF-safe, block</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf-new/*.jar"/>
@@ -25,14 +25,14 @@
   </driver>
 
 <!--
-  <driver name="LZF/fast/stream">
+  <driver name="LZF-fast/stream">
         <description><div xmlns=""><p>LZF, stream</p></div></description>
         <param name="streaming" value="true" />
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
-  <driver name="LZF/safe/stream">
+  <driver name="LZF-safe/stream">
         <description><div xmlns=""><p>LZF-safe, stream</p></div></description>
         <param name="streaming" value="true" />
         <param name="japex.classPath" value="build/classes"/>
@@ -42,7 +42,7 @@
 -->
 
 <!--
-  <driver name="LZF/Voldemort/block" normal="false">
+  <driver name="LZF-Voldemort/block" normal="false">
         <description><div xmlns=""><p>LZF/V, block</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
