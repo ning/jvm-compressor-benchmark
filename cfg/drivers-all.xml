@@ -107,12 +107,32 @@
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 
+  <!-- 05-Mar-2013, tatu: Now there are separate "safe" versions that do not
+      use 'sun.misc.Unsafe' (similar to LZ4 above)
+    -->
+  <driver name="LZF-safe/block" normal="false">
+        <description><div xmlns=""><p>LZF-safe, block mode</p></div></description>
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfSafeDriver" />
+  </driver>
+<!--
+  <driver name="LZF-safe/stream">
+        <description><div xmlns=""><p>LZF-safe, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.classPath" value="lib/lzf/*.jar"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfSafeDriver" />
+  </driver>
+-->
+
   <driver name="LZO-java/block">
         <description><div xmlns=""><p>LZO-java, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
   </driver>
+<!--
   <driver name="LZO-java/stream">
         <description><div xmlns=""><p>LZO-java, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -120,6 +140,7 @@
         <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
   </driver>
+-->
 
   <driver name="QuickLZ/L1/block">
         <description><div xmlns=""><p>QuickLZ (level 1), block mode
@@ -141,6 +162,7 @@
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
   </driver>
+<!--
   <driver name="Gzip/jzlib/stream">
         <description><div xmlns=""><p>JCraft's jzlib (gzip), streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -148,6 +170,7 @@
         <param name="japex.classPath" value="lib/jzlib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JCraftGzipDriver" />
   </driver>
+-->
   <driver name="BZip2/stream">
         <description><div xmlns=""><p>Commons-compress BZip2 implementation</p></div></description>
         <param name="streaming" value="true" />
@@ -161,6 +184,7 @@
         <param name="japex.classPath" value="lib/lzma/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaDriver" />
   </driver>
+<!--
   <driver name="LZMA-java/stream">
         <description><div xmlns=""><p>LZMA-java, streaming</p></div></description>
         <param name="streaming" value="true" />
@@ -168,5 +192,6 @@
         <param name="japex.classPath" value="lib/lzma-java/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaJavaDriver" />
   </driver>
+-->
 
 </driverGroup>
