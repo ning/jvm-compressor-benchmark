@@ -27,11 +27,11 @@ public abstract class DriverBase extends JapexDriverBase
      *    so let's upgrade this to 0.6 gig/sec for now
      */
     
-    final static double MAX_COMPRESS_THROUGHPUT = 599.9;
+    final static double MAX_COMPRESS_THROUGHPUT = 999.9;
 
-    final static double MAX_UNCOMPRESS_THROUGHPUT = 599.9;
+    final static double MAX_UNCOMPRESS_THROUGHPUT = 999.9;
 
-    final static double MAX_BOTH_THROUGHPUT = 399.9;
+    final static double MAX_BOTH_THROUGHPUT = 599.9;
     
     protected final String _driverName;
     
