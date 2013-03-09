@@ -2,12 +2,12 @@
  
 echo "About to run test on Canterbury corpus files"
 
-# LZO has some issues with memory usage, apparently need to increase?
+# No huge files, default mem should do
 # Since there are 11 input files, 2 modes (comp/uncomp),
 # group by... hmmh. 5.5 would be optimal. But I guess 6 has to do?
 
 java -server -cp lib/japex/\* \
- -Xmx500M \
+ -Xmx400M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
