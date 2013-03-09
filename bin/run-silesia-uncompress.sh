@@ -1,11 +1,11 @@
 #!/bin/sh
  
-echo "About to run uncompress test on Calgary corpus files"
+echo "About to run uncompress test on Silesia corpus files"
 
 # Since there are 12 input files group by 6
 
 java -server -cp lib/japex/\* \
- -Xmx400M \
+ -Xmx500M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
