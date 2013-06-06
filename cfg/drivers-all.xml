@@ -107,13 +107,13 @@
   <!-- 05-Mar-2013, tatu: Now there are separate "safe" versions that do not
       use 'sun.misc.Unsafe' (similar to LZ4 above)
     -->
+<!--
   <driver name="LZF-safe/block" normal="false">
         <description><div xmlns=""><p>LZF-safe, block mode</p></div></description>
         <param name="japex.classPath" value="build/classes"/>
         <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfSafeDriver" />
   </driver>
-<!--
   <driver name="LZF-safe/stream">
         <description><div xmlns=""><p>LZF-safe, streaming</p></div></description>
         <param name="streaming" value="true" />
