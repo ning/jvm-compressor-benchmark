@@ -7,7 +7,7 @@ echo "About to run test on Canterbury corpus files"
 # group by... hmmh. 5.5 would be optimal. But I guess 6 has to do?
 
 java -server -cp lib/japex/\* \
- -Xmx400M \
+ -Xmx512M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
