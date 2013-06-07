@@ -7,7 +7,7 @@ Benchmark suite is based on [Japex framework](http://japex.java.net/).
 
 In addition to benchmark itself, we also provide access to set of benchmark results, which can be used for overview of general performance patterns for standard test suites. It is recommended, however, to run tests yourself since they vary depending on platform. In addition, to get more accurate understanding of how results apply to your use case(s), the best thing to do is to collect specific set of test data that reflects your usage, and run tests over this.
 
-For more complete description, checkout out project [Wiki](https://github.com/ning/jvm-compressor-benchmark/wiki)
+For more complete description, checkout out project [Wiki](../../wiki)
 
 # Codecs included
 
@@ -27,7 +27,7 @@ Currently following codecs are included in distribution:
     * JNI-based [native LZ4](http://code.google.com/p/lz4/) (block mode)
     * Pure java [lz4-java](https://github.com/jpountz/lz4-java) (block mode)
 
-(for more details on what is NOT included, check out Wiki page at [https://github.com/ning/jvm-compressor-benchmark/wiki](Wiki))
+(for more details on what is NOT included, check out Wiki page at [../../wiki](Wiki))
 
 Note that some codecs or operating modes are excluded due to sheer number of combinations.
 
