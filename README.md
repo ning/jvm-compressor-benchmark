@@ -24,7 +24,7 @@ Currently following codecs are included in distribution:
        * note: since no faster than native version, not included in standard results
 * [LZO-java](https://github.com/Karmasphere/lzo-java) (streaming, may add block)
 * LZ4:
-    * JNI-based [native LZ4](http://code.google.com/p/lz4/)) (block mode)
+    * JNI-based [native LZ4](http://code.google.com/p/lz4/) (block mode)
     * Pure java [lz4-java](https://github.com/jpountz/lz4-java) (block mode)
 
 (for more details on what is NOT included, check out Wiki page at [https://github.com/ning/jvm-compressor-benchmark/wiki](Wiki))
