@@ -15,25 +15,7 @@ Are available on project [Wiki](../../wiki).
 
 # Codecs included
 
-Currently following codecs are included in distribution:
-
-* [LZF](https://github.com/ning/compress) (block and streaming modes)
-* [QuickLZ](http://www.quicklz.com/) (block mode)
-* Gzip: JDK, [JCraft](http://www.jcraft.com/jzlib/) (streaming mode)
-* [Bzip2 from commons-compression](http://commons.apache.org/compress/) (streaming mode)
-* [Snappy](http://code.google.com/p/snappy-java/) (Java JNI wrapper over [native Snappy](http://code.google.com/p/snappy/))
-* LZMA:
-   * [LZMA by 7zip](http://www.7-zip.org/sdk.html) (block mode)
-   * [LZMA-java](https://github.com/jponge/lzma-java) (streaming)
-       * note: since no faster than native version, not included in standard results
-* [LZO-java](https://github.com/Karmasphere/lzo-java) (streaming, may add block)
-* LZ4:
-    * JNI-based [native LZ4](http://code.google.com/p/lz4/) (block mode)
-    * Pure java [lz4-java](https://github.com/jpountz/lz4-java) (block mode)
-
-(for more details on what is NOT included, check out [project Wiki](../../wiki))
-
-Note that some codecs or operating modes are excluded due to sheer number of combinations.
+Codecs are listed on project [Wiki](../../wiki).
 
 # Test data used
 
