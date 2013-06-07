@@ -27,7 +27,7 @@ Currently following codecs are included in distribution:
     * JNI-based [native LZ4](http://code.google.com/p/lz4/) (block mode)
     * Pure java [lz4-java](https://github.com/jpountz/lz4-java) (block mode)
 
-(for more details on what is NOT included, check out Wiki page at [../../wiki](Wiki))
+(for more details on what is NOT included, check out [project Wiki](../../wiki))
 
 Note that some codecs or operating modes are excluded due to sheer number of combinations.
 
