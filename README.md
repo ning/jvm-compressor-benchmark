@@ -21,12 +21,15 @@ Currently following codecs are included in distribution:
 * LZMA:
    * [LZMA by 7zip](http://www.7-zip.org/sdk.html) (block mode)
    * [LZMA-java](https://github.com/jponge/lzma-java) (streaming)
-       * note: new (2011/7) addition,  not yet included in results
+       * note: since no faster than native version, not included in standard results
 * [LZO-java](https://github.com/Karmasphere/lzo-java) (streaming, may add block)
- * note: new (2011/7) addition,  not yet included in results
-* [LZ4](https://github.com/jpountz/lz4-java) (block mode, bindings and ports of [native LZ4](http://code.google.com/p/lz4/))
+* LZ4:
+    * JNI-based [native LZ4](http://code.google.com/p/lz4/)) (block mode)
+    * Pure java [lz4-java](https://github.com/jpountz/lz4-java) (block mode)
 
 (for more details on what is NOT included, check out Wiki page at [https://github.com/ning/jvm-compressor-benchmark/wiki](Wiki))
+
+Note that some codecs or operating modes are excluded due to sheer number of combinations.
 
 # Test data used
 
