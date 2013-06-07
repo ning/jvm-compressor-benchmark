@@ -9,6 +9,10 @@ In addition to benchmark itself, we also provide access to set of benchmark resu
 
 For more complete description, checkout out project [Wiki](../../wiki)
 
+# Results
+
+Are available on project [Wiki](../../wiki).
+
 # Codecs included
 
 Currently following codecs are included in distribution:
