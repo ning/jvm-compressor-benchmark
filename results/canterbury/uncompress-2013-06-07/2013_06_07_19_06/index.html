@@ -1,0 +1,2838 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:extrep="http://www.sun.com/japex/extendedTestSuiteReport" xmlns:suite="http://www.sun.com/japex/testSuite" xmlns:rep="http://www.sun.com/japex/testSuiteReport" xmlns="http://www.w3.org/1999/xhtml">
+<link href="report.css" type="text/css" rel="stylesheet"/>
+<body>
+<table border="0" cellpadding="2">
+<tr>
+<td valign="middle" width="90">
+<p>
+<a href="https://japex.dev.java.net">
+<img src="small_japex.gif" align="middle" border="0"/>
+</a>
+</p>
+</td>
+<td valign="middle">
+<h1>Japex Report: Test suite for JVM compressors</h1>
+</td>
+</tr>
+</table>
+<h2>Description</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</div>
+<h2>Global Parameters</h2>
+<ul>
+<li>configFile: <a href="tests-canterbury-uncompress.xml">tests-canterbury-uncompress.xml</a>
+</li>
+<li>chartType: barchart</li>
+<li>dateTime: 07 Jun 2013/19:06:00 PDT</li>
+<li>hostName: TS-MacMini.local</li>
+<li>inputDir: testdata/canterbury</li>
+<li>numberOfCpus: 2</li>
+<li>numberOfThreads: 1</li>
+<li>osArchitecture: x86_64</li>
+<li>osName: Mac OS X</li>
+<li>plotDrivers: false</li>
+<li>plotGroupSize: 6</li>
+<li>reportsDirectory: reports/canterbury-uncompress</li>
+<li>resultAxis: normal</li>
+<li>resultAxisX: normal</li>
+<li>resultUnit: TPS</li>
+<li>resultUnitX: Size%</li>
+<li>runTime: 30</li>
+<li>runsPerDriver: 1</li>
+<li>singleClassLoader: false</li>
+<li>version: 1.2.2</li>
+<li>vmInfo: Oracle Corporation 23.6-b04</li>
+<li>warmupTime: 7</li>
+<li>warmupsPerDriver: 0</li>
+</ul>
+<h2>Result Summary 
+        (TPS)</h2>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th width="15%">
+<b>driver</b>
+</th>
+<th>
+<b>resultAritMean</b>
+</th>
+<th>
+<b>resultAritMeanX</b>
+</th>
+<th>
+<b>resultGeomMean</b>
+</th>
+<th>
+<b>resultGeomMeanX</b>
+</th>
+<th>
+<b>resultHarmMean</b>
+</th>
+<th>
+<b>resultHarmMeanX</b>
+</th>
+<th>
+<b>singleClassLoader</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">LZ4 (JNI)/block</td>
+<td align="right">
+<nobr>756.164</nobr>
+</td>
+<td align="right">
+<nobr>50.701</nobr>
+</td>
+<td align="right">
+<nobr>742.483</nobr>
+</td>
+<td align="right">
+<nobr>48.004</nobr>
+</td>
+<td align="right">
+<nobr>731.298</nobr>
+</td>
+<td align="right">
+<nobr>44.003</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZ4 (Java+Unsafe)/block</td>
+<td align="right">
+<nobr>508.453</nobr>
+</td>
+<td align="right">
+<nobr>50.701</nobr>
+</td>
+<td align="right">
+<nobr>493.962</nobr>
+</td>
+<td align="right">
+<nobr>48.004</nobr>
+</td>
+<td align="right">
+<nobr>481.467</nobr>
+</td>
+<td align="right">
+<nobr>44.003</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Snappy(JNI)/block</td>
+<td align="right">
+<nobr>431.653</nobr>
+</td>
+<td align="right">
+<nobr>50.82</nobr>
+</td>
+<td align="right">
+<nobr>417.664</nobr>
+</td>
+<td align="right">
+<nobr>48.41</nobr>
+</td>
+<td align="right">
+<nobr>405.695</nobr>
+</td>
+<td align="right">
+<nobr>44.947</nobr>
+</td>
+<td align="right">
+<nobr>true</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Snappy(iq80)/block</td>
+<td align="right">
+<nobr>440.827</nobr>
+</td>
+<td align="right">
+<nobr>50.82</nobr>
+</td>
+<td align="right">
+<nobr>428.539</nobr>
+</td>
+<td align="right">
+<nobr>48.41</nobr>
+</td>
+<td align="right">
+<nobr>417.875</nobr>
+</td>
+<td align="right">
+<nobr>44.947</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/block</td>
+<td align="right">
+<nobr>457.602</nobr>
+</td>
+<td align="right">
+<nobr>49.283</nobr>
+</td>
+<td align="right">
+<nobr>452.881</nobr>
+</td>
+<td align="right">
+<nobr>46.876</nobr>
+</td>
+<td align="right">
+<nobr>448.402</nobr>
+</td>
+<td align="right">
+<nobr>43.104</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/stream</td>
+<td align="right">
+<nobr>416.951</nobr>
+</td>
+<td align="right">
+<nobr>49.283</nobr>
+</td>
+<td align="right">
+<nobr>412.984</nobr>
+</td>
+<td align="right">
+<nobr>46.876</nobr>
+</td>
+<td align="right">
+<nobr>409.209</nobr>
+</td>
+<td align="right">
+<nobr>43.104</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZO-java/block</td>
+<td align="right">
+<nobr>174.58</nobr>
+</td>
+<td align="right">
+<nobr>48.48</nobr>
+</td>
+<td align="right">
+<nobr>167.25</nobr>
+</td>
+<td align="right">
+<nobr>46.044</nobr>
+</td>
+<td align="right">
+<nobr>161.078</nobr>
+</td>
+<td align="right">
+<nobr>42.537</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZ4 HC (JNI)/block</td>
+<td align="right">
+<nobr>829.889</nobr>
+</td>
+<td align="right">
+<nobr>40.535</nobr>
+</td>
+<td align="right">
+<nobr>797.78</nobr>
+</td>
+<td align="right">
+<nobr>38.426</nobr>
+</td>
+<td align="right">
+<nobr>771.563</nobr>
+</td>
+<td align="right">
+<nobr>35.173</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">QuickLZ/L3/block</td>
+<td align="right">
+<nobr>122.858</nobr>
+</td>
+<td align="right">
+<nobr>41.294</nobr>
+</td>
+<td align="right">
+<nobr>117.343</nobr>
+</td>
+<td align="right">
+<nobr>39.393</nobr>
+</td>
+<td align="right">
+<nobr>113.137</nobr>
+</td>
+<td align="right">
+<nobr>36.611</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Gzip/JDK/stream</td>
+<td align="right">
+<nobr>164.341</nobr>
+</td>
+<td align="right">
+<nobr>31.632</nobr>
+</td>
+<td align="right">
+<nobr>155.209</nobr>
+</td>
+<td align="right">
+<nobr>29.918</nobr>
+</td>
+<td align="right">
+<nobr>148.452</nobr>
+</td>
+<td align="right">
+<nobr>27.481</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">BZip2/stream</td>
+<td align="right">
+<nobr>16.309</nobr>
+</td>
+<td align="right">
+<nobr>28.177</nobr>
+</td>
+<td align="right">
+<nobr>15.291</nobr>
+</td>
+<td align="right">
+<nobr>26.1</nobr>
+</td>
+<td align="right">
+<nobr>14.5</nobr>
+</td>
+<td align="right">
+<nobr>23.301</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZMA-orig/block</td>
+<td align="right">
+<nobr>21.824</nobr>
+</td>
+<td align="right">
+<nobr>27.334</nobr>
+</td>
+<td align="right">
+<nobr>20.261</nobr>
+</td>
+<td align="right">
+<nobr>23.695</nobr>
+</td>
+<td align="right">
+<nobr>19.189</nobr>
+</td>
+<td align="right">
+<nobr>18.295</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<br/>
+<center>
+<img src="result.jpg"/>
+</center>
+<br/>
+<br/>
+<h2>Driver: LZ4 (JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 (JNI), block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lz4/*.jar</li>
+<li>driverClass: com.ning.jcbm.lz4.Lz4JNIDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>129963</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>628.938</nobr>
+</td>
+<td align="right">
+<nobr>59.662</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>163356</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>650.627</nobr>
+</td>
+<td align="right">
+<nobr>63.134</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>992264</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>776.799</nobr>
+</td>
+<td align="right">
+<nobr>48.405</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>1955847</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>693.964</nobr>
+</td>
+<td align="right">
+<nobr>46.807</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>5910584</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>699.755</nobr>
+</td>
+<td align="right">
+<nobr>51.492</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>25681</nobr>
+</td>
+<td align="right">
+<nobr>29.967</nobr>
+</td>
+<td align="right">
+<nobr>841.572</nobr>
+</td>
+<td align="right">
+<nobr>36.486</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>46909</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>636.957</nobr>
+</td>
+<td align="right">
+<nobr>55.61</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>42227</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>647.422</nobr>
+</td>
+<td align="right">
+<nobr>67.11</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>73596</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>1201.801</nobr>
+</td>
+<td align="right">
+<nobr>16.822</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>694700</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>845.224</nobr>
+</td>
+<td align="right">
+<nobr>49.205</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>5165832</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>694.749</nobr>
+</td>
+<td align="right">
+<nobr>62.976</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZ4 (Java+Unsafe)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 (Java+Unsafe), block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lz4/*.jar</li>
+<li>driverClass: com.ning.jcbm.lz4.Lz4JavaUnsafeDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>81016</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>392.042</nobr>
+</td>
+<td align="right">
+<nobr>59.662</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>96962</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>386.187</nobr>
+</td>
+<td align="right">
+<nobr>63.134</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>662185</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>518.356</nobr>
+</td>
+<td align="right">
+<nobr>48.405</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>1379674</nobr>
+</td>
+<td align="right">
+<nobr>29.96</nobr>
+</td>
+<td align="right">
+<nobr>489.681</nobr>
+</td>
+<td align="right">
+<nobr>46.807</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>5154040</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>610.182</nobr>
+</td>
+<td align="right">
+<nobr>51.492</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>17315</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>567.346</nobr>
+</td>
+<td align="right">
+<nobr>36.486</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>29710</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>403.411</nobr>
+</td>
+<td align="right">
+<nobr>55.61</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>24205</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>371.098</nobr>
+</td>
+<td align="right">
+<nobr>67.11</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>51815</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>846.104</nobr>
+</td>
+<td align="right">
+<nobr>16.822</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>437665</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>532.493</nobr>
+</td>
+<td align="right">
+<nobr>49.205</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>3539916</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>476.078</nobr>
+</td>
+<td align="right">
+<nobr>62.976</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Snappy(JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-JNI, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/snappy/*.jar</li>
+<li>driverClass: com.ning.jcbm.snappy.SnappyDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>67430</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>326.32</nobr>
+</td>
+<td align="right">
+<nobr>59.81</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>78672</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>313.349</nobr>
+</td>
+<td align="right">
+<nobr>64.074</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>589608</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>461.543</nobr>
+</td>
+<td align="right">
+<nobr>48.116</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>1241105</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>440.292</nobr>
+</td>
+<td align="right">
+<nobr>42.404</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>3891979</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>460.777</nobr>
+</td>
+<td align="right">
+<nobr>48.374</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>15032</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>492.547</nobr>
+</td>
+<td align="right">
+<nobr>41.344</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>26168</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>355.328</nobr>
+</td>
+<td align="right">
+<nobr>57.108</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>19444</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>298.108</nobr>
+</td>
+<td align="right">
+<nobr>68.347</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>46040</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>751.933</nobr>
+</td>
+<td align="right">
+<nobr>18.21</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>358576</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>436.299</nobr>
+</td>
+<td align="right">
+<nobr>51.875</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>3058597</nobr>
+</td>
+<td align="right">
+<nobr>29.95</nobr>
+</td>
+<td align="right">
+<nobr>411.683</nobr>
+</td>
+<td align="right">
+<nobr>59.357</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Snappy(iq80)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-Java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/iq80-snappy/*.jar</li>
+<li>driverClass: com.ning.jcbm.iq80snappy.Iq80SnappyDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>73616</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>356.258</nobr>
+</td>
+<td align="right">
+<nobr>59.81</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>84357</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>335.981</nobr>
+</td>
+<td align="right">
+<nobr>64.074</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>607519</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>475.56</nobr>
+</td>
+<td align="right">
+<nobr>48.116</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>1345041</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>477.169</nobr>
+</td>
+<td align="right">
+<nobr>42.404</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>4100264</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>485.432</nobr>
+</td>
+<td align="right">
+<nobr>48.374</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>14083</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>461.484</nobr>
+</td>
+<td align="right">
+<nobr>41.344</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>26844</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>364.51</nobr>
+</td>
+<td align="right">
+<nobr>57.108</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>19698</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>302.08</nobr>
+</td>
+<td align="right">
+<nobr>68.347</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>45409</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>741.546</nobr>
+</td>
+<td align="right">
+<nobr>18.21</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>342489</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>416.702</nobr>
+</td>
+<td align="right">
+<nobr>51.875</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>3214883</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>432.371</nobr>
+</td>
+<td align="right">
+<nobr>59.357</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>86478</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>418.483</nobr>
+</td>
+<td align="right">
+<nobr>56.216</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>100361</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>399.733</nobr>
+</td>
+<td align="right">
+<nobr>59.172</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>564352</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>441.782</nobr>
+</td>
+<td align="right">
+<nobr>48.632</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>1516010</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>537.866</nobr>
+</td>
+<td align="right">
+<nobr>42.448</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>4291019</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>508.022</nobr>
+</td>
+<td align="right">
+<nobr>47.89</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>17897</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>586.45</nobr>
+</td>
+<td align="right">
+<nobr>40.737</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>30818</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>418.473</nobr>
+</td>
+<td align="right">
+<nobr>54.463</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>25331</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>388.381</nobr>
+</td>
+<td align="right">
+<nobr>62.431</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>32383</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>528.812</nobr>
+</td>
+<td align="right">
+<nobr>16.283</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>308413</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>375.244</nobr>
+</td>
+<td align="right">
+<nobr>55.267</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>3199978</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>430.371</nobr>
+</td>
+<td align="right">
+<nobr>58.576</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>78649</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>380.608</nobr>
+</td>
+<td align="right">
+<nobr>56.216</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>91601</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>364.859</nobr>
+</td>
+<td align="right">
+<nobr>59.172</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>512273</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>401.018</nobr>
+</td>
+<td align="right">
+<nobr>48.632</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>1354643</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>480.587</nobr>
+</td>
+<td align="right">
+<nobr>42.448</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>3865851</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>457.696</nobr>
+</td>
+<td align="right">
+<nobr>47.89</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>16092</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>527.298</nobr>
+</td>
+<td align="right">
+<nobr>40.737</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>28223</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>383.243</nobr>
+</td>
+<td align="right">
+<nobr>54.463</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>23286</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>357.034</nobr>
+</td>
+<td align="right">
+<nobr>62.431</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>30076</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>491.148</nobr>
+</td>
+<td align="right">
+<nobr>16.283</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>283674</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>345.151</nobr>
+</td>
+<td align="right">
+<nobr>55.267</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>2957917</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>397.819</nobr>
+</td>
+<td align="right">
+<nobr>58.576</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZO-java/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzo-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzo.LzoJavaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>25879</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>125.246</nobr>
+</td>
+<td align="right">
+<nobr>56.998</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>31142</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>124.04</nobr>
+</td>
+<td align="right">
+<nobr>60.913</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>213466</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>167.109</nobr>
+</td>
+<td align="right">
+<nobr>47.641</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>458366</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>162.615</nobr>
+</td>
+<td align="right">
+<nobr>42.197</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>1609544</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>190.563</nobr>
+</td>
+<td align="right">
+<nobr>48.804</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>7282</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>238.584</nobr>
+</td>
+<td align="right">
+<nobr>35.118</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>9544</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>129.59</nobr>
+</td>
+<td align="right">
+<nobr>54.901</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>7767</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>119.083</nobr>
+</td>
+<td align="right">
+<nobr>64.214</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>19014</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>310.483</nobr>
+</td>
+<td align="right">
+<nobr>16.991</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>148586</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>180.789</nobr>
+</td>
+<td align="right">
+<nobr>47.191</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>1280883</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>172.272</nobr>
+</td>
+<td align="right">
+<nobr>58.316</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZ4 HC (JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 HC (JNI), block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lz4/*.jar</li>
+<li>driverClass: com.ning.jcbm.lz4.Lz4HcJNIDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>127935</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>619.092</nobr>
+</td>
+<td align="right">
+<nobr>41.877</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>156256</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>622.356</nobr>
+</td>
+<td align="right">
+<nobr>47.067</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>1061318</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>830.804</nobr>
+</td>
+<td align="right">
+<nobr>42.036</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>2219307</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>787.363</nobr>
+</td>
+<td align="right">
+<nobr>37.955</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>6650076</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>787.343</nobr>
+</td>
+<td align="right">
+<nobr>46.439</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>32212</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>1055.44</nobr>
+</td>
+<td align="right">
+<nobr>31.483</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>45381</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>616.207</nobr>
+</td>
+<td align="right">
+<nobr>38.864</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>38297</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>587.187</nobr>
+</td>
+<td align="right">
+<nobr>47.215</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>98998</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>1499.9</nobr>
+</td>
+<td align="right">
+<nobr>13.094</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>787302</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>957.939</nobr>
+</td>
+<td align="right">
+<nobr>42.751</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>5689041</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>765.148</nobr>
+</td>
+<td align="right">
+<nobr>57.109</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: QuickLZ/L3/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.quicklz.QuickLZDriver3</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>22918</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>110.898</nobr>
+</td>
+<td align="right">
+<nobr>46.73</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>26008</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>103.584</nobr>
+</td>
+<td align="right">
+<nobr>51.222</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>143860</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>112.613</nobr>
+</td>
+<td align="right">
+<nobr>40.377</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>331059</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>117.452</nobr>
+</td>
+<td align="right">
+<nobr>34.996</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>823397</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>97.483</nobr>
+</td>
+<td align="right">
+<nobr>41.602</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>5382</nobr>
+</td>
+<td align="right">
+<nobr>29.977</nobr>
+</td>
+<td align="right">
+<nobr>176.314</nobr>
+</td>
+<td align="right">
+<nobr>34.142</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>8647</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>117.407</nobr>
+</td>
+<td align="right">
+<nobr>43.398</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>6108</nobr>
+</td>
+<td align="right">
+<nobr>30</nobr>
+</td>
+<td align="right">
+<nobr>93.561</nobr>
+</td>
+<td align="right">
+<nobr>54.016</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>14309</nobr>
+</td>
+<td align="right">
+<nobr>29.96</nobr>
+</td>
+<td align="right">
+<nobr>233.758</nobr>
+</td>
+<td align="right">
+<nobr>14.781</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>89314</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>108.668</nobr>
+</td>
+<td align="right">
+<nobr>40.902</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>592607</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>79.703</nobr>
+</td>
+<td align="right">
+<nobr>52.07</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Gzip/JDK/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.gzip.JDKGzipDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>28535</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>138.1</nobr>
+</td>
+<td align="right">
+<nobr>35.767</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>32820</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>130.717</nobr>
+</td>
+<td align="right">
+<nobr>39.057</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>192981</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>151.065</nobr>
+</td>
+<td align="right">
+<nobr>32.333</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>447247</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>158.666</nobr>
+</td>
+<td align="right">
+<nobr>27.946</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>1012278</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>119.846</nobr>
+</td>
+<td align="right">
+<nobr>32.679</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>8153</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>267.125</nobr>
+</td>
+<td align="right">
+<nobr>19.809</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>10767</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>146.197</nobr>
+</td>
+<td align="right">
+<nobr>33.954</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>8350</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>128.024</nobr>
+</td>
+<td align="right">
+<nobr>40.521</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>19389</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>316.635</nobr>
+</td>
+<td align="right">
+<nobr>11.001</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>120892</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>147.088</nobr>
+</td>
+<td align="right">
+<nobr>33.954</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>775416</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>104.285</nobr>
+</td>
+<td align="right">
+<nobr>40.927</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: BZip2/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/jakarta/*.jar</li>
+<li>driverClass: com.ning.jcbm.bzip2.BZip2Driver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>3118</nobr>
+</td>
+<td align="right">
+<nobr>29.975</nobr>
+</td>
+<td align="right">
+<nobr>15.088</nobr>
+</td>
+<td align="right">
+<nobr>28.429</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>3628</nobr>
+</td>
+<td align="right">
+<nobr>29.975</nobr>
+</td>
+<td align="right">
+<nobr>14.449</nobr>
+</td>
+<td align="right">
+<nobr>31.644</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>17666</nobr>
+</td>
+<td align="right">
+<nobr>29.959</nobr>
+</td>
+<td align="right">
+<nobr>13.836</nobr>
+</td>
+<td align="right">
+<nobr>31.008</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>38698</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>13.729</nobr>
+</td>
+<td align="right">
+<nobr>27.256</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>84827</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>10.043</nobr>
+</td>
+<td align="right">
+<nobr>34.507</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>774</nobr>
+</td>
+<td align="right">
+<nobr>30.002</nobr>
+</td>
+<td align="right">
+<nobr>25.335</nobr>
+</td>
+<td align="right">
+<nobr>11.988</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>1208</nobr>
+</td>
+<td align="right">
+<nobr>29.994</nobr>
+</td>
+<td align="right">
+<nobr>16.391</nobr>
+</td>
+<td align="right">
+<nobr>27.343</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>964</nobr>
+</td>
+<td align="right">
+<nobr>29.983</nobr>
+</td>
+<td align="right">
+<nobr>14.775</nobr>
+</td>
+<td align="right">
+<nobr>32.6</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>2008</nobr>
+</td>
+<td align="right">
+<nobr>29.979</nobr>
+</td>
+<td align="right">
+<nobr>32.783</nobr>
+</td>
+<td align="right">
+<nobr>9.696</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>11105</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>13.511</nobr>
+</td>
+<td align="right">
+<nobr>33.768</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>70300</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>9.455</nobr>
+</td>
+<td align="right">
+<nobr>41.708</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZMA-orig/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzma/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzma.LzmaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">U:alice29.txt</td>
+<td align="right">
+<nobr>3770</nobr>
+</td>
+<td align="right">
+<nobr>29.98</nobr>
+</td>
+<td align="right">
+<nobr>18.239</nobr>
+</td>
+<td align="right">
+<nobr>31.874</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:asyoulik.txt</td>
+<td align="right">
+<nobr>4126</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>16.433</nobr>
+</td>
+<td align="right">
+<nobr>35.555</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:cp.html</td>
+<td align="right">
+<nobr>21627</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>16.929</nobr>
+</td>
+<td align="right">
+<nobr>30.886</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:fields.c</td>
+<td align="right">
+<nobr>55610</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>19.728</nobr>
+</td>
+<td align="right">
+<nobr>26.753</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:grammar.lsp</td>
+<td align="right">
+<nobr>132458</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>15.682</nobr>
+</td>
+<td align="right">
+<nobr>33.539</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:kennedy.xls</td>
+<td align="right">
+<nobr>1019</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>33.389</nobr>
+</td>
+<td align="right">
+<nobr>5.341</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:lcet10.txt</td>
+<td align="right">
+<nobr>1563</nobr>
+</td>
+<td align="right">
+<nobr>29.988</nobr>
+</td>
+<td align="right">
+<nobr>21.212</nobr>
+</td>
+<td align="right">
+<nobr>27.985</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:plrabn12.txt</td>
+<td align="right">
+<nobr>1163</nobr>
+</td>
+<td align="right">
+<nobr>29.995</nobr>
+</td>
+<td align="right">
+<nobr>17.818</nobr>
+</td>
+<td align="right">
+<nobr>34.319</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:ptt5</td>
+<td align="right">
+<nobr>2987</nobr>
+</td>
+<td align="right">
+<nobr>29.977</nobr>
+</td>
+<td align="right">
+<nobr>48.77</nobr>
+</td>
+<td align="right">
+<nobr>7.96</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:sum</td>
+<td align="right">
+<nobr>15594</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>18.973</nobr>
+</td>
+<td align="right">
+<nobr>24.66</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">U:xargs.1</td>
+<td align="right">
+<nobr>95807</nobr>
+</td>
+<td align="right">
+<nobr>29.972</nobr>
+</td>
+<td align="right">
+<nobr>12.886</nobr>
+</td>
+<td align="right">
+<nobr>41.803</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Results Per Test</h2>
+<br/>
+<center>
+<img src="testcase0.jpg"/>
+</center>
+<br/>
+<br/>
+<center>
+<img src="testcase1.jpg"/>
+</center>
+<br/>
+<br/>
+<br/>
+<small>
+<hr/>
+<font size="-2">
+                        Generated using <a href="https://japex.dev.java.net">Japex</a> version 
+                        1.2.2</font>
+</small>
+</body>
+</html>
