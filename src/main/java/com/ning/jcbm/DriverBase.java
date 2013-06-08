@@ -26,12 +26,13 @@ public abstract class DriverBase extends JapexDriverBase
      *    For decompression, fastest codecs can legitimately expand at bit higher speeds,
      *    so let's upgrade this to 0.6 gig/sec for now
      */
+    // 07-Jun-2013, tatu: Time flies, performance climbs. Need higher limits
     
-    final static double MAX_COMPRESS_THROUGHPUT = 999.9;
+    final static double MAX_COMPRESS_THROUGHPUT = 1199.9;
 
-    final static double MAX_UNCOMPRESS_THROUGHPUT = 999.9;
+    final static double MAX_UNCOMPRESS_THROUGHPUT = 1499.9;
 
-    final static double MAX_BOTH_THROUGHPUT = 599.9;
+    final static double MAX_BOTH_THROUGHPUT = 799.9;
     
     protected final String _driverName;
     
