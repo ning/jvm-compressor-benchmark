@@ -6,7 +6,7 @@ echo "About to run test with 'maximum compression' test data"
 # Since there are 10 input files, 2 modes (comp/uncomp), group by 5
 
 java -server -cp lib/japex/\*   \
- -Xmx256M \
+ -Xmx512M \
  -Djava.library.path=lib/jni \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \

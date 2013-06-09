@@ -5,7 +5,7 @@ echo "About to run round-trip test using Silesia corpus files"
 # Since there are 12 input files group by 6
 
 java -server -cp lib/japex/\* \
- -Xmx400M \
+ -Xmx512M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \

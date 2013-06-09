@@ -6,7 +6,7 @@ echo "About to run compress test on Silesia corpus files"
 # Bigger heap needed for some codecs
 
 java -server -cp lib/japex/\* \
- -Xmx500M \
+ -Xmx512M \
  -Djava.awt.headless=true \
  -Djapex.runsPerDriver=1 \
  -Djapex.warmupTime=7 \
