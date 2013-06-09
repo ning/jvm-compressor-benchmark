@@ -28,7 +28,7 @@ public abstract class DriverBase extends JapexDriverBase
      */
     // 07-Jun-2013, tatu: Time flies, performance climbs. Need higher limits
     
-    final static double MAX_COMPRESS_THROUGHPUT = 1199.9;
+    final static double MAX_COMPRESS_THROUGHPUT = 999.9;
 
     final static double MAX_UNCOMPRESS_THROUGHPUT = 1499.9;
 
