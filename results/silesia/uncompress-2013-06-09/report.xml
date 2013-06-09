@@ -1,0 +1,1100 @@
+<testSuiteReport name="Decompression test using Silesia data set" xmlns="http://www.sun.com/japex/testSuiteReport">
+<description xmlns="http://www.sun.com/japex/testSuite">
+
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Decompress test using Silesia data set
+</p>
+</div>
+</description>  <chartType>barchart</chartType>
+  <configFile>tests-silesia-uncompress.xml</configFile>
+  <dateTime>09 Jun 2013/09:33:43 PDT</dateTime>
+  <hostName>TS-MacMini.local</hostName>
+  <inputDir>testdata/silesia</inputDir>
+  <numberOfCpus>2</numberOfCpus>
+  <numberOfThreads>1</numberOfThreads>
+  <osArchitecture>x86_64</osArchitecture>
+  <osName>Mac OS X</osName>
+  <plotDrivers>false</plotDrivers>
+  <plotGroupSize>6</plotGroupSize>
+  <reportsDirectory>reports/silesia-uncompress</reportsDirectory>
+  <resultAxis>normal</resultAxis>
+  <resultAxisX>normal</resultAxisX>
+  <resultUnit>TPS</resultUnit>
+  <resultUnitX>Size%</resultUnitX>
+  <runTime>30</runTime>
+  <runsPerDriver>1</runsPerDriver>
+  <singleClassLoader>false</singleClassLoader>
+  <version>1.2.2</version>
+  <vmInfo>Oracle Corporation 23.6-b04</vmInfo>
+  <warmupTime>7</warmupTime>
+  <warmupsPerDriver>0</warmupsPerDriver>
+  <driver name="LZ4 (JNI)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 (JNI), block mode</p>
+    </div>
+        </description>    <classPath>build/classes
+lib/lz4/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lz4.Lz4JNIDriver</driverClass>
+    <resultAritMean>832.232</resultAritMean>
+    <resultAritMeanX>54.971</resultAritMeanX>
+    <resultGeomMean>814.277</resultGeomMean>
+    <resultGeomMeanX>49.786</resultGeomMeanX>
+    <resultHarmMean>797.229</resultHarmMean>
+    <resultHarmMeanX>43.921</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>1812</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>587.705</resultValue>
+      <resultValueX>63.106</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>534</resultIterations>
+      <resultTime>29.997</resultTime>
+      <resultValue>869.579</resultValue>
+      <resultValueX>51.496</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>2411</resultIterations>
+      <resultTime>29.959</resultTime>
+      <resultValue>765.238</resultValue>
+      <resultValueX>56.86</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>964</resultIterations>
+      <resultTime>29.94</resultTime>
+      <resultValue>1030.307</resultValue>
+      <resultValueX>17.516</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>3970</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>777.381</resultValue>
+      <resultValueX>68.727</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>2751</resultIterations>
+      <resultTime>29.966</resultTime>
+      <resultValue>883.008</resultValue>
+      <resultValueX>51.788</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>2838</resultIterations>
+      <resultTime>29.95</resultTime>
+      <resultValue>598.883</resultValue>
+      <resultValueX>53.126</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>1240</resultIterations>
+      <resultTime>29.951</resultTime>
+      <resultValue>853.09</resultValue>
+      <resultValueX>36.547</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>3493</resultIterations>
+      <resultTime>29.958</resultTime>
+      <resultValue>806.376</resultValue>
+      <resultValueX>90.95</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>501</resultIterations>
+      <resultTime>29.947</resultTime>
+      <resultValue>661.457</resultValue>
+      <resultValueX>49.11</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>4659</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>1256.667</resultValue>
+      <resultValueX>96.319</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>5273</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>897.093</resultValue>
+      <resultValueX>24.102</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZ4 (Java+Unsafe)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 (Java+Unsafe), block mode</p>
+    </div>
+        </description>    <classPath>build/classes
+lib/lz4/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lz4.Lz4JavaUnsafeDriver</driverClass>
+    <resultAritMean>574.873</resultAritMean>
+    <resultAritMeanX>54.971</resultAritMeanX>
+    <resultGeomMean>554.677</resultGeomMean>
+    <resultGeomMeanX>49.786</resultGeomMeanX>
+    <resultHarmMean>537.013</resultHarmMean>
+    <resultHarmMeanX>43.921</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>1155</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>374.558</resultValue>
+      <resultValueX>63.106</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>349</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>568.928</resultValue>
+      <resultValueX>51.496</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>1686</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>534.94</resultValue>
+      <resultValueX>56.86</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>707</resultIterations>
+      <resultTime>29.947</resultTime>
+      <resultValue>755.443</resultValue>
+      <resultValueX>17.516</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>2586</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>506.312</resultValue>
+      <resultValueX>68.727</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>1801</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>577.97</resultValue>
+      <resultValueX>51.788</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>1906</resultIterations>
+      <resultTime>29.959</resultTime>
+      <resultValue>402.091</resultValue>
+      <resultValueX>53.126</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>846</resultIterations>
+      <resultTime>29.956</resultTime>
+      <resultValue>581.927</resultValue>
+      <resultValueX>36.547</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>2248</resultIterations>
+      <resultTime>29.968</resultTime>
+      <resultValue>518.797</resultValue>
+      <resultValueX>90.95</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>322</resultIterations>
+      <resultTime>30.016</resultTime>
+      <resultValue>424.143</resultValue>
+      <resultValueX>49.11</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>3704</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>999.087</resultValue>
+      <resultValueX>96.319</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>3846</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>654.282</resultValue>
+      <resultValueX>24.102</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Snappy(JNI)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-JNI, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/snappy/*.jar</classPath>
+    <driverClass>com.ning.jcbm.snappy.SnappyDriver</driverClass>
+    <resultAritMean>522.531</resultAritMean>
+    <resultAritMeanX>56.175</resultAritMeanX>
+    <resultGeomMean>497.441</resultGeomMean>
+    <resultGeomMeanX>51.42</resultGeomMeanX>
+    <resultHarmMean>475.83</resultHarmMean>
+    <resultHarmMeanX>46.116</resultHarmMeanX>
+    <singleClassLoader>true</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>963</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>312.347</resultValue>
+      <resultValueX>64.396</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>306</resultIterations>
+      <resultTime>30.05</resultTime>
+      <resultValue>497.421</resultValue>
+      <resultValueX>52.592</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>1373</resultIterations>
+      <resultTime>29.956</resultTime>
+      <resultValue>435.822</resultValue>
+      <resultValueX>55.167</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>709</resultIterations>
+      <resultTime>29.932</resultTime>
+      <resultValue>757.958</resultValue>
+      <resultValueX>19.56</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>2152</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>421.403</resultValue>
+      <resultValueX>70.176</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>1732</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>555.88</resultValue>
+      <resultValueX>59.404</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>1624</resultIterations>
+      <resultTime>29.973</resultTime>
+      <resultValue>342.444</resultValue>
+      <resultValueX>50.396</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>792</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>544.685</resultValue>
+      <resultValueX>38.941</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>1931</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>445.553</resultValue>
+      <resultValueX>89.106</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>297</resultIterations>
+      <resultTime>29.951</resultTime>
+      <resultValue>392.062</resultValue>
+      <resultValueX>50.567</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>3500</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>944.031</resultValue>
+      <resultValueX>97.887</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>3649</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>620.77</resultValue>
+      <resultValueX>25.908</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Snappy(iq80)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-Java, block mode</p>
+    </div>
+        </description>    <classPath>build/classes
+lib/iq80-snappy/*.jar</classPath>
+    <driverClass>com.ning.jcbm.iq80snappy.Iq80SnappyDriver</driverClass>
+    <resultAritMean>537.117</resultAritMean>
+    <resultAritMeanX>56.175</resultAritMeanX>
+    <resultGeomMean>514.637</resultGeomMean>
+    <resultGeomMeanX>51.42</resultGeomMeanX>
+    <resultHarmMean>495.414</resultHarmMean>
+    <resultHarmMeanX>46.116</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>1065</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>345.485</resultValue>
+      <resultValueX>64.396</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>301</resultIterations>
+      <resultTime>29.956</resultTime>
+      <resultValue>490.824</resultValue>
+      <resultValueX>52.592</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>1520</resultIterations>
+      <resultTime>29.952</resultTime>
+      <resultValue>482.546</resultValue>
+      <resultValueX>55.167</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>735</resultIterations>
+      <resultTime>29.943</resultTime>
+      <resultValue>785.459</resultValue>
+      <resultValueX>19.56</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>2049</resultIterations>
+      <resultTime>29.944</resultTime>
+      <resultValue>401.481</resultValue>
+      <resultValueX>70.176</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>1673</resultIterations>
+      <resultTime>29.953</resultTime>
+      <resultValue>537.232</resultValue>
+      <resultValueX>59.404</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>1828</resultIterations>
+      <resultTime>29.96</resultTime>
+      <resultValue>385.622</resultValue>
+      <resultValueX>50.396</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>841</resultIterations>
+      <resultTime>29.956</resultTime>
+      <resultValue>578.493</resultValue>
+      <resultValueX>38.941</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>1847</resultIterations>
+      <resultTime>29.944</resultTime>
+      <resultValue>426.596</resultValue>
+      <resultValueX>89.106</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>325</resultIterations>
+      <resultTime>29.991</resultTime>
+      <resultValue>428.456</resultValue>
+      <resultValueX>50.567</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>3403</resultIterations>
+      <resultTime>29.956</resultTime>
+      <resultValue>918.078</resultValue>
+      <resultValueX>97.887</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>3909</resultIterations>
+      <resultTime>29.959</resultTime>
+      <resultValue>665.127</resultValue>
+      <resultValueX>25.908</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>483.963</resultAritMean>
+    <resultAritMeanX>55.903</resultAritMeanX>
+    <resultGeomMean>473.156</resultGeomMean>
+    <resultGeomMeanX>51.475</resultGeomMeanX>
+    <resultHarmMean>463.137</resultHarmMean>
+    <resultHarmMeanX>46.702</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>1234</resultIterations>
+      <resultTime>29.97</resultTime>
+      <resultValue>400.225</resultValue>
+      <resultValueX>59.503</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>298</resultIterations>
+      <resultTime>29.917</resultTime>
+      <resultValue>486.566</resultValue>
+      <resultValueX>52.817</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>1210</resultIterations>
+      <resultTime>29.973</resultTime>
+      <resultValue>383.862</resultValue>
+      <resultValueX>52.358</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>667</resultIterations>
+      <resultTime>29.956</resultTime>
+      <resultValue>712.49</resultValue>
+      <resultValueX>21.146</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>1960</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>383.816</resultValue>
+      <resultValueX>69.459</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>1663</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>533.738</resultValue>
+      <resultValueX>66.184</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>2167</resultIterations>
+      <resultTime>29.955</resultTime>
+      <resultValue>457.213</resultValue>
+      <resultValueX>49.83</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>818</resultIterations>
+      <resultTime>29.953</resultTime>
+      <resultValue>562.728</resultValue>
+      <resultValueX>38.819</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>2133</resultIterations>
+      <resultTime>29.957</resultTime>
+      <resultValue>492.434</resultValue>
+      <resultValueX>88.245</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>317</resultIterations>
+      <resultTime>29.954</resultTime>
+      <resultValue>418.426</resultValue>
+      <resultValueX>49.02</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>1279</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>344.87</resultValue>
+      <resultValueX>96.721</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>3710</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>631.186</resultValue>
+      <resultValueX>26.73</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZF/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzf/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzf.LzfDriver</driverClass>
+    <resultAritMean>440.285</resultAritMean>
+    <resultAritMeanX>55.903</resultAritMeanX>
+    <resultGeomMean>430.45</resultGeomMean>
+    <resultGeomMeanX>51.475</resultGeomMeanX>
+    <resultHarmMean>421.408</resultHarmMean>
+    <resultHarmMeanX>46.702</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">true</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>1131</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>366.828</resultValue>
+      <resultValueX>59.503</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>272</resultIterations>
+      <resultTime>29.931</resultTime>
+      <resultValue>443.911</resultValue>
+      <resultValueX>52.817</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>1095</resultIterations>
+      <resultTime>29.959</resultTime>
+      <resultValue>347.541</resultValue>
+      <resultValueX>52.358</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>608</resultIterations>
+      <resultTime>29.942</resultTime>
+      <resultValue>649.767</resultValue>
+      <resultValueX>21.146</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>1792</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>350.912</resultValue>
+      <resultValueX>69.459</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>1462</resultIterations>
+      <resultTime>29.955</resultTime>
+      <resultValue>469.451</resultValue>
+      <resultValueX>66.184</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>1994</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>420.542</resultValue>
+      <resultValueX>49.83</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>756</resultIterations>
+      <resultTime>29.972</resultTime>
+      <resultValue>519.742</resultValue>
+      <resultValueX>38.819</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>1872</resultIterations>
+      <resultTime>29.963</resultTime>
+      <resultValue>432.092</resultValue>
+      <resultValueX>88.245</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>293</resultIterations>
+      <resultTime>29.938</resultTime>
+      <resultValue>386.958</resultValue>
+      <resultValueX>49.02</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>1166</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>314.48</resultValue>
+      <resultValueX>96.721</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>3416</resultIterations>
+      <resultTime>29.961</resultTime>
+      <resultValue>581.202</resultValue>
+      <resultValueX>26.73</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZO-java/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzo-java/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzo.LzoJavaDriver</driverClass>
+    <resultAritMean>202.991</resultAritMean>
+    <resultAritMeanX>63.512</resultAritMeanX>
+    <resultGeomMean>191.827</resultGeomMean>
+    <resultGeomMeanX>56.732</resultGeomMeanX>
+    <resultHarmMean>180.947</resultHarmMean>
+    <resultHarmMeanX>48.871</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>346</resultIterations>
+      <resultTime>29.978</resultTime>
+      <resultValue>112.189</resultValue>
+      <resultValueX>60.978</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>197</resultIterations>
+      <resultTime>30.061</resultTime>
+      <resultValue>320.111</resultValue>
+      <resultValueX>100.138</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>549</resultIterations>
+      <resultTime>29.995</resultTime>
+      <resultValue>174.037</resultValue>
+      <resultValueX>53.502</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>233</resultIterations>
+      <resultTime>29.979</resultTime>
+      <resultValue>248.697</resultValue>
+      <resultValueX>18.725</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>715</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>140.013</resultValue>
+      <resultValueX>68.879</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>584</resultIterations>
+      <resultTime>30.002</resultTime>
+      <resultValue>187.229</resultValue>
+      <resultValueX>56.238</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>580</resultIterations>
+      <resultTime>29.983</resultTime>
+      <resultValue>122.259</resultValue>
+      <resultValueX>47.876</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>383</resultIterations>
+      <resultTime>30.001</resultTime>
+      <resultValue>263.053</resultValue>
+      <resultValueX>86.773</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>1015</resultIterations>
+      <resultTime>29.96</resultTime>
+      <resultValue>234.306</resultValue>
+      <resultValueX>96.06</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>100</resultIterations>
+      <resultTime>30.153</resultTime>
+      <resultValue>131.127</resultValue>
+      <resultValueX>48.37</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>1079</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>290.916</resultValue>
+      <resultValueX>100.391</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>1246</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>211.959</resultValue>
+      <resultValueX>24.208</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZ4 HC (JNI)/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 HC (JNI), block mode</p>
+    </div>
+        </description>    <classPath>build/classes
+lib/lz4/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lz4.Lz4HcJNIDriver</driverClass>
+    <resultAritMean>863.882</resultAritMean>
+    <resultAritMeanX>42.461</resultAritMeanX>
+    <resultGeomMean>839.169</resultGeomMean>
+    <resultGeomMeanX>36.658</resultGeomMeanX>
+    <resultHarmMean>816.888</resultHarmMean>
+    <resultHarmMeanX>30.495</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>1749</resultIterations>
+      <resultTime>29.948</resultTime>
+      <resultValue>567.679</resultValue>
+      <resultValueX>43.507</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>558</resultIterations>
+      <resultTime>30.007</resultTime>
+      <resultValue>908.361</resultValue>
+      <resultValueX>43.131</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>2471</resultIterations>
+      <resultTime>29.967</resultTime>
+      <resultValue>784.062</resultValue>
+      <resultValueX>42.6</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>1285</resultIterations>
+      <resultTime>29.946</resultTime>
+      <resultValue>1373.104</resultValue>
+      <resultValueX>10.966</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>3869</resultIterations>
+      <resultTime>29.965</resultTime>
+      <resultValue>757.546</resultValue>
+      <resultValueX>57.613</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>3018</resultIterations>
+      <resultTime>29.96</resultTime>
+      <resultValue>968.923</resultValue>
+      <resultValueX>39.437</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>3140</resultIterations>
+      <resultTime>29.955</resultTime>
+      <resultValue>662.518</resultValue>
+      <resultValueX>31.899</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>1372</resultIterations>
+      <resultTime>29.946</resultTime>
+      <resultValue>944.066</resultValue>
+      <resultValueX>28.427</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>3366</resultIterations>
+      <resultTime>29.96</resultTime>
+      <resultValue>777.015</resultValue>
+      <resultValueX>79.089</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>519</resultIterations>
+      <resultTime>30.001</resultTime>
+      <resultValue>683.983</resultValue>
+      <resultValueX>33.785</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>2854</resultIterations>
+      <resultTime>29.959</resultTime>
+      <resultValue>769.878</resultValue>
+      <resultValueX>84.668</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>6874</resultIterations>
+      <resultTime>29.964</resultTime>
+      <resultValue>1169.453</resultValue>
+      <resultValueX>14.414</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="QuickLZ/L3/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.quicklz.QuickLZDriver3</driverClass>
+    <resultAritMean>128.734</resultAritMean>
+    <resultAritMeanX>44.621</resultAritMeanX>
+    <resultGeomMean>121.328</resultGeomMean>
+    <resultGeomMeanX>39.544</resultGeomMeanX>
+    <resultHarmMean>115.129</resultHarmMean>
+    <resultHarmMeanX>34.096</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>315</resultIterations>
+      <resultTime>29.976</resultTime>
+      <resultValue>102.144</resultValue>
+      <resultValueX>50.032</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>68</resultIterations>
+      <resultTime>29.99</resultTime>
+      <resultValue>110.758</resultValue>
+      <resultValueX>43.422</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>391</resultIterations>
+      <resultTime>30.011</resultTime>
+      <resultValue>123.883</resultValue>
+      <resultValueX>45.732</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>230</resultIterations>
+      <resultTime>30.007</resultTime>
+      <resultValue>245.27</resultValue>
+      <resultValueX>13.361</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>447</resultIterations>
+      <resultTime>29.989</resultTime>
+      <resultValue>87.452</resultValue>
+      <resultValueX>57.681</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>387</resultIterations>
+      <resultTime>30.006</resultTime>
+      <resultValue>124.052</resultValue>
+      <resultValueX>42.23</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>568</resultIterations>
+      <resultTime>29.952</resultTime>
+      <resultValue>119.853</resultValue>
+      <resultValueX>36.944</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>213</resultIterations>
+      <resultTime>30.044</resultTime>
+      <resultValue>146.087</resultValue>
+      <resultValueX>29.478</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>315</resultIterations>
+      <resultTime>30.028</resultTime>
+      <resultValue>72.55</resultValue>
+      <resultValueX>83.745</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>98</resultIterations>
+      <resultTime>30.021</resultTime>
+      <resultValue>129.069</resultValue>
+      <resultValueX>36.425</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>308</resultIterations>
+      <resultTime>30.037</resultTime>
+      <resultValue>82.868</resultValue>
+      <resultValueX>79.219</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>1181</resultIterations>
+      <resultTime>29.979</resultTime>
+      <resultValue>200.816</resultValue>
+      <resultValueX>17.185</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="Gzip/JDK/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</description>    <classPath>build/classes</classPath>
+    <driverClass>com.ning.jcbm.gzip.JDKGzipDriver</driverClass>
+    <resultAritMean>180.483</resultAritMean>
+    <resultAritMeanX>37.428</resultAritMeanX>
+    <resultGeomMean>164.542</resultGeomMean>
+    <resultGeomMeanX>32.309</resultGeomMeanX>
+    <resultHarmMean>152.383</resultHarmMean>
+    <resultHarmMeanX>26.858</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">true</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>412</resultIterations>
+      <resultTime>29.987</resultTime>
+      <resultValue>133.551</resultValue>
+      <resultValueX>37.985</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>98</resultIterations>
+      <resultTime>29.922</resultTime>
+      <resultValue>159.982</resultValue>
+      <resultValueX>37.269</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>457</resultIterations>
+      <resultTime>29.954</resultTime>
+      <resultValue>145.073</resultValue>
+      <resultValueX>36.868</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>361</resultIterations>
+      <resultTime>29.925</resultTime>
+      <resultValue>386.027</resultValue>
+      <resultValueX>9.538</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>566</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>110.81</resultValue>
+      <resultValueX>50.344</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>501</resultIterations>
+      <resultTime>29.981</resultTime>
+      <resultValue>160.729</resultValue>
+      <resultValueX>36.638</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>792</resultIterations>
+      <resultTime>29.971</resultTime>
+      <resultValue>167.015</resultValue>
+      <resultValueX>28.079</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>319</resultIterations>
+      <resultTime>29.975</resultTime>
+      <resultValue>219.285</resultValue>
+      <resultValueX>25.23</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>465</resultIterations>
+      <resultTime>30.02</resultTime>
+      <resultValue>107.128</resultValue>
+      <resultValueX>73.522</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>122</resultIterations>
+      <resultTime>30.005</resultTime>
+      <resultValue>160.76</resultValue>
+      <resultValueX>29.46</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>334</resultIterations>
+      <resultTime>29.974</resultTime>
+      <resultValue>90.053</resultValue>
+      <resultValueX>71.335</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>1913</resultIterations>
+      <resultTime>29.97</resultTime>
+      <resultValue>325.384</resultValue>
+      <resultValueX>12.871</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="BZip2/stream">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</description>    <classPath>build/classes
+lib/jakarta/*.jar</classPath>
+    <driverClass>com.ning.jcbm.bzip2.BZip2Driver</driverClass>
+    <resultAritMean>18.057</resultAritMean>
+    <resultAritMeanX>31.179</resultAritMeanX>
+    <resultGeomMean>17.211</resultGeomMean>
+    <resultGeomMeanX>26.142</resultGeomMeanX>
+    <resultHarmMean>16.423</resultHarmMean>
+    <resultHarmMeanX>20.644</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">true</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>49</resultIterations>
+      <resultTime>30.581</resultTime>
+      <resultValue>15.575</resultValue>
+      <resultValueX>30.552</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>10</resultIterations>
+      <resultTime>32.37</resultTime>
+      <resultValue>15.09</resultValue>
+      <resultValueX>35.926</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>64</resultIterations>
+      <resultTime>30.18</resultTime>
+      <resultValue>20.164</resultValue>
+      <resultValueX>25.449</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>28</resultIterations>
+      <resultTime>29.969</resultTime>
+      <resultValue>29.897</resultValue>
+      <resultValueX>6.384</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>61</resultIterations>
+      <resultTime>30.376</resultTime>
+      <resultValue>11.782</resultValue>
+      <resultValueX>47.816</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>50</resultIterations>
+      <resultTime>30.334</resultTime>
+      <resultValue>15.854</resultValue>
+      <resultValueX>32.87</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>92</resultIterations>
+      <resultTime>30.022</resultTime>
+      <resultValue>19.368</resultValue>
+      <resultValueX>21.011</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>29</resultIterations>
+      <resultTime>30.622</resultTime>
+      <resultValue>19.514</resultValue>
+      <resultValueX>22.448</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>43</resultIterations>
+      <resultTime>30.105</resultTime>
+      <resultValue>9.878</resultValue>
+      <resultValueX>69.086</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>14</resultIterations>
+      <resultTime>30.114</resultTime>
+      <resultValue>18.381</resultValue>
+      <resultValueX>23.347</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>50</resultIterations>
+      <resultTime>30.187</resultTime>
+      <resultValue>13.386</resultValue>
+      <resultValueX>49.627</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>164</resultIterations>
+      <resultTime>30.081</resultTime>
+      <resultValue>27.793</resultValue>
+      <resultValueX>9.63</resultValueX>
+    </testCase>
+  </driver>
+  <driver name="LZMA-orig/block">
+<description xmlns="http://www.sun.com/japex/testSuite">
+    <div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</description>    <classPath>build/classes
+lib/lzma/*.jar</classPath>
+    <driverClass>com.ning.jcbm.lzma.LzmaDriver</driverClass>
+    <resultAritMean>27.187</resultAritMean>
+    <resultAritMeanX>28.236</resultAritMeanX>
+    <resultGeomMean>22.971</resultGeomMean>
+    <resultGeomMeanX>23.308</resultGeomMeanX>
+    <resultHarmMean>19.71</resultHarmMean>
+    <resultHarmMeanX>17.777</resultHarmMeanX>
+    <singleClassLoader>n/a</singleClassLoader>
+    <streaming xmlns="">n/a</streaming>
+    <testCase name="U:dickens">
+      <resultIterations>72</resultIterations>
+      <resultTime>30.079</resultTime>
+      <resultValue>23.268</resultValue>
+      <resultValueX>28.442</resultValueX>
+    </testCase>
+    <testCase name="U:mozilla">
+      <resultIterations>13</resultIterations>
+      <resultTime>31.854</resultTime>
+      <resultValue>19.935</resultValue>
+      <resultValueX>26.869</resultValueX>
+    </testCase>
+    <testCase name="U:mr">
+      <resultIterations>59</resultIterations>
+      <resultTime>30.341</resultTime>
+      <resultValue>18.49</resultValue>
+      <resultValueX>27.741</resultValueX>
+    </testCase>
+    <testCase name="U:nci">
+      <resultIterations>65</resultIterations>
+      <resultTime>30.195</resultTime>
+      <resultValue>68.883</resultValue>
+      <resultValueX>5.026</resultValueX>
+    </testCase>
+    <testCase name="U:ooffice">
+      <resultIterations>75</resultIterations>
+      <resultTime>30.123</resultTime>
+      <resultValue>14.608</resultValue>
+      <resultValueX>39.685</resultValueX>
+    </testCase>
+    <testCase name="U:osdb">
+      <resultIterations>62</resultIterations>
+      <resultTime>30.107</resultTime>
+      <resultValue>19.808</resultValue>
+      <resultValueX>28.49</resultValueX>
+    </testCase>
+    <testCase name="U:reymont">
+      <resultIterations>140</resultIterations>
+      <resultTime>30.108</resultTime>
+      <resultValue>29.389</resultValue>
+      <resultValueX>20.209</resultValueX>
+    </testCase>
+    <testCase name="U:samba">
+      <resultIterations>44</resultIterations>
+      <resultTime>30.085</resultTime>
+      <resultValue>30.136</resultValue>
+      <resultValueX>18.101</resultValueX>
+    </testCase>
+    <testCase name="U:sao">
+      <resultIterations>42</resultIterations>
+      <resultTime>30.098</resultTime>
+      <resultValue>9.651</resultValue>
+      <resultValueX>61.082</resultValueX>
+    </testCase>
+    <testCase name="U:webster">
+      <resultIterations>22</resultIterations>
+      <resultTime>30.921</resultTime>
+      <resultValue>28.131</resultValue>
+      <resultValueX>21.932</resultValueX>
+    </testCase>
+    <testCase name="U:x-ray">
+      <resultIterations>36</resultIterations>
+      <resultTime>30.066</resultTime>
+      <resultValue>9.677</resultValue>
+      <resultValueX>53.042</resultValueX>
+    </testCase>
+    <testCase name="U:xml">
+      <resultIterations>319</resultIterations>
+      <resultTime>29.962</resultTime>
+      <resultValue>54.273</resultValue>
+      <resultValueX>8.212</resultValueX>
+    </testCase>
+  </driver>
+</testSuiteReport>
