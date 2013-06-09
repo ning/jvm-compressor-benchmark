@@ -1,0 +1,2658 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:extrep="http://www.sun.com/japex/extendedTestSuiteReport" xmlns:suite="http://www.sun.com/japex/testSuite" xmlns:rep="http://www.sun.com/japex/testSuiteReport" xmlns="http://www.w3.org/1999/xhtml">
+<link href="report.css" type="text/css" rel="stylesheet"/>
+<body>
+<table border="0" cellpadding="2">
+<tr>
+<td valign="middle" width="90">
+<p>
+<a href="https://japex.dev.java.net">
+<img src="small_japex.gif" align="middle" border="0"/>
+</a>
+</p>
+</td>
+<td valign="middle">
+<h1>Japex Report: Test suite for JVM compressors</h1>
+</td>
+</tr>
+</table>
+<h2>Description</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p>
+</div>
+</div>
+<h2>Global Parameters</h2>
+<ul>
+<li>configFile: <a href="tests-max-comp-compress.xml">tests-max-comp-compress.xml</a>
+</li>
+<li>chartType: barchart</li>
+<li>dateTime: 08 Jun 2013/14:54:30 PDT</li>
+<li>hostName: TS-MacMini.local</li>
+<li>inputDir: testdata/maximumcompression</li>
+<li>numberOfCpus: 2</li>
+<li>numberOfThreads: 1</li>
+<li>osArchitecture: x86_64</li>
+<li>osName: Mac OS X</li>
+<li>plotDrivers: false</li>
+<li>plotGroupSize: 5</li>
+<li>reportsDirectory: reports/maxcomp-compress</li>
+<li>resultAxis: normal</li>
+<li>resultAxisX: normal</li>
+<li>resultUnit: TPS</li>
+<li>resultUnitX: Size%</li>
+<li>runTime: 30</li>
+<li>runsPerDriver: 1</li>
+<li>singleClassLoader: false</li>
+<li>version: 1.2.2</li>
+<li>vmInfo: Oracle Corporation 23.6-b04</li>
+<li>warmupTime: 7</li>
+<li>warmupsPerDriver: 0</li>
+</ul>
+<h2>Result Summary 
+        (TPS)</h2>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th width="15%">
+<b>driver</b>
+</th>
+<th>
+<b>resultAritMean</b>
+</th>
+<th>
+<b>resultAritMeanX</b>
+</th>
+<th>
+<b>resultGeomMean</b>
+</th>
+<th>
+<b>resultGeomMeanX</b>
+</th>
+<th>
+<b>resultHarmMean</b>
+</th>
+<th>
+<b>resultHarmMeanX</b>
+</th>
+<th>
+<b>singleClassLoader</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">LZ4 (JNI)/block</td>
+<td align="right">
+<nobr>426.698</nobr>
+</td>
+<td align="right">
+<nobr>55.885</nobr>
+</td>
+<td align="right">
+<nobr>343.388</nobr>
+</td>
+<td align="right">
+<nobr>48.213</nobr>
+</td>
+<td align="right">
+<nobr>290.668</nobr>
+</td>
+<td align="right">
+<nobr>38.711</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZ4 (Java+Unsafe)/block</td>
+<td align="right">
+<nobr>313.029</nobr>
+</td>
+<td align="right">
+<nobr>55.885</nobr>
+</td>
+<td align="right">
+<nobr>224.597</nobr>
+</td>
+<td align="right">
+<nobr>48.213</nobr>
+</td>
+<td align="right">
+<nobr>181.712</nobr>
+</td>
+<td align="right">
+<nobr>38.711</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Snappy(JNI)/block</td>
+<td align="right">
+<nobr>296.487</nobr>
+</td>
+<td align="right">
+<nobr>56.726</nobr>
+</td>
+<td align="right">
+<nobr>207.254</nobr>
+</td>
+<td align="right">
+<nobr>50.191</nobr>
+</td>
+<td align="right">
+<nobr>166.791</nobr>
+</td>
+<td align="right">
+<nobr>42.542</nobr>
+</td>
+<td align="right">
+<nobr>true</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Snappy(iq80)/block</td>
+<td align="right">
+<nobr>285.986</nobr>
+</td>
+<td align="right">
+<nobr>56.726</nobr>
+</td>
+<td align="right">
+<nobr>195.011</nobr>
+</td>
+<td align="right">
+<nobr>50.191</nobr>
+</td>
+<td align="right">
+<nobr>155.033</nobr>
+</td>
+<td align="right">
+<nobr>42.542</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/block</td>
+<td align="right">
+<nobr>135.441</nobr>
+</td>
+<td align="right">
+<nobr>56.142</nobr>
+</td>
+<td align="right">
+<nobr>116.188</nobr>
+</td>
+<td align="right">
+<nobr>49.434</nobr>
+</td>
+<td align="right">
+<nobr>103.305</nobr>
+</td>
+<td align="right">
+<nobr>41.57</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZF/stream</td>
+<td align="right">
+<nobr>130.456</nobr>
+</td>
+<td align="right">
+<nobr>56.142</nobr>
+</td>
+<td align="right">
+<nobr>111.777</nobr>
+</td>
+<td align="right">
+<nobr>49.434</nobr>
+</td>
+<td align="right">
+<nobr>99.47</nobr>
+</td>
+<td align="right">
+<nobr>41.57</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZO-java/block</td>
+<td align="right">
+<nobr>313.545</nobr>
+</td>
+<td align="right">
+<nobr>56.966</nobr>
+</td>
+<td align="right">
+<nobr>169.252</nobr>
+</td>
+<td align="right">
+<nobr>49.259</nobr>
+</td>
+<td align="right">
+<nobr>123.119</nobr>
+</td>
+<td align="right">
+<nobr>40.384</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZ4 HC (JNI)/block</td>
+<td align="right">
+<nobr>18.418</nobr>
+</td>
+<td align="right">
+<nobr>46.999</nobr>
+</td>
+<td align="right">
+<nobr>16.989</nobr>
+</td>
+<td align="right">
+<nobr>38.037</nobr>
+</td>
+<td align="right">
+<nobr>15.147</nobr>
+</td>
+<td align="right">
+<nobr>28.328</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">QuickLZ/L3/block</td>
+<td align="right">
+<nobr>16.312</nobr>
+</td>
+<td align="right">
+<nobr>48.965</nobr>
+</td>
+<td align="right">
+<nobr>15.851</nobr>
+</td>
+<td align="right">
+<nobr>39.758</nobr>
+</td>
+<td align="right">
+<nobr>15.456</nobr>
+</td>
+<td align="right">
+<nobr>30.275</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">Gzip/JDK/stream</td>
+<td align="right">
+<nobr>16.836</nobr>
+</td>
+<td align="right">
+<nobr>42.446</nobr>
+</td>
+<td align="right">
+<nobr>15.086</nobr>
+</td>
+<td align="right">
+<nobr>33.46</nobr>
+</td>
+<td align="right">
+<nobr>13.843</nobr>
+</td>
+<td align="right">
+<nobr>25.033</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">BZip2/stream</td>
+<td align="right">
+<nobr>4.082</nobr>
+</td>
+<td align="right">
+<nobr>40.582</nobr>
+</td>
+<td align="right">
+<nobr>3.881</nobr>
+</td>
+<td align="right">
+<nobr>30.252</nobr>
+</td>
+<td align="right">
+<nobr>3.621</nobr>
+</td>
+<td align="right">
+<nobr>20.231</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">LZMA-orig/block</td>
+<td align="right">
+<nobr>1.227</nobr>
+</td>
+<td align="right">
+<nobr>36.854</nobr>
+</td>
+<td align="right">
+<nobr>1.108</nobr>
+</td>
+<td align="right">
+<nobr>26.256</nobr>
+</td>
+<td align="right">
+<nobr>1.011</nobr>
+</td>
+<td align="right">
+<nobr>17.21</nobr>
+</td>
+<td align="right">
+<nobr>n/a</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<br/>
+<center>
+<img src="result.jpg"/>
+</center>
+<br/>
+<br/>
+<h2>Driver: LZ4 (JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 (JNI), block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lz4/*.jar</li>
+<li>driverClass: com.ning.jcbm.lz4.Lz4JNIDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>112123</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>1199.9</nobr>
+</td>
+<td align="right">
+<nobr>100.379</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>1752</nobr>
+</td>
+<td align="right">
+<nobr>29.955</nobr>
+</td>
+<td align="right">
+<nobr>215.907</nobr>
+</td>
+<td align="right">
+<nobr>62.131</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>1054</nobr>
+</td>
+<td align="right">
+<nobr>29.928</nobr>
+</td>
+<td align="right">
+<nobr>692.442</nobr>
+</td>
+<td align="right">
+<nobr>11.685</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>3943</nobr>
+</td>
+<td align="right">
+<nobr>29.944</nobr>
+</td>
+<td align="right">
+<nobr>568.49</nobr>
+</td>
+<td align="right">
+<nobr>88.933</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>1568</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>188.751</nobr>
+</td>
+<td align="right">
+<nobr>76.104</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>1740</nobr>
+</td>
+<td align="right">
+<nobr>29.959</nobr>
+</td>
+<td align="right">
+<nobr>225.293</nobr>
+</td>
+<td align="right">
+<nobr>48.552</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>3851</nobr>
+</td>
+<td align="right">
+<nobr>29.96</nobr>
+</td>
+<td align="right">
+<nobr>510.959</nobr>
+</td>
+<td align="right">
+<nobr>28.078</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>1479</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>195.311</nobr>
+</td>
+<td align="right">
+<nobr>57.851</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>2175</nobr>
+</td>
+<td align="right">
+<nobr>29.964</nobr>
+</td>
+<td align="right">
+<nobr>285.3</nobr>
+</td>
+<td align="right">
+<nobr>34.349</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>1941</nobr>
+</td>
+<td align="right">
+<nobr>29.964</nobr>
+</td>
+<td align="right">
+<nobr>184.623</nobr>
+</td>
+<td align="right">
+<nobr>50.788</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZ4 (Java+Unsafe)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 (Java+Unsafe), block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lz4/*.jar</li>
+<li>driverClass: com.ning.jcbm.lz4.Lz4JavaUnsafeDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>112293</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>1199.9</nobr>
+</td>
+<td align="right">
+<nobr>100.379</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>1058</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>130.335</nobr>
+</td>
+<td align="right">
+<nobr>62.131</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>639</nobr>
+</td>
+<td align="right">
+<nobr>29.934</nobr>
+</td>
+<td align="right">
+<nobr>419.727</nobr>
+</td>
+<td align="right">
+<nobr>11.685</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>2698</nobr>
+</td>
+<td align="right">
+<nobr>29.962</nobr>
+</td>
+<td align="right">
+<nobr>388.752</nobr>
+</td>
+<td align="right">
+<nobr>88.933</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>944</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>113.621</nobr>
+</td>
+<td align="right">
+<nobr>76.104</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>1078</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>139.533</nobr>
+</td>
+<td align="right">
+<nobr>48.552</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>2440</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>323.627</nobr>
+</td>
+<td align="right">
+<nobr>28.078</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>910</nobr>
+</td>
+<td align="right">
+<nobr>29.988</nobr>
+</td>
+<td align="right">
+<nobr>120.082</nobr>
+</td>
+<td align="right">
+<nobr>57.851</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>1357</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>177.992</nobr>
+</td>
+<td align="right">
+<nobr>34.349</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>1228</nobr>
+</td>
+<td align="right">
+<nobr>29.986</nobr>
+</td>
+<td align="right">
+<nobr>116.718</nobr>
+</td>
+<td align="right">
+<nobr>50.788</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Snappy(JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-JNI, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/snappy/*.jar</li>
+<li>driverClass: com.ning.jcbm.snappy.SnappyDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>72301</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>1199.9</nobr>
+</td>
+<td align="right">
+<nobr>99.996</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>1029</nobr>
+</td>
+<td align="right">
+<nobr>29.965</nobr>
+</td>
+<td align="right">
+<nobr>126.764</nobr>
+</td>
+<td align="right">
+<nobr>62.662</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>512</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>335.855</nobr>
+</td>
+<td align="right">
+<nobr>14.714</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>2738</nobr>
+</td>
+<td align="right">
+<nobr>29.965</nobr>
+</td>
+<td align="right">
+<nobr>394.48</nobr>
+</td>
+<td align="right">
+<nobr>89.326</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>935</nobr>
+</td>
+<td align="right">
+<nobr>29.989</nobr>
+</td>
+<td align="right">
+<nobr>112.467</nobr>
+</td>
+<td align="right">
+<nobr>76.396</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>889</nobr>
+</td>
+<td align="right">
+<nobr>29.975</nobr>
+</td>
+<td align="right">
+<nobr>115.043</nobr>
+</td>
+<td align="right">
+<nobr>43.695</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>2341</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>310.544</nobr>
+</td>
+<td align="right">
+<nobr>32.685</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>811</nobr>
+</td>
+<td align="right">
+<nobr>29.979</nobr>
+</td>
+<td align="right">
+<nobr>107.051</nobr>
+</td>
+<td align="right">
+<nobr>55.903</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>1153</nobr>
+</td>
+<td align="right">
+<nobr>29.983</nobr>
+</td>
+<td align="right">
+<nobr>151.146</nobr>
+</td>
+<td align="right">
+<nobr>36.421</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>1174</nobr>
+</td>
+<td align="right">
+<nobr>29.978</nobr>
+</td>
+<td align="right">
+<nobr>111.616</nobr>
+</td>
+<td align="right">
+<nobr>55.458</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Snappy(iq80)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Snappy-Java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/iq80-snappy/*.jar</li>
+<li>driverClass: com.ning.jcbm.iq80snappy.Iq80SnappyDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>66309</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>1199.9</nobr>
+</td>
+<td align="right">
+<nobr>99.996</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>873</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>107.534</nobr>
+</td>
+<td align="right">
+<nobr>62.662</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>517</nobr>
+</td>
+<td align="right">
+<nobr>30.014</nobr>
+</td>
+<td align="right">
+<nobr>338.688</nobr>
+</td>
+<td align="right">
+<nobr>14.714</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>2483</nobr>
+</td>
+<td align="right">
+<nobr>29.963</nobr>
+</td>
+<td align="right">
+<nobr>357.766</nobr>
+</td>
+<td align="right">
+<nobr>89.326</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>781</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>94.014</nobr>
+</td>
+<td align="right">
+<nobr>76.396</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>902</nobr>
+</td>
+<td align="right">
+<nobr>29.995</nobr>
+</td>
+<td align="right">
+<nobr>116.648</nobr>
+</td>
+<td align="right">
+<nobr>43.695</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>2184</nobr>
+</td>
+<td align="right">
+<nobr>29.966</nobr>
+</td>
+<td align="right">
+<nobr>289.712</nobr>
+</td>
+<td align="right">
+<nobr>32.685</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>826</nobr>
+</td>
+<td align="right">
+<nobr>29.963</nobr>
+</td>
+<td align="right">
+<nobr>109.088</nobr>
+</td>
+<td align="right">
+<nobr>55.903</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>1113</nobr>
+</td>
+<td align="right">
+<nobr>29.981</nobr>
+</td>
+<td align="right">
+<nobr>145.912</nobr>
+</td>
+<td align="right">
+<nobr>36.421</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>1058</nobr>
+</td>
+<td align="right">
+<nobr>29.974</nobr>
+</td>
+<td align="right">
+<nobr>100.602</nobr>
+</td>
+<td align="right">
+<nobr>55.458</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>2229</nobr>
+</td>
+<td align="right">
+<nobr>29.98</nobr>
+</td>
+<td align="right">
+<nobr>59.735</nobr>
+</td>
+<td align="right">
+<nobr>100.008</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>746</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>91.883</nobr>
+</td>
+<td align="right">
+<nobr>61.749</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>568</nobr>
+</td>
+<td align="right">
+<nobr>29.984</nobr>
+</td>
+<td align="right">
+<nobr>372.462</nobr>
+</td>
+<td align="right">
+<nobr>14.067</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>467</nobr>
+</td>
+<td align="right">
+<nobr>30.011</nobr>
+</td>
+<td align="right">
+<nobr>67.18</nobr>
+</td>
+<td align="right">
+<nobr>89.135</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>616</nobr>
+</td>
+<td align="right">
+<nobr>29.988</nobr>
+</td>
+<td align="right">
+<nobr>74.096</nobr>
+</td>
+<td align="right">
+<nobr>75.166</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>1116</nobr>
+</td>
+<td align="right">
+<nobr>29.975</nobr>
+</td>
+<td align="right">
+<nobr>144.42</nobr>
+</td>
+<td align="right">
+<nobr>40.624</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>1363</nobr>
+</td>
+<td align="right">
+<nobr>29.98</nobr>
+</td>
+<td align="right">
+<nobr>180.723</nobr>
+</td>
+<td align="right">
+<nobr>32.026</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>872</nobr>
+</td>
+<td align="right">
+<nobr>29.973</nobr>
+</td>
+<td align="right">
+<nobr>115.125</nobr>
+</td>
+<td align="right">
+<nobr>53.205</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>1166</nobr>
+</td>
+<td align="right">
+<nobr>29.982</nobr>
+</td>
+<td align="right">
+<nobr>152.857</nobr>
+</td>
+<td align="right">
+<nobr>37.052</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>1009</nobr>
+</td>
+<td align="right">
+<nobr>29.979</nobr>
+</td>
+<td align="right">
+<nobr>95.927</nobr>
+</td>
+<td align="right">
+<nobr>58.385</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZF/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZF, streaming</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzf/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzf.LzfDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>2170</nobr>
+</td>
+<td align="right">
+<nobr>29.976</nobr>
+</td>
+<td align="right">
+<nobr>58.162</nobr>
+</td>
+<td align="right">
+<nobr>100.008</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>718</nobr>
+</td>
+<td align="right">
+<nobr>29.969</nobr>
+</td>
+<td align="right">
+<nobr>88.442</nobr>
+</td>
+<td align="right">
+<nobr>61.749</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>551</nobr>
+</td>
+<td align="right">
+<nobr>29.941</nobr>
+</td>
+<td align="right">
+<nobr>361.837</nobr>
+</td>
+<td align="right">
+<nobr>14.067</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>452</nobr>
+</td>
+<td align="right">
+<nobr>29.986</nobr>
+</td>
+<td align="right">
+<nobr>65.077</nobr>
+</td>
+<td align="right">
+<nobr>89.135</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>593</nobr>
+</td>
+<td align="right">
+<nobr>29.961</nobr>
+</td>
+<td align="right">
+<nobr>71.394</nobr>
+</td>
+<td align="right">
+<nobr>75.166</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>1045</nobr>
+</td>
+<td align="right">
+<nobr>29.985</nobr>
+</td>
+<td align="right">
+<nobr>135.186</nobr>
+</td>
+<td align="right">
+<nobr>40.624</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>1320</nobr>
+</td>
+<td align="right">
+<nobr>29.971</nobr>
+</td>
+<td align="right">
+<nobr>175.073</nobr>
+</td>
+<td align="right">
+<nobr>32.026</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>820</nobr>
+</td>
+<td align="right">
+<nobr>29.965</nobr>
+</td>
+<td align="right">
+<nobr>108.29</nobr>
+</td>
+<td align="right">
+<nobr>53.205</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>1134</nobr>
+</td>
+<td align="right">
+<nobr>29.963</nobr>
+</td>
+<td align="right">
+<nobr>148.755</nobr>
+</td>
+<td align="right">
+<nobr>37.052</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>971</nobr>
+</td>
+<td align="right">
+<nobr>29.97</nobr>
+</td>
+<td align="right">
+<nobr>92.341</nobr>
+</td>
+<td align="right">
+<nobr>58.385</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZO-java/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZO-java, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzo-java/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzo.LzoJavaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>48754</nobr>
+</td>
+<td align="right">
+<nobr>29.968</nobr>
+</td>
+<td align="right">
+<nobr>1199.9</nobr>
+</td>
+<td align="right">
+<nobr>100.381</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>721</nobr>
+</td>
+<td align="right">
+<nobr>29.993</nobr>
+</td>
+<td align="right">
+<nobr>88.738</nobr>
+</td>
+<td align="right">
+<nobr>64.016</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>292</nobr>
+</td>
+<td align="right">
+<nobr>30.014</nobr>
+</td>
+<td align="right">
+<nobr>191.285</nobr>
+</td>
+<td align="right">
+<nobr>13.02</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>7235</nobr>
+</td>
+<td align="right">
+<nobr>29.959</nobr>
+</td>
+<td align="right">
+<nobr>1042.613</nobr>
+</td>
+<td align="right">
+<nobr>99.703</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>610</nobr>
+</td>
+<td align="right">
+<nobr>30</nobr>
+</td>
+<td align="right">
+<nobr>73.346</nobr>
+</td>
+<td align="right">
+<nobr>76.552</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>722</nobr>
+</td>
+<td align="right">
+<nobr>30.004</nobr>
+</td>
+<td align="right">
+<nobr>93.342</nobr>
+</td>
+<td align="right">
+<nobr>43.803</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>1236</nobr>
+</td>
+<td align="right">
+<nobr>29.963</nobr>
+</td>
+<td align="right">
+<nobr>163.974</nobr>
+</td>
+<td align="right">
+<nobr>30.493</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>661</nobr>
+</td>
+<td align="right">
+<nobr>29.99</nobr>
+</td>
+<td align="right">
+<nobr>87.218</nobr>
+</td>
+<td align="right">
+<nobr>55.661</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>860</nobr>
+</td>
+<td align="right">
+<nobr>29.985</nobr>
+</td>
+<td align="right">
+<nobr>112.73</nobr>
+</td>
+<td align="right">
+<nobr>34.153</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>866</nobr>
+</td>
+<td align="right">
+<nobr>29.99</nobr>
+</td>
+<td align="right">
+<nobr>82.3</nobr>
+</td>
+<td align="right">
+<nobr>51.878</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZ4 HC (JNI)/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>LZ4 HC (JNI), block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lz4/*.jar</li>
+<li>driverClass: com.ning.jcbm.lz4.Lz4HcJNIDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>823</nobr>
+</td>
+<td align="right">
+<nobr>29.984</nobr>
+</td>
+<td align="right">
+<nobr>22.053</nobr>
+</td>
+<td align="right">
+<nobr>100.305</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>160</nobr>
+</td>
+<td align="right">
+<nobr>29.995</nobr>
+</td>
+<td align="right">
+<nobr>19.691</nobr>
+</td>
+<td align="right">
+<nobr>53.156</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>33</nobr>
+</td>
+<td align="right">
+<nobr>29.939</nobr>
+</td>
+<td align="right">
+<nobr>21.672</nobr>
+</td>
+<td align="right">
+<nobr>7.605</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>145</nobr>
+</td>
+<td align="right">
+<nobr>30.152</nobr>
+</td>
+<td align="right">
+<nobr>20.762</nobr>
+</td>
+<td align="right">
+<nobr>85.494</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>166</nobr>
+</td>
+<td align="right">
+<nobr>30.131</nobr>
+</td>
+<td align="right">
+<nobr>19.873</nobr>
+</td>
+<td align="right">
+<nobr>66.45</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>65</nobr>
+</td>
+<td align="right">
+<nobr>30.077</nobr>
+</td>
+<td align="right">
+<nobr>8.383</nobr>
+</td>
+<td align="right">
+<nobr>40.028</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>212</nobr>
+</td>
+<td align="right">
+<nobr>30.009</nobr>
+</td>
+<td align="right">
+<nobr>28.083</nobr>
+</td>
+<td align="right">
+<nobr>24.764</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>49</nobr>
+</td>
+<td align="right">
+<nobr>30.033</nobr>
+</td>
+<td align="right">
+<nobr>6.456</nobr>
+</td>
+<td align="right">
+<nobr>36.458</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>123</nobr>
+</td>
+<td align="right">
+<nobr>30.201</nobr>
+</td>
+<td align="right">
+<nobr>16.008</nobr>
+</td>
+<td align="right">
+<nobr>23.982</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>223</nobr>
+</td>
+<td align="right">
+<nobr>29.978</nobr>
+</td>
+<td align="right">
+<nobr>21.202</nobr>
+</td>
+<td align="right">
+<nobr>31.752</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: QuickLZ/L3/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>QuickLZ (level 3), block mode
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.quicklz.QuickLZDriver3</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>486</nobr>
+</td>
+<td align="right">
+<nobr>30.009</nobr>
+</td>
+<td align="right">
+<nobr>13.012</nobr>
+</td>
+<td align="right">
+<nobr>100.001</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>113</nobr>
+</td>
+<td align="right">
+<nobr>29.976</nobr>
+</td>
+<td align="right">
+<nobr>13.916</nobr>
+</td>
+<td align="right">
+<nobr>52.073</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>40</nobr>
+</td>
+<td align="right">
+<nobr>30.657</nobr>
+</td>
+<td align="right">
+<nobr>25.654</nobr>
+</td>
+<td align="right">
+<nobr>8.589</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>91</nobr>
+</td>
+<td align="right">
+<nobr>30.159</nobr>
+</td>
+<td align="right">
+<nobr>13.027</nobr>
+</td>
+<td align="right">
+<nobr>100</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>102</nobr>
+</td>
+<td align="right">
+<nobr>30.128</nobr>
+</td>
+<td align="right">
+<nobr>12.212</nobr>
+</td>
+<td align="right">
+<nobr>65.653</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>110</nobr>
+</td>
+<td align="right">
+<nobr>30.144</nobr>
+</td>
+<td align="right">
+<nobr>14.155</nobr>
+</td>
+<td align="right">
+<nobr>35.502</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>148</nobr>
+</td>
+<td align="right">
+<nobr>30.022</nobr>
+</td>
+<td align="right">
+<nobr>19.596</nobr>
+</td>
+<td align="right">
+<nobr>25.717</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>110</nobr>
+</td>
+<td align="right">
+<nobr>30.169</nobr>
+</td>
+<td align="right">
+<nobr>14.428</nobr>
+</td>
+<td align="right">
+<nobr>42.061</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>161</nobr>
+</td>
+<td align="right">
+<nobr>30.126</nobr>
+</td>
+<td align="right">
+<nobr>21.005</nobr>
+</td>
+<td align="right">
+<nobr>24.883</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>170</nobr>
+</td>
+<td align="right">
+<nobr>30.068</nobr>
+</td>
+<td align="right">
+<nobr>16.114</nobr>
+</td>
+<td align="right">
+<nobr>35.169</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: Gzip/JDK/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>JDK Gzip/Deflate, streaming
+</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes</li>
+<li>driverClass: com.ning.jcbm.gzip.JDKGzipDriver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>609</nobr>
+</td>
+<td align="right">
+<nobr>29.991</nobr>
+</td>
+<td align="right">
+<nobr>16.315</nobr>
+</td>
+<td align="right">
+<nobr>99.92</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>100</nobr>
+</td>
+<td align="right">
+<nobr>30.121</nobr>
+</td>
+<td align="right">
+<nobr>12.255</nobr>
+</td>
+<td align="right">
+<nobr>44.756</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>60</nobr>
+</td>
+<td align="right">
+<nobr>29.956</nobr>
+</td>
+<td align="right">
+<nobr>39.382</nobr>
+</td>
+<td align="right">
+<nobr>7.03</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>108</nobr>
+</td>
+<td align="right">
+<nobr>30.211</nobr>
+</td>
+<td align="right">
+<nobr>15.433</nobr>
+</td>
+<td align="right">
+<nobr>84.658</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>87</nobr>
+</td>
+<td align="right">
+<nobr>30.059</nobr>
+</td>
+<td align="right">
+<nobr>10.44</nobr>
+</td>
+<td align="right">
+<nobr>57.887</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>78</nobr>
+</td>
+<td align="right">
+<nobr>30.001</nobr>
+</td>
+<td align="right">
+<nobr>10.085</nobr>
+</td>
+<td align="right">
+<nobr>25.801</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>203</nobr>
+</td>
+<td align="right">
+<nobr>30.018</nobr>
+</td>
+<td align="right">
+<nobr>26.882</nobr>
+</td>
+<td align="right">
+<nobr>24.21</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>64</nobr>
+</td>
+<td align="right">
+<nobr>30.352</nobr>
+</td>
+<td align="right">
+<nobr>8.344</nobr>
+</td>
+<td align="right">
+<nobr>30.406</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>118</nobr>
+</td>
+<td align="right">
+<nobr>30.092</nobr>
+</td>
+<td align="right">
+<nobr>15.413</nobr>
+</td>
+<td align="right">
+<nobr>20.565</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>146</nobr>
+</td>
+<td align="right">
+<nobr>30.14</nobr>
+</td>
+<td align="right">
+<nobr>13.806</nobr>
+</td>
+<td align="right">
+<nobr>29.23</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: BZip2/stream</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>Commons-compress BZip2 implementation</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/jakarta/*.jar</li>
+<li>driverClass: com.ning.jcbm.bzip2.BZip2Driver</li>
+<li>streaming: true</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>162</nobr>
+</td>
+<td align="right">
+<nobr>29.984</nobr>
+</td>
+<td align="right">
+<nobr>4.341</nobr>
+</td>
+<td align="right">
+<nobr>99.687</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>42</nobr>
+</td>
+<td align="right">
+<nobr>30.044</nobr>
+</td>
+<td align="right">
+<nobr>5.16</nobr>
+</td>
+<td align="right">
+<nobr>43.696</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>5</nobr>
+</td>
+<td align="right">
+<nobr>33.928</nobr>
+</td>
+<td align="right">
+<nobr>2.898</nobr>
+</td>
+<td align="right">
+<nobr>4.689</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>31</nobr>
+</td>
+<td align="right">
+<nobr>30.068</nobr>
+</td>
+<td align="right">
+<nobr>4.451</nobr>
+</td>
+<td align="right">
+<nobr>84.641</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>39</nobr>
+</td>
+<td align="right">
+<nobr>30.121</nobr>
+</td>
+<td align="right">
+<nobr>4.671</nobr>
+</td>
+<td align="right">
+<nobr>56.559</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>43</nobr>
+</td>
+<td align="right">
+<nobr>30.288</nobr>
+</td>
+<td align="right">
+<nobr>5.507</nobr>
+</td>
+<td align="right">
+<nobr>28.469</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>13</nobr>
+</td>
+<td align="right">
+<nobr>31.596</nobr>
+</td>
+<td align="right">
+<nobr>1.636</nobr>
+</td>
+<td align="right">
+<nobr>23.096</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>30</nobr>
+</td>
+<td align="right">
+<nobr>30.923</nobr>
+</td>
+<td align="right">
+<nobr>3.839</nobr>
+</td>
+<td align="right">
+<nobr>22.451</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>26</nobr>
+</td>
+<td align="right">
+<nobr>30.621</nobr>
+</td>
+<td align="right">
+<nobr>3.337</nobr>
+</td>
+<td align="right">
+<nobr>18.538</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>53</nobr>
+</td>
+<td align="right">
+<nobr>30.314</nobr>
+</td>
+<td align="right">
+<nobr>4.983</nobr>
+</td>
+<td align="right">
+<nobr>23.994</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Driver: LZMA-orig/block</h2>
+<div class="description">
+<div xmlns="" xmlns:ns2="http://www.sun.com/japex/testSuite" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <p>7Zip's LZMA, block mode</p>
+    </div>
+</div>
+<p>
+<ul>
+<li>classPath: build/classes
+lib/lzma/*.jar</li>
+<li>driverClass: com.ning.jcbm.lzma.LzmaDriver</li>
+<li>streaming: n/a</li>
+</ul>
+</p>
+<table width="80%" border="1">
+<thead>
+<tr>
+<th>
+<b>testCase</b>
+</th>
+<th>
+<b>resultIterations</b>
+</th>
+<th>
+<b>resultTime</b>
+</th>
+<th>
+<b>resultValue</b>
+</th>
+<th>
+<b>resultValueX</b>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">C:A10.jpg</td>
+<td align="right">
+<nobr>94</nobr>
+</td>
+<td align="right">
+<nobr>30</nobr>
+</td>
+<td align="right">
+<nobr>2.517</nobr>
+</td>
+<td align="right">
+<nobr>100.412</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:AcroRd32.exe</td>
+<td align="right">
+<nobr>9</nobr>
+</td>
+<td align="right">
+<nobr>31.415</nobr>
+</td>
+<td align="right">
+<nobr>1.058</nobr>
+</td>
+<td align="right">
+<nobr>36.369</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FP.LOG</td>
+<td align="right">
+<nobr>2</nobr>
+</td>
+<td align="right">
+<nobr>42.083</nobr>
+</td>
+<td align="right">
+<nobr>0.934</nobr>
+</td>
+<td align="right">
+<nobr>4.021</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:FlashMX.pdf</td>
+<td align="right">
+<nobr>11</nobr>
+</td>
+<td align="right">
+<nobr>31.24</nobr>
+</td>
+<td align="right">
+<nobr>1.52</nobr>
+</td>
+<td align="right">
+<nobr>81.929</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:MSO97.DLL</td>
+<td align="right">
+<nobr>9</nobr>
+</td>
+<td align="right">
+<nobr>31.877</nobr>
+</td>
+<td align="right">
+<nobr>1.018</nobr>
+</td>
+<td align="right">
+<nobr>48.162</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:english.dic</td>
+<td align="right">
+<nobr>8</nobr>
+</td>
+<td align="right">
+<nobr>31.035</nobr>
+</td>
+<td align="right">
+<nobr>1</nobr>
+</td>
+<td align="right">
+<nobr>20.951</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:ohs.doc</td>
+<td align="right">
+<nobr>16</nobr>
+</td>
+<td align="right">
+<nobr>30.887</nobr>
+</td>
+<td align="right">
+<nobr>2.059</nobr>
+</td>
+<td align="right">
+<nobr>19.265</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:rafale.bmp</td>
+<td align="right">
+<nobr>5</nobr>
+</td>
+<td align="right">
+<nobr>35.877</nobr>
+</td>
+<td align="right">
+<nobr>0.551</nobr>
+</td>
+<td align="right">
+<nobr>23.496</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:vcfiu.hlp</td>
+<td align="right">
+<nobr>8</nobr>
+</td>
+<td align="right">
+<nobr>33.78</nobr>
+</td>
+<td align="right">
+<nobr>0.931</nobr>
+</td>
+<td align="right">
+<nobr>14.83</nobr>
+</td>
+</tr>
+<tr>
+<td align="right">C:world95.txt</td>
+<td align="right">
+<nobr>8</nobr>
+</td>
+<td align="right">
+<nobr>33.387</nobr>
+</td>
+<td align="right">
+<nobr>0.683</nobr>
+</td>
+<td align="right">
+<nobr>19.103</nobr>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h2>Results Per Test</h2>
+<br/>
+<center>
+<img src="testcase0.jpg"/>
+</center>
+<br/>
+<br/>
+<center>
+<img src="testcase1.jpg"/>
+</center>
+<br/>
+<br/>
+<br/>
+<small>
+<hr/>
+<font size="-2">
+                        Generated using <a href="https://japex.dev.java.net">Japex</a> version 
+                        1.2.2</font>
+</small>
+</body>
+</html>
