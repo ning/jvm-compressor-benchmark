@@ -14,6 +14,7 @@ public class LzfDriver extends DriverBase
         super("LZF");
     }
     
+    @Override
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
         // uses new "appendEncoded" in 0.9.7:
@@ -22,11 +23,13 @@ public class LzfDriver extends DriverBase
         return outPtr;
     }
 
+    @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
         return LZFDecoder.decode(compressed, 0, compressed.length, uncompressBuffer);
     }
 
+    @Override
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)
         throws IOException
     {
@@ -35,6 +38,7 @@ public class LzfDriver extends DriverBase
         out.close();
     }
 
+    @Override
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer)
         throws IOException
     {

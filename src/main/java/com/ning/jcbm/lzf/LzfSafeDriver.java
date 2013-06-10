@@ -15,7 +15,8 @@ public class LzfSafeDriver extends DriverBase
     public LzfSafeDriver() {
         super("LZF-safe");
     }
-    
+
+    @Override
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
         int outPtr = LZFEncoder.safeAppendEncoded(uncompressed, 0, uncompressed.length,
@@ -23,11 +24,13 @@ public class LzfSafeDriver extends DriverBase
         return outPtr;
     }
 
+    @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
         return LZFDecoder.safeDecode(compressed, 0, compressed.length, uncompressBuffer);
     }
 
+    @Override
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)
         throws IOException
     {
@@ -36,6 +39,7 @@ public class LzfSafeDriver extends DriverBase
         out.close();
     }
 
+    @Override
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer)
         throws IOException
     {

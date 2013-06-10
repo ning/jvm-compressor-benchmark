@@ -16,22 +16,26 @@ public class BZip2Driver  extends DriverBase
     }
 
     // No native Block API; but need some impl for test framework
-    
+
+    @Override
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException {
         return compressBlockUsingStream(uncompressed, compressBuffer);
     }
 
+    @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException {
         return uncompressBlockUsingStream(new BZip2CompressorInputStream(new ByteArrayInputStream(compressed)), uncompressBuffer);
     }
 
+    @Override
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
         BZip2CompressorOutputStream out = new BZip2CompressorOutputStream(rawOut, COMP_LEVEL);
         out.write(uncompressed);
         out.close();
     }
-    
+
+    @Override
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
         BZip2CompressorInputStream in = new BZip2CompressorInputStream(compIn);
@@ -42,6 +46,7 @@ public class BZip2Driver  extends DriverBase
         while ((count = in.read(inputBuffer)) >= 0) {
             total += count;
         }
+        in.close();
         return total;
     }
 }

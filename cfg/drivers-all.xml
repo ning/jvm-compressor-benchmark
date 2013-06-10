@@ -172,6 +172,15 @@
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
   </driver>
 
+  <!-- there's this version that helps with smaller content -->
+  <driver name="Gzip/Ning/stream">
+        <description><div xmlns=""><p>JDK Gzip-via-Ning, streaming
+</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.classPath" value="build/classes"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.gzip.NingGzipDriver" />
+  </driver>
+
 <!-- Should we include slower gzip or not?
   <driver name="Gzip/jzlib/stream">
         <description><div xmlns=""><p>JCraft's jzlib (gzip), streaming</p></div></description>
