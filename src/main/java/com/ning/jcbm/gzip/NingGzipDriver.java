@@ -24,7 +24,7 @@ public class NingGzipDriver extends DriverBase
         throws IOException
     {
         OptimizedGZIPInputStream in = new OptimizedGZIPInputStream(new ByteArrayInputStream(compressed));
-        int i = uncompressBlockUsingStream(null, uncompressBuffer);
+        int i = uncompressBlockUsingStream(in, uncompressBuffer);
         in.close();
         return i;
     }
