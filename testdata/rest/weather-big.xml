@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weatherdata>
+  <location>
+    <name>Moscow</name>
+    <type/>
+    <country>RU</country>
+    <timezone/>
+    <location altitude="0" latitude="55.75222" longitude="37.615555" geobase="geonames" geobaseid="524901"/>
+  </location>
+  <credit/>
+  <meta>
+    <lastupdate/>
+    <calctime>0.1002</calctime>
+    <nextupdate/>
+  </meta>
+  <sun rise="2014-03-27T03:12:03" set="2014-03-27T15:57:33"/>
+  <forecast>
+    <time from="2014-03-27T12:00:00" to="2014-03-27T15:00:00">
+      <symbol number="800" name="sky is clear" var="01d"/>
+      <precipitation/>
+      <windDirection deg="189.003" code="S" name="South"/>
+      <windSpeed mps="2.57" name="Light breeze"/>
+      <temperature unit="celsius" value="9.41" min="7.04" max="9.41"/>
+      <pressure unit="hPa" value="1019.21"/>
+      <humidity value="65" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-27T15:00:00" to="2014-03-27T18:00:00">
+      <symbol number="800" name="sky is clear" var="01d"/>
+      <precipitation/>
+      <windDirection deg="212.506" code="SSW" name="South-southwest"/>
+      <windSpeed mps="1.21" name="Calm"/>
+      <temperature unit="celsius" value="8.4" min="6.149" max="8.4"/>
+      <pressure unit="hPa" value="1016.65"/>
+      <humidity value="65" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-27T18:00:00" to="2014-03-27T21:00:00">
+      <symbol number="800" name="sky is clear" var="01n"/>
+      <precipitation/>
+      <windDirection deg="205.002" code="SSW" name="South-southwest"/>
+      <windSpeed mps="1.77" name="Light breeze"/>
+      <temperature unit="celsius" value="2.08" min="-0.055999999999983" max="2.08"/>
+      <pressure unit="hPa" value="1014.06"/>
+      <humidity value="69" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-27T21:00:00" to="2014-03-28T00:00:00">
+      <symbol number="802" name="scattered clouds" var="03n"/>
+      <precipitation/>
+      <windDirection deg="277.001" code="W" name="West"/>
+      <windSpeed mps="2.85" name="Light breeze"/>
+      <temperature unit="celsius" value="0.96000000000004" min="-1.051" max="0.96000000000004"/>
+      <pressure unit="hPa" value="1012.13"/>
+      <humidity value="69" unit="%"/>
+      <clouds value="scattered clouds" all="36" unit="%"/>
+    </time>
+    <time from="2014-03-28T00:00:00" to="2014-03-28T03:00:00">
+      <symbol number="801" name="few clouds" var="02n"/>
+      <precipitation/>
+      <windDirection deg="308" code="NW" name="Northwest"/>
+      <windSpeed mps="2.5" name="Light breeze"/>
+      <temperature unit="celsius" value="0.22000000000003" min="-1.674" max="0.22000000000003"/>
+      <pressure unit="hPa" value="1010.38"/>
+      <humidity value="78" unit="%"/>
+      <clouds value="few clouds" all="20" unit="%"/>
+    </time>
+    <time from="2014-03-28T03:00:00" to="2014-03-28T06:00:00">
+      <symbol number="800" name="sky is clear" var="01n"/>
+      <precipitation/>
+      <windDirection deg="358.5" code="" name=""/>
+      <windSpeed mps="3.66" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="-0.63999999999999" min="-2.415" max="-0.63999999999999"/>
+      <pressure unit="hPa" value="1009.9"/>
+      <humidity value="82" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-28T06:00:00" to="2014-03-28T09:00:00">
+      <symbol number="800" name="sky is clear" var="01d"/>
+      <precipitation/>
+      <windDirection deg="13.5048" code="NNE" name="North-northeast"/>
+      <windSpeed mps="5.26" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="1.68" min="0.021000000000015" max="1.68"/>
+      <pressure unit="hPa" value="1010.26"/>
+      <humidity value="74" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-28T09:00:00" to="2014-03-28T12:00:00">
+      <symbol number="801" name="few clouds" var="02d"/>
+      <precipitation/>
+      <windDirection deg="17.0062" code="NNE" name="North-northeast"/>
+      <windSpeed mps="6.57" name="Moderate breeze"/>
+      <temperature unit="celsius" value="1.79" min="0.24900000000002" max="1.79"/>
+      <pressure unit="hPa" value="1011.35"/>
+      <humidity value="62" unit="%"/>
+      <clouds value="few clouds" all="12" unit="%"/>
+    </time>
+    <time from="2014-03-28T12:00:00" to="2014-03-28T15:00:00">
+      <symbol number="802" name="scattered clouds" var="03d"/>
+      <precipitation/>
+      <windDirection deg="8.00006" code="N" name="North"/>
+      <windSpeed mps="7.4" name="Moderate breeze"/>
+      <temperature unit="celsius" value="1.19" min="-0.23099999999999" max="1.19"/>
+      <pressure unit="hPa" value="1011.26"/>
+      <humidity value="59" unit="%"/>
+      <clouds value="scattered clouds" all="48" unit="%"/>
+    </time>
+    <time from="2014-03-28T15:00:00" to="2014-03-28T18:00:00">
+      <symbol number="803" name="broken clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="8.50323" code="N" name="North"/>
+      <windSpeed mps="7.26" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-0.25" min="-1.551" max="-0.25"/>
+      <pressure unit="hPa" value="1011.65"/>
+      <humidity value="59" unit="%"/>
+      <clouds value="broken clouds" all="56" unit="%"/>
+    </time>
+    <time from="2014-03-28T18:00:00" to="2014-03-28T21:00:00">
+      <symbol number="803" name="broken clouds" var="04n"/>
+      <precipitation/>
+      <windDirection deg="0.506134" code="N" name="North"/>
+      <windSpeed mps="6.7" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-1.27" min="-2.454" max="-1.27"/>
+      <pressure unit="hPa" value="1011.15"/>
+      <humidity value="63" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-03-28T21:00:00" to="2014-03-29T00:00:00">
+      <symbol number="802" name="scattered clouds" var="03n"/>
+      <precipitation/>
+      <windDirection deg="20.5005" code="NNE" name="North-northeast"/>
+      <windSpeed mps="7.52" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-3.54" min="-4.606" max="-3.54"/>
+      <pressure unit="hPa" value="1012.42"/>
+      <humidity value="60" unit="%"/>
+      <clouds value="scattered clouds" all="36" unit="%"/>
+    </time>
+    <time from="2014-03-29T00:00:00" to="2014-03-29T03:00:00">
+      <symbol number="800" name="sky is clear" var="01n"/>
+      <precipitation/>
+      <windDirection deg="21.5" code="NNE" name="North-northeast"/>
+      <windSpeed mps="6.53" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-5.74" min="-6.687" max="-5.74"/>
+      <pressure unit="hPa" value="1013.96"/>
+      <humidity value="61" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-29T03:00:00" to="2014-03-29T06:00:00">
+      <symbol number="800" name="sky is clear" var="02n"/>
+      <precipitation/>
+      <windDirection deg="17.0006" code="NNE" name="North-northeast"/>
+      <windSpeed mps="6.06" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-7.08" min="-7.914" max="-7.08"/>
+      <pressure unit="hPa" value="1014.67"/>
+      <humidity value="58" unit="%"/>
+      <clouds value="sky is clear" all="8" unit="%"/>
+    </time>
+    <time from="2014-03-29T06:00:00" to="2014-03-29T09:00:00">
+      <symbol number="800" name="sky is clear" var="01d"/>
+      <precipitation/>
+      <windDirection deg="17.0023" code="NNE" name="North-northeast"/>
+      <windSpeed mps="6.18" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-5.29" min="-5.998" max="-5.29"/>
+      <pressure unit="hPa" value="1015.29"/>
+      <humidity value="62" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-29T09:00:00" to="2014-03-29T12:00:00">
+      <symbol number="800" name="sky is clear" var="01d"/>
+      <precipitation/>
+      <windDirection deg="13.5118" code="NNE" name="North-northeast"/>
+      <windSpeed mps="6.01" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-2.1" min="-2.691" max="-2.1"/>
+      <pressure unit="hPa" value="1014.63"/>
+      <humidity value="65" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-29T12:00:00" to="2014-03-29T15:00:00">
+      <symbol number="800" name="sky is clear" var="01d"/>
+      <precipitation/>
+      <windDirection deg="5.00555" code="N" name="North"/>
+      <windSpeed mps="5.76" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-0.060000000000002" min="-0.53499999999997" max="-0.060000000000002"/>
+      <pressure unit="hPa" value="1013.47"/>
+      <humidity value="64" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time from="2014-03-29T15:00:00" to="2014-03-29T18:00:00">
+      <symbol number="800" name="sky is clear" var="02d"/>
+      <precipitation/>
+      <windDirection deg="354.505" code="" name=""/>
+      <windSpeed mps="4.89" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="-1.28" min="-1.638" max="-1.28"/>
+      <pressure unit="hPa" value="1012.57"/>
+      <humidity value="60" unit="%"/>
+      <clouds value="sky is clear" all="8" unit="%"/>
+    </time>
+    <time from="2014-03-29T18:00:00" to="2014-03-29T21:00:00">
+      <symbol number="801" name="few clouds" var="02n"/>
+      <precipitation/>
+      <windDirection deg="347.009" code="NNW" name="North-northwest"/>
+      <windSpeed mps="3.2" name="Light breeze"/>
+      <temperature unit="celsius" value="-4.17" min="-4.405" max="-4.17"/>
+      <pressure unit="hPa" value="1011.62"/>
+      <humidity value="59" unit="%"/>
+      <clouds value="few clouds" all="20" unit="%"/>
+    </time>
+    <time from="2014-03-29T21:00:00" to="2014-03-30T00:00:00">
+      <symbol number="802" name="scattered clouds" var="03n"/>
+      <precipitation/>
+      <windDirection deg="300.5" code="WNW" name="West-northwest"/>
+      <windSpeed mps="1.81" name="Light breeze"/>
+      <temperature unit="celsius" value="-6.02" min="-6.136" max="-6.02"/>
+      <pressure unit="hPa" value="1009.59"/>
+      <humidity value="63" unit="%"/>
+      <clouds value="scattered clouds" all="44" unit="%"/>
+    </time>
+    <time from="2014-03-30T00:00:00" to="2014-03-30T03:00:00">
+      <symbol number="803" name="broken clouds" var="04n"/>
+      <precipitation/>
+      <windDirection deg="275.501" code="W" name="West"/>
+      <windSpeed mps="2.38" name="Light breeze"/>
+      <temperature unit="celsius" value="-5.266" min="-5.266" max="-5.266"/>
+      <pressure unit="hPa" value="1006.93"/>
+      <humidity value="62" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-03-30T03:00:00" to="2014-03-30T06:00:00">
+      <symbol number="804" name="overcast clouds" var="04n"/>
+      <precipitation/>
+      <windDirection deg="251" code="WSW" name="West-southwest"/>
+      <windSpeed mps="3.02" name="Light breeze"/>
+      <temperature unit="celsius" value="-4.047" min="-4.047" max="-4.047"/>
+      <pressure unit="hPa" value="1003.51"/>
+      <humidity value="67" unit="%"/>
+      <clouds value="overcast clouds" all="88" unit="%"/>
+    </time>
+    <time from="2014-03-30T06:00:00" to="2014-03-30T09:00:00">
+      <symbol number="803" name="broken clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="278.507" code="W" name="West"/>
+      <windSpeed mps="3.52" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="-1.026" min="-1.026" max="-1.026"/>
+      <pressure unit="hPa" value="1000.6"/>
+      <humidity value="68" unit="%"/>
+      <clouds value="broken clouds" all="68" unit="%"/>
+    </time>
+    <time from="2014-03-30T09:00:00" to="2014-03-30T12:00:00">
+      <symbol number="803" name="broken clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="302.002" code="WNW" name="West-northwest"/>
+      <windSpeed mps="4.06" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="2.181" min="2.181" max="2.181"/>
+      <pressure unit="hPa" value="998.81"/>
+      <humidity value="74" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-03-30T12:00:00" to="2014-03-30T15:00:00">
+      <symbol number="804" name="overcast clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="317.002" code="NW" name="Northwest"/>
+      <windSpeed mps="4.36" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="3.937" min="3.937" max="3.937"/>
+      <pressure unit="hPa" value="997.65"/>
+      <humidity value="73" unit="%"/>
+      <clouds value="overcast clouds" all="88" unit="%"/>
+    </time>
+    <time from="2014-03-30T15:00:00" to="2014-03-30T18:00:00">
+      <symbol number="803" name="broken clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="333.001" code="NNW" name="North-northwest"/>
+      <windSpeed mps="3.76" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="3.54" min="3.54" max="3.54"/>
+      <pressure unit="hPa" value="997.6"/>
+      <humidity value="69" unit="%"/>
+      <clouds value="broken clouds" all="64" unit="%"/>
+    </time>
+    <time from="2014-03-30T18:00:00" to="2014-03-30T21:00:00">
+      <symbol number="802" name="scattered clouds" var="03n"/>
+      <precipitation/>
+      <windDirection deg="342" code="NNW" name="North-northwest"/>
+      <windSpeed mps="2.35" name="Light breeze"/>
+      <temperature unit="celsius" value="-0.34999999999997" min="-0.34999999999997" max="-0.34999999999997"/>
+      <pressure unit="hPa" value="997.98"/>
+      <humidity value="70" unit="%"/>
+      <clouds value="scattered clouds" all="32" unit="%"/>
+    </time>
+    <time from="2014-03-30T21:00:00" to="2014-03-31T00:00:00">
+      <symbol number="803" name="broken clouds" var="04n"/>
+      <precipitation/>
+      <windDirection deg="285.501" code="WNW" name="West-northwest"/>
+      <windSpeed mps="1.2" name="Calm"/>
+      <temperature unit="celsius" value="-3.252" min="-3.252" max="-3.252"/>
+      <pressure unit="hPa" value="997.62"/>
+      <humidity value="80" unit="%"/>
+      <clouds value="broken clouds" all="68" unit="%"/>
+    </time>
+    <time from="2014-03-31T00:00:00" to="2014-03-31T03:00:00">
+      <symbol number="803" name="broken clouds" var="04n"/>
+      <precipitation/>
+      <windDirection deg="251.005" code="WSW" name="West-southwest"/>
+      <windSpeed mps="1.22" name="Calm"/>
+      <temperature unit="celsius" value="-3.914" min="-3.914" max="-3.914"/>
+      <pressure unit="hPa" value="996.73"/>
+      <humidity value="84" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-03-31T03:00:00" to="2014-03-31T06:00:00">
+      <symbol number="803" name="broken clouds" var="04n"/>
+      <precipitation/>
+      <windDirection deg="229.502" code="SW" name="Southwest"/>
+      <windSpeed mps="1.16" name="Calm"/>
+      <temperature unit="celsius" value="-3.499" min="-3.499" max="-3.499"/>
+      <pressure unit="hPa" value="995.73"/>
+      <humidity value="88" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-03-31T06:00:00" to="2014-03-31T09:00:00">
+      <symbol number="803" name="broken clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="245.502" code="WSW" name="West-southwest"/>
+      <windSpeed mps="1.71" name="Light breeze"/>
+      <temperature unit="celsius" value="0.339" min="0.339" max="0.339"/>
+      <pressure unit="hPa" value="994.72"/>
+      <humidity value="81" unit="%"/>
+      <clouds value="broken clouds" all="64" unit="%"/>
+    </time>
+    <time from="2014-03-31T09:00:00" to="2014-03-31T12:00:00">
+      <symbol number="600" name="light snow" var="13d"/>
+      <precipitation value="0.5" unit="3h" type="snow"/>
+      <windDirection deg="235" code="SW" name="Southwest"/>
+      <windSpeed mps="1.62" name="Light breeze"/>
+      <temperature unit="celsius" value="2.846" min="2.846" max="2.846"/>
+      <pressure unit="hPa" value="993.17"/>
+      <humidity value="78" unit="%"/>
+      <clouds value="overcast clouds" all="88" unit="%"/>
+    </time>
+    <time from="2014-03-31T12:00:00" to="2014-03-31T15:00:00">
+      <symbol number="600" name="light snow" var="13d"/>
+      <precipitation value="0.5" unit="3h" type="snow"/>
+      <windDirection deg="146.501" code="SSE" name="South-southeast"/>
+      <windSpeed mps="1.76" name="Light breeze"/>
+      <temperature unit="celsius" value="2.254" min="2.254" max="2.254"/>
+      <pressure unit="hPa" value="990.72"/>
+      <humidity value="77" unit="%"/>
+      <clouds value="overcast clouds" all="88" unit="%"/>
+    </time>
+    <time from="2014-03-31T15:00:00" to="2014-03-31T18:00:00">
+      <symbol number="601" name="snow" var="13d"/>
+      <precipitation value="3" unit="3h" type="snow"/>
+      <windDirection deg="106.51" code="ESE" name="East-southeast"/>
+      <windSpeed mps="2.05" name="Light breeze"/>
+      <temperature unit="celsius" value="0.70600000000002" min="0.70600000000002" max="0.70600000000002"/>
+      <pressure unit="hPa" value="988.56"/>
+      <humidity value="91" unit="%"/>
+      <clouds value="overcast clouds" all="92" unit="%"/>
+    </time>
+    <time from="2014-03-31T18:00:00" to="2014-03-31T21:00:00">
+      <symbol number="601" name="snow" var="13n"/>
+      <precipitation value="5" unit="3h" type="snow"/>
+      <windDirection deg="55.0024" code="NE" name="NorthEast"/>
+      <windSpeed mps="3.48" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="-0.29599999999999" min="-0.29599999999999" max="-0.29599999999999"/>
+      <pressure unit="hPa" value="986.37"/>
+      <humidity value="98" unit="%"/>
+      <clouds value="overcast clouds" all="92" unit="%"/>
+    </time>
+    <time from="2014-03-31T21:00:00" to="2014-04-01T00:00:00">
+      <symbol number="601" name="snow" var="13n"/>
+      <precipitation value="4" unit="3h" type="snow"/>
+      <windDirection deg="22.5002" code="NNE" name="North-northeast"/>
+      <windSpeed mps="5.38" name="Gentle Breeze"/>
+      <temperature unit="celsius" value="-1.071" min="-1.071" max="-1.071"/>
+      <pressure unit="hPa" value="984.69"/>
+      <humidity value="97" unit="%"/>
+      <clouds value="overcast clouds" all="92" unit="%"/>
+    </time>
+    <time from="2014-04-01T00:00:00" to="2014-04-01T03:00:00">
+      <symbol number="601" name="snow" var="13n"/>
+      <precipitation value="2.5" unit="3h" type="snow"/>
+      <windDirection deg="10.0015" code="N" name="North"/>
+      <windSpeed mps="7.79" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-3.1" min="-3.1" max="-3.1"/>
+      <pressure unit="hPa" value="984.63"/>
+      <humidity value="94" unit="%"/>
+      <clouds value="overcast clouds" all="88" unit="%"/>
+    </time>
+    <time from="2014-04-01T03:00:00" to="2014-04-01T06:00:00">
+      <symbol number="601" name="snow" var="13d"/>
+      <precipitation value="2" unit="3h" type="snow"/>
+      <windDirection deg="4.50027" code="N" name="North"/>
+      <windSpeed mps="8.69" name="Fresh Breeze"/>
+      <temperature unit="celsius" value="-3.717" min="-3.717" max="-3.717"/>
+      <pressure unit="hPa" value="985.38"/>
+      <humidity value="92" unit="%"/>
+      <clouds value="overcast clouds" all="88" unit="%"/>
+    </time>
+    <time from="2014-04-01T06:00:00" to="2014-04-01T09:00:00">
+      <symbol number="600" name="light snow" var="13d"/>
+      <precipitation value="1.5" unit="3h" type="snow"/>
+      <windDirection deg="0.504578" code="N" name="North"/>
+      <windSpeed mps="9" name="Fresh Breeze"/>
+      <temperature unit="celsius" value="-3.797" min="-3.797" max="-3.797"/>
+      <pressure unit="hPa" value="987.19"/>
+      <humidity value="89" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-04-01T09:00:00" to="2014-04-01T12:00:00">
+      <symbol number="600" name="light snow" var="13d"/>
+      <precipitation value="0.5" unit="3h" type="snow"/>
+      <windDirection deg="358" code="" name=""/>
+      <windSpeed mps="8.07" name="Fresh Breeze"/>
+      <temperature unit="celsius" value="-3.212" min="-3.212" max="-3.212"/>
+      <pressure unit="hPa" value="989.71"/>
+      <humidity value="85" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time from="2014-04-01T12:00:00" to="2014-04-01T15:00:00">
+      <symbol number="803" name="broken clouds" var="04d"/>
+      <precipitation/>
+      <windDirection deg="350.505" code="" name=""/>
+      <windSpeed mps="7.28" name="Moderate breeze"/>
+      <temperature unit="celsius" value="-2.261" min="-2.261" max="-2.261"/>
+      <pressure unit="hPa" value="991.42"/>
+      <humidity value="86" unit="%"/>
+      <clouds value="broken clouds" all="76" unit="%"/>
+    </time>
+  </forecast>
+</weatherdata>
+

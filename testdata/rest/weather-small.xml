@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weatherdata>
+  <location>
+    <name>Moscow</name>
+    <type/>
+    <country>RU</country>
+    <timezone/>
+    <location altitude="0" latitude="55.75222" longitude="37.615555" geobase="geonames" geobaseid="524901"/>
+  </location>
+  <credit/>
+  <meta>
+    <lastupdate/>
+    <calctime>0.1998</calctime>
+    <nextupdate/>
+  </meta>
+  <sun rise="2014-03-27T03:12:03" set="2014-03-27T15:57:33"/>
+  <forecast>
+    <time day="2014-03-27">
+      <symbol number="800" name="晴" var="01d"/>
+      <precipitation/>
+      <windDirection deg="219" code="SW" name="Southwest"/>
+      <windSpeed mps="3.86" name="Gentle Breeze"/>
+      <temperature day="284.09" min="275.36" max="284.09" night="275.36" eve="282.45" morn="284.09"/>
+      <pressure unit="hPa" value="1013.88"/>
+      <humidity value="53" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time day="2014-03-28">
+      <symbol number="801" name="晴，少云" var="02d"/>
+      <precipitation/>
+      <windDirection deg="3" code="N" name="North"/>
+      <windSpeed mps="8.01" name="Fresh Breeze"/>
+      <temperature day="275.66" min="266.96" max="275.66" night="266.96" eve="272.89" morn="271.8"/>
+      <pressure unit="hPa" value="1007.57"/>
+      <humidity value="54" unit="%"/>
+      <clouds value="few clouds" all="24" unit="%"/>
+    </time>
+    <time day="2014-03-29">
+      <symbol number="800" name="晴" var="01d"/>
+      <precipitation/>
+      <windDirection deg="8" code="N" name="North"/>
+      <windSpeed mps="8.89" name="Fresh Breeze"/>
+      <temperature day="270.77" min="264.78" max="272.68" night="264.81" eve="271.57" morn="264.78"/>
+      <pressure unit="hPa" value="1010.83"/>
+      <humidity value="50" unit="%"/>
+      <clouds value="sky is clear" all="0" unit="%"/>
+    </time>
+    <time day="2014-03-30">
+      <symbol number="600" name="小雪" var="13d"/>
+      <precipitation value="0.5" type="snow"/>
+      <windDirection deg="281" code="W" name="West"/>
+      <windSpeed mps="6.67" name="Moderate breeze"/>
+      <temperature day="275.33" min="266.83" max="276.88" night="271.36" eve="276.42" morn="266.83"/>
+      <pressure unit="hPa" value="991.82"/>
+      <humidity value="71" unit="%"/>
+      <clouds value="broken clouds" all="80" unit="%"/>
+    </time>
+    <time day="2014-03-31">
+      <symbol number="802" name="多云" var="03d"/>
+      <precipitation/>
+      <windDirection deg="320" code="NW" name="Northwest"/>
+      <windSpeed mps="5.25" name="Gentle Breeze"/>
+      <temperature day="272.99" min="266.36" max="273.69" night="266.78" eve="272.67" morn="266.36"/>
+      <pressure unit="hPa" value="990.92"/>
+      <humidity value="63" unit="%"/>
+      <clouds value="scattered clouds" all="44" unit="%"/>
+    </time>
+    <time day="2014-04-01">
+      <symbol number="601" name="雪" var="13d"/>
+      <precipitation value="3.55" type="snow"/>
+      <windDirection deg="333" code="NNW" name="North-northwest"/>
+      <windSpeed mps="0.97" name="Calm"/>
+      <temperature day="274.46" min="267.26" max="274.46" night="267.26" eve="270.51" morn="271.32"/>
+      <pressure unit="hPa" value="988.05"/>
+      <humidity value="0" unit="%"/>
+      <clouds value="overcast clouds" all="86" unit="%"/>
+    </time>
+    <time day="2014-04-02">
+      <symbol number="601" name="雪" var="13d"/>
+      <precipitation value="1.94" type="snow"/>
+      <windDirection deg="27" code="NNE" name="North-northeast"/>
+      <windSpeed mps="5" name="Gentle Breeze"/>
+      <temperature day="273.96" min="264.03" max="273.96" night="264.03" eve="267.37" morn="269.82"/>
+      <pressure unit="hPa" value="996.93"/>
+      <humidity value="0" unit="%"/>
+      <clouds value="broken clouds" all="78" unit="%"/>
+    </time>
+  </forecast>
+</weatherdata>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Test suite for JVM compressors"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Micro-benchmark for testing performance of compressors on JVM platform
+</p></div></description>
+
+    <!-- Drivers -->
+    <xi:include href="drivers-lzf-gzip.xml" />
+    
+<testCase name='U:angel-big.json' />
+<testCase name='U:angel-search.json' />
+<testCase name='U:angel-startups.json' />
+<testCase name='U:angel-status.json' />
+<testCase name='U:get_data.sh' />
+<testCase name='U:nasa-big.json' />
+<testCase name='U:nasa-category.json' />
+<testCase name='U:nasa-tag.json' />
+<testCase name='U:seismo-index.json' />
+<testCase name='U:seismo-index.xml' />
+<testCase name='U:seismo-station.json' />
+<testCase name='U:seismo-station.xml' />
+<testCase name='U:usajobs-big.json' />
+<testCase name='U:usajobs-big.xml' />
+<testCase name='U:usajobs-small.json' />
+<testCase name='U:usajobs-small.xml' />
+<testCase name='U:weather-big.json' />
+<testCase name='U:weather-big.xml' />
+<testCase name='U:weather-small.json' />
+<testCase name='U:weather-small.xml' />
+</testSuite>
