@@ -31,3 +31,4 @@ Micro-benchmark for testing performance of compressors on JVM platform
 <testCase name='R:weather-big.xml' />
 <testCase name='R:weather-small.json' />
 <testCase name='R:weather-small.xml' />
+</testSuite>

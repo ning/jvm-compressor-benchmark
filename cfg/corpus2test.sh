@@ -33,7 +33,7 @@ done
 
 echo '</testSuite>' >> tests-lzf-$FOLDER-compress.xml
 echo '</testSuite>' >> tests-lzf-$FOLDER-uncompress.xml
-echo '</testSuite>' >> tests-lzf-$FOLDER-rountrip.xml
+echo '</testSuite>' >> tests-lzf-$FOLDER-roundtrip.xml
 echo '</testSuite>' >> tests-lzf-$FOLDER-all.xml
 
 
