@@ -6,6 +6,7 @@ import java.io.OutputStream;
 
 import net.jpountz.lz4.LZ4Compressor;
 import net.jpountz.lz4.LZ4Decompressor;
+import net.jpountz.lz4.LZ4FastDecompressor;
 
 import com.ning.jcbm.DriverBase;
 
@@ -15,9 +16,9 @@ import com.ning.jcbm.DriverBase;
 public abstract class AbstractLz4Driver extends DriverBase {
 
     private final LZ4Compressor compressor;
-    private final LZ4Decompressor decompressor;
+    private final LZ4FastDecompressor decompressor;
 
-    protected AbstractLz4Driver(String name, LZ4Compressor compressor, LZ4Decompressor decompressor) {
+    protected AbstractLz4Driver(String name, LZ4Compressor compressor, LZ4FastDecompressor decompressor) {
         super(name);
         this.compressor = compressor;
         this.decompressor = decompressor;
