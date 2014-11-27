@@ -8,7 +8,7 @@ import net.jpountz.lz4.LZ4Factory;
 public class Lz4JNIDriver extends AbstractLz4Driver {
 
     public Lz4JNIDriver() {
-        super("LZ4 (JNI)", LZ4Factory.nativeInstance().fastCompressor(), LZ4Factory.nativeInstance().decompressor());
+        super("LZ4 (JNI)", LZ4Factory.nativeInstance().fastCompressor(), LZ4Factory.nativeInstance().fastDecompressor());
     }
 
 }

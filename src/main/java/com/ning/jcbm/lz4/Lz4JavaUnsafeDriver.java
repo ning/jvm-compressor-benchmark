@@ -8,7 +8,7 @@ import net.jpountz.lz4.LZ4Factory;
 public class Lz4JavaUnsafeDriver extends AbstractLz4Driver {
 
     public Lz4JavaUnsafeDriver() {
-        super("LZ4 (Java+Unsafe)", LZ4Factory.unsafeInstance().fastCompressor(), LZ4Factory.unsafeInstance().decompressor());
+        super("LZ4 (Java+Unsafe)", LZ4Factory.unsafeInstance().fastCompressor(), LZ4Factory.unsafeInstance().fastDecompressor());
     }
 
 }
