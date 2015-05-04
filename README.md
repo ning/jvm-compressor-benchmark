@@ -9,6 +9,25 @@ In addition to benchmark itself, we also provide access to set of benchmark resu
 
 For more complete description, checkout out project [Wiki](../../wiki)
 
+# Running tests
+
+To run tests, you first need to compile the Java sources using [Ant](http://ant.apache.org/):
+
+   ant compile
+
+After you have built classes, you can invoke tests directly by running test suite.
+There are couple of sample scripts to show options and configurations available, and you can run one of them like:
+
+    ./run-calgary-compress.sh
+
+but commonly you probably want to create your own scripts by modifying one of existing ones, to choose different
+sets of input data and/or compression codecs to use.
+Configuration uses standard Japex xml file based configuration, with a set of system properties.
+
+The main thing, either way, is to invoke Japex main class `com.sun.japex.Japex` with a single xml configuration file
+as its argument. System properties named with `japex.` prefix can be used to override default settings as well
+as definitions from the xml file as needed.
+
 # Results
 
 Are available on project [Wiki](../../wiki).
