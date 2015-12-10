@@ -13,7 +13,7 @@ For more complete description, checkout out project [Wiki](../../wiki)
 
 To run tests, you first need to compile the Java sources using [Ant](http://ant.apache.org/):
 
-   ant compile
+    ant compile
 
 After you have built classes, you can invoke tests directly by running test suite.
 There are couple of sample scripts to show options and configurations available, and you can run one of them like:
