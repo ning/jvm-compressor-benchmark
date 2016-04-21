@@ -54,6 +54,4 @@ To participate in discussions of benchmark suite, results, and other things rela
 
 # License
 
-Benchmark code is licensed under Apache License 2.0.
-
-Note that as usual, license only covers (re)distribution of code, and does not apply to your own use of code (i.e. running tests locally), which you can do regardless of licensing.
+Benchmark code is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0).
