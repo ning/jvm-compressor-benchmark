@@ -25,7 +25,8 @@ public class LzoJavaDriver extends DriverBase
     }
 
     // No native Block API; but need some impl for test framework
-    
+
+    @Override
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
@@ -55,7 +56,8 @@ public class LzoJavaDriver extends DriverBase
         buffer[offset++] = (byte) (value >> 8);
         buffer[offset] = (byte) value;
     }
-    
+
+    @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
         /* Alas, we can't really support true block decompression since we
@@ -67,6 +69,7 @@ public class LzoJavaDriver extends DriverBase
         return uncompressBlockUsingStream(uncompressed, uncompressBuffer);
     }
 
+    @Override
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
         LzoCompressor compressor = LzoLibrary.getInstance().newCompressor(DEFAULT_ALGORITHM, null);
@@ -77,7 +80,8 @@ public class LzoJavaDriver extends DriverBase
         compressedOut.write(uncompressed);
         compressedOut.close();
     }
-    
+
+    @Override
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
         LzoDecompressor decompressor = LzoLibrary.getInstance().newDecompressor(DEFAULT_ALGORITHM, null);

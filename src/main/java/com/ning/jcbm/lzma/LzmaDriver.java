@@ -99,7 +99,7 @@ public class LzmaDriver extends DriverBase
      */
     
     @Override
-    protected void compressToStream(byte[] uncompressed, OutputStream out) throws IOException {
+    public void compressToStream(byte[] uncompressed, OutputStream out) throws IOException {
         throw new UnsupportedOperationException();
     }
 

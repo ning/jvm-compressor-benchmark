@@ -194,15 +194,4 @@
         <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaDriver" />
   </driver>
 
-
-<!--
-  <driver name="LZMA-java/stream">
-        <description><div xmlns=""><p>LZMA-java, streaming</p></div></description>
-        <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzma-java/*.jar"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaJavaDriver" />
-  </driver>
--->
-
 </driverGroup>

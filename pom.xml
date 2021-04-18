@@ -97,11 +97,6 @@ JNI-backed ones.
       <!-- Likely deprecated ones -->
 
       <dependency>
-          <groupId>com.github.jponge</groupId>
-          <artifactId>lzma-java</artifactId>
-          <version>${version.lzma-java}</version>
-      </dependency>
-      <dependency>
           <groupId>com.jcraft</groupId>
           <artifactId>jzlib</artifactId>
           <version>${version.jzlib}</version>

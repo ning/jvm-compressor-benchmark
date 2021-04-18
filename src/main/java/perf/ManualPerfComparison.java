@@ -2,7 +2,7 @@ package perf;
 
 import java.io.*;
 
-import com.ning.jcbm.lzma.LzmaJavaDriver;
+import com.ning.jcbm.lzma.LzmaDriver;
 
 /**
  * Simple manual performance micro-benchmark that compares compress and
@@ -10,7 +10,7 @@ import com.ning.jcbm.lzma.LzmaJavaDriver;
  */
 public class ManualPerfComparison
 {
-    private final LzmaJavaDriver driver = new LzmaJavaDriver();
+    private final LzmaDriver driver = new LzmaDriver();
     
     private int size = 0;
 
