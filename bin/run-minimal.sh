@@ -2,18 +2,13 @@
  
 echo "About to run minimal sanity test on 3 input files, couple of codecs"
 
-java -server -cp lib/japex/\* \
- -Xmx256M \
- -Djava.library.path=lib/jni \
- -Djava.awt.headless=true \
- -Djapex.runsPerDriver=1 \
- -Djapex.warmupTime=5 \
- -Djapex.runTime=15 \
- -Djapex.numberOfThreads=1 \
- -Djapex.reportsDirectory=reports/minimal \
+java -server -Xmx512M \
+ -Djava.awt.headless=true -Djapex.contextClassLoader=true -Djapex.numberOfThreads=1 \
+ -Djapex.runsPerDriver=1 -Djapex.warmupTime=5 -Djapex.runTime=15 \
  -Djapex.plotGroupSize=5 \
+ -Djapex.reportsDirectory=reports/minimal \
  -Djapex.inputDir="testdata/canterbury" \
- com.sun.japex.Japex \
+ -jar target/jvm-compressor-benchmark-*.jar -verbose \
  cfg/tests-minimal.xml
 
 echo "Done!";
