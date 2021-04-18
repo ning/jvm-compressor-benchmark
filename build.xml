@@ -9,7 +9,6 @@
   <property name="dir.build.classes" value="${basedir}/build/classes"/>
   <!-- Distribution -->
   <property name="dir.dist" location="${basedir}/dist" />
-
   <property name="VERSION" value="0.1" />
 
   <patternset id="dist-all-source-files">
