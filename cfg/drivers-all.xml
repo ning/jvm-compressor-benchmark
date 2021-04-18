@@ -148,23 +148,9 @@
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJNIDriver"/>
   </driver>
 
-<!--
-  <driver name="QuickLZ/L1/block">
-        <description><div xmlns=""><p>QuickLZ (level 1), block mode
-</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver1" />
-  </driver>
--->
+  <!-- 17-Apr-2021, tatu: Removed "QuickLZ" (http://www.quicklz.com/) codecs -->
 
-  <driver name="QuickLZ/L3/block">
-        <description><div xmlns=""><p>QuickLZ (level 3), block mode
-</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.driverClass" value="com.ning.jcbm.quicklz.QuickLZDriver3" />
-  </driver>
-
-  <driver name="Gzip/JDK/stream">
+ <driver name="Gzip/JDK/stream">
         <description><div xmlns=""><p>JDK Gzip/Deflate, streaming
 </p></div></description>
         <param name="streaming" value="true" />
