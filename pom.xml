@@ -34,6 +34,7 @@ JNI-backed ones.
       <javac.src.version>1.8</javac.src.version>
       <javac.target.version>1.8</javac.target.version>
 
+      <!-- may locally build 1.2.5-SNAPSHOT but otherwise -->
       <version.japex>1.2.4</version.japex>
 
       <version.aircompressor>0.18</version.aircompressor>      

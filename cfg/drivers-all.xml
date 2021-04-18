@@ -11,27 +11,18 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
   <driver name="LZ4 (JNI)/block" normal="false">
-        <description><div xmlns=""><p>LZ4 (JNI), block mode</p></div>
-        </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <description><div xmlns=""><p>LZ4 (JNI), block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver"/>
   </driver>
 
   <driver name="LZ4 (Java+Unsafe)/block" normal="false">
-        <description><div xmlns=""><p>LZ4 (Java+Unsafe), block mode</p></div>
-        </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <description><div xmlns=""><p>LZ4 (Java+Unsafe), block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JavaUnsafeDriver"/>
   </driver>
 
 <!--
   <driver name="LZ4 HC (Java+Unsafe)/block" normal="false">
-        <description><div xmlns=""><p>LZ4 HC (Java+Unsafe), block mode</p></div>
-        </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <description><div xmlns=""><p>LZ4 HC (Java+Unsafe), block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJavaUnsafeDriver"/>
   </driver>
 -->
@@ -40,18 +31,12 @@
   Disabled because most people would likely use the unsafe impl instead.
 
   <driver name="LZ4 (Java)/block" normal="false">
-        <description><div xmlns=""><p>LZ4 (Java), block mode</p></div>
-        </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <description><div xmlns=""><p>LZ4 (Java), block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JavaDriver"/>
   </driver>
 
   <driver name="LZ4 HC (Java)/block" normal="false">
-        <description><div xmlns=""><p>LZ4 HC (Java), block mode</p></div>
-        </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4/*.jar"/>
+        <description><div xmlns=""><p>LZ4 HC (Java), block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJavaDriver"/>
   </driver>
 -->
@@ -61,8 +46,6 @@
     -->
   <driver name="Snappy(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-JNI, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
@@ -72,8 +55,6 @@
   <driver name="Snappy(JNI)/stream" normal="false">
         <description><div xmlns=""><p>Snappy-JNI, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
@@ -82,8 +63,6 @@
   <driver name="Snappy(iq80)/block" normal="false">
         <description><div xmlns=""><p>Snappy-Java, block mode</p></div>
         </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/iq80-snappy/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.iq80snappy.Iq80SnappyDriver"/>
   </driver>
 
@@ -92,15 +71,11 @@
     -->
   <driver name="LZF/block" normal="false">
         <description><div xmlns=""><p>LZF, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
   <driver name="LZF/stream">
         <description><div xmlns=""><p>LZF, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 
@@ -110,31 +85,23 @@
 <!--
   <driver name="LZF-safe/block" normal="false">
         <description><div xmlns=""><p>LZF-safe, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfSafeDriver" />
   </driver>
   <driver name="LZF-safe/stream">
         <description><div xmlns=""><p>LZF-safe, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfSafeDriver" />
   </driver>
 -->
 
   <driver name="LZO-java/block">
         <description><div xmlns=""><p>LZO-java, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
   </driver>
 <!-- no big difference between block, streaming, so just include faster
   <driver name="LZO-java/stream">
         <description><div xmlns=""><p>LZO-java, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzo-java/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzo.LzoJavaDriver" />
   </driver>
 -->
@@ -143,8 +110,6 @@
   <driver name="LZ4 HC (JNI)/block" normal="false">
         <description><div xmlns=""><p>LZ4 HC (JNI), block mode</p></div>
         </description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lz4/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4HcJNIDriver"/>
   </driver>
 
@@ -153,9 +118,8 @@
  <driver name="Gzip/JDK/stream">
         <description><div xmlns=""><p>JDK Gzip/Deflate, streaming
 </p></div></description>
-        <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
+        <param name="streaming" value="true" />
   </driver>
 
   <!-- there's this version that helps with smaller content -->
@@ -163,7 +127,6 @@
         <description><div xmlns=""><p>JDK Gzip-via-Ning, streaming
 </p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.NingGzipDriver" />
   </driver>
 
@@ -171,16 +134,12 @@
   <driver name="Gzip/jzlib/stream">
         <description><div xmlns=""><p>JCraft's jzlib (gzip), streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/jzlib/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JCraftGzipDriver" />
   </driver>
 -->
   <driver name="BZip2/stream">
         <description><div xmlns=""><p>Commons-compress BZip2 implementation</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/jakarta/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
   </driver>
 
@@ -189,8 +148,6 @@
 
   <driver name="LZMA-orig/block">
         <description><div xmlns=""><p>7Zip's LZMA, block mode</p></div></description>
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzma/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaDriver" />
   </driver>
 

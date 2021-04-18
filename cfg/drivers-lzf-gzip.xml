@@ -13,14 +13,11 @@
   <driver name="LZF/stream">
         <description><div xmlns=""><p>LZF, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
-        <param name="japex.classPath" value="lib/lzf/*.jar"/>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
   <driver name="Gzip/JDK/stream">
         <description><div xmlns=""><p>JDK Gzip/Deflate, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.classPath" value="build/classes"/>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
   </driver>
 </driverGroup>
