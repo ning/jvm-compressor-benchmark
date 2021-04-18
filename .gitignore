@@ -21,3 +21,4 @@ target
 *.iws
 
 # Reports (to make easier to publish)
+reports
