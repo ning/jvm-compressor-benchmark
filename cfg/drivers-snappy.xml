@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definition of all Snappy variants, in alphabetic order
+  -->
+
+<driverGroup name="javaDrivers"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+  <driver name="Snappy/Apache/stream" normal="false">
+        <description><div xmlns=""><p>Snappy-iq80-Java, block mode</p></div>
+        </description>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.Iq80JavaSnappyDriver"/>
+  </driver>
+
+  <driver name="Snappy/iq80(Java)/block" normal="false">
+        <description><div xmlns=""><p>Snappy-ApacheCC-Java, streaming</p></div>
+        </description>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.CommonsCompressSnappyDriver"/>
+  </driver>
+
+  <driver name="Snappy/Xerial(JNI)/block" normal="false">
+        <description><div xmlns=""><p>Snappy-Xerial-JNI, block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
+        <param name="japex.singleClassLoader" value="true"/>
+  </driver>
+  <driver name="Snappy/Xerial(JNI)/stream" normal="false">
+        <description><div xmlns=""><p>Snappy-Xerial-JNI, streaming</p></div></description>
+        <param name="streaming" value="true" />
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
+        <param name="japex.singleClassLoader" value="true"/>
+  </driver>
+
+</driverGroup>

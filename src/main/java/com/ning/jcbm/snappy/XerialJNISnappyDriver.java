@@ -42,15 +42,13 @@ public class XerialJNISnappyDriver extends DriverBase
     @Override
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
-        SnappyInputStream in = new SnappyInputStream(compIn);
-
         int total = 0;
-        int count;
-        
-        while ((count = in.read(inputBuffer)) >= 0) {
-            total += count;
+        try (SnappyInputStream in = new SnappyInputStream(compIn)) {
+            int count;
+            while ((count = in.read(inputBuffer)) >= 0) {
+                total += count;
+            }
         }
-        in.close();
         return total;
     }
 }
