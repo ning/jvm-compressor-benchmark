@@ -8,19 +8,19 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
   <driver name="Snappy/Apache/stream" normal="false">
-        <description><div xmlns=""><p>Snappy-iq80-Java, block mode</p></div>
-        </description>
+        <description><div xmlns=""><p>Snappy-iq80-Java, block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.Iq80JavaSnappyDriver"/>
   </driver>
 
   <driver name="Snappy/iq80(Java)/block" normal="false">
-        <description><div xmlns=""><p>Snappy-ApacheCC-Java, streaming</p></div>
-        </description>
+        <description><div xmlns=""><p>Snappy-ApacheCC-Java, streaming</p></div></description>
+        <param name="streaming" value="false" />
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.CommonsCompressSnappyDriver"/>
   </driver>
 
   <driver name="Snappy/Xerial(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-Xerial-JNI, block mode</p></div></description>
+        <param name="streaming" value="false" />
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>

@@ -13,21 +13,19 @@ Micro-benchmark for testing performance of compressors on JVM platform
     <driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <driver name="Zstd0 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>Zstd/0 (JNI), block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel0ZstdDriver"/>
+  </driver>
+  <driver name="Zstd9 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>Zstd/9 (JNI), block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel9ZstdDriver"/>
+  </driver>
+
   <driver name="LZ4(JNI)/block" normal="false">
         <description><div xmlns=""><p>LZ4/JNI, block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver" />
-        <!-- is this enough? -->
-	<!--
-        <param name="java.library.path" value="lib/lz4-jni" />
--->
   </driver>
-
-<!--
-  <driver name="Snappy(JNI)/block" normal="false">
-        <description><div xmlns=""><p>Snappy-java, block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
-  </driver>
--->
 
   <driver name="Snappy(iq80)/block" normal="false">
         <description><div xmlns=""><p>Snappy-iq80, block mode</p></div></description>

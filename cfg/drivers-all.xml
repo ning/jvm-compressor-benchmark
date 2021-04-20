@@ -10,6 +10,15 @@
   xmlns="http://www.sun.com/japex/testSuite"
   xmlns:xi="http://www.w3.org/2001/XInclude"
 >
+  <driver name="Zstd0 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>Zstd/0 (JNI), block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel0ZstdDriver"/>
+  </driver>
+  <driver name="Zstd9 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>Zstd/9 (JNI), block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel9ZstdDriver"/>
+  </driver>
+
   <driver name="LZ4 (JNI)/block" normal="false">
         <description><div xmlns=""><p>LZ4 (JNI), block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver"/>
@@ -44,25 +53,20 @@
   <driver name="Snappy/Apache/stream" normal="false">
         <description><div xmlns=""><p>Snappy-iq80-Java, block mode</p></div>
         </description>
-        <param name="japex.driverClass" value="com.ning.jcbm.snappy.Iq80JavaSnappyDriver"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.CommonsCompressSnappyDriver"/>
   </driver>
 
   <driver name="Snappy/iq80(Java)/block" normal="false">
         <description><div xmlns=""><p>Snappy-ApacheCC-Java, streaming</p></div>
         </description>
-        <param name="japex.driverClass" value="com.ning.jcbm.snappy.CommonsCompressSnappyDriver"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.Iq80JavaSnappyDriver"/>
   </driver>
 
-  <!-- 28-Jul-2011, tatu: JNI loading was supposed to work with 1.0.3, but still having
-          issues here, so need to keep commented out
-    -->
   <driver name="Snappy/Xerial(JNI)/block" normal="false">
         <description><div xmlns=""><p>Snappy-Xerial-JNI, block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
-  <!--
-  -->
   <!--
   <driver name="Snappy/Xerial(JNI)/stream" normal="false">
         <description><div xmlns=""><p>Snappy-Xerial-JNI, streaming</p></div></description>
