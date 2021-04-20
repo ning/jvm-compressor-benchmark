@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import com.nixxcode.jvmbrotli.common.BrotliLoader;
 import com.nixxcode.jvmbrotli.dec.BrotliInputStream;
 import com.nixxcode.jvmbrotli.dec.Decoder;
 import com.nixxcode.jvmbrotli.enc.BrotliOutputStream;
@@ -16,6 +17,8 @@ public class JvmBrotliDriver extends DriverBase
     public JvmBrotliDriver()
     {
         super("Brotli/jvmbrotli");
+        // As per [https://jvmbrotli.com/examples], must call at least once:
+        BrotliLoader.isBrotliAvailable();
     }
 
     @Override
