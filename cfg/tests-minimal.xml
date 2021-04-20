@@ -37,20 +37,17 @@ Micro-benchmark for testing performance of compressors on JVM platform
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
   </driver>
 
-<!--  
-  <driver name="LZF/stream">
-        <description><div xmlns=""><p>Test driver for LZF, streaming</p></div></description>
-        <param name="streaming" value="true" />
-        <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  <driver name="Brotli/default/block">
+        <description><div xmlns=""><p>Test driver for Brotli, block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.brotli.JvmBrotliDriver" />
+        <param name="streaming" value="false" />
   </driver>
 
   <driver name="Gzip/JDK/stream">
-        <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming
-</p></div></description>
-        <param name="streaming" value="true" />
+        <description><div xmlns=""><p>Test driver for JDK Gzip/Deflate, streaming</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
-      </driver>
--->
+        <param name="streaming" value="true" />
+  </driver>
 
     </driverGroup>
     <!-- Test cases: name has to match with filename -->

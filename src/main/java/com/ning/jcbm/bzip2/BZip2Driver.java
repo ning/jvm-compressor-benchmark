@@ -7,12 +7,12 @@ import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
 import com.ning.jcbm.DriverBase;
 
-public class BZip2Driver  extends DriverBase
+public class BZip2Driver extends DriverBase
 {
     private final static int COMP_LEVEL = 2; // from 1 to 9; 100 - 900k blocks
     
     public BZip2Driver() {
-        super("bzip2");
+        super("Bzip2/ApacheCC");
     }
 
     // No native Block API; but need some impl for test framework

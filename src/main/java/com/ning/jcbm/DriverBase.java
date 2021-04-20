@@ -27,14 +27,14 @@ public abstract class DriverBase extends JapexDriverBase
      *    so let's upgrade this to 0.6 gig/sec for now
      */
     // 07-Jun-2013, tatu: Time flies, performance climbs. Need higher limits
-    // 19-Apr-2021, tatu: And yet again.
-    
+    // 19-Apr-2021, tatu: And yet again (now to 999/2499/999)
+
     final static double MAX_COMPRESS_THROUGHPUT = 999.9;
 
-    final static double MAX_UNCOMPRESS_THROUGHPUT = 1999.9;
+    final static double MAX_UNCOMPRESS_THROUGHPUT = 2499.9;
 
     final static double MAX_BOTH_THROUGHPUT = 999.9;
-    
+
     protected final String _driverName;
     
     /**

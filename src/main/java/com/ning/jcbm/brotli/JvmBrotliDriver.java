@@ -4,15 +4,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import org.apache.commons.compress.compressors.brotli.BrotliCompressorInputStream;
+import com.nixxcode.jvmbrotli.dec.BrotliInputStream;
+import com.nixxcode.jvmbrotli.enc.BrotliOutputStream;
 
 import com.ning.jcbm.DriverBase;
 
-public class CommonsCompressBrotliDriver extends DriverBase
+// Brotli with default quality setting (-1)
+public class JvmBrotliDriver extends DriverBase
 {
-    public CommonsCompressBrotliDriver()
+    public JvmBrotliDriver()
     {
-        super("Brotli/ApacheCC");
+        super("Brotli/jvmbrotli");
     }
 
     @Override
@@ -40,8 +42,10 @@ public class CommonsCompressBrotliDriver extends DriverBase
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut)
             throws IOException
     {
-        // Apache Commons-Compress 1.20 only provides read-only version:
-        throw new UnsupportedOperationException();
+        // Use default quality level (-1 marker), window length
+        try (BrotliOutputStream out = new BrotliOutputStream(rawOut)) {
+            out.write(uncompressed);
+        }
     }
 
     @Override
@@ -49,7 +53,7 @@ public class CommonsCompressBrotliDriver extends DriverBase
             throws IOException
     {
         int total = 0;
-        try (BrotliCompressorInputStream in = new BrotliCompressorInputStream(compIn)) {
+        try (BrotliInputStream in = new BrotliInputStream(compIn)) {
             int count;
             while ((count = in.read(inputBuffer)) >= 0) {
                 total += count;

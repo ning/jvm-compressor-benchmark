@@ -125,6 +125,13 @@
 
   <!-- 17-Apr-2021, tatu: Removed "QuickLZ" (http://www.quicklz.com/) codecs -->
 
+ <driver name="Brotli/default/block">
+        <description><div xmlns=""><p>Brotli (default), block mode
+</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.brotli.JvmBrotliDriver" />
+        <param name="streaming" value="false" />
+  </driver>
+
  <driver name="Gzip/JDK/stream">
         <description><div xmlns=""><p>JDK Gzip/Deflate, streaming
 </p></div></description>
@@ -140,25 +147,18 @@
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.NingGzipDriver" />
   </driver>
 
-<!-- Should we include slower gzip or not?
-  <driver name="Gzip/jzlib/stream">
-        <description><div xmlns=""><p>JCraft's jzlib (gzip), streaming</p></div></description>
-        <param name="streaming" value="true" />
-        <param name="japex.driverClass" value="com.ning.jcbm.gzip.JCraftGzipDriver" />
-  </driver>
--->
   <driver name="BZip2/stream">
         <description><div xmlns=""><p>Commons-compress BZip2 implementation</p></div></description>
         <param name="streaming" value="true" />
         <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
   </driver>
 
-<!-- Include fastest LZMA version in official results; no point for slower one
--->
+<!-- TODO: add XZ codec
 
-  <driver name="LZMA-orig/block">
-        <description><div xmlns=""><p>7Zip's LZMA, block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.lzma.LzmaDriver" />
+  <driver name="XZ/java/block">
+        <description><div xmlns=""><p>XZ from Tukaani, block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.xz.XZTukaaniDriver" />
   </driver>
+-->
 
 </driverGroup>
