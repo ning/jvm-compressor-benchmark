@@ -42,6 +42,7 @@ public class JvmBrotliDriver extends DriverBase
             throws IOException
     {
         byte[] decoded = Decoder.decompress(compressed);
+        System.arraycopy(decoded, 0, uncompressBuffer, 0, decoded.length);
         return decoded.length;
     }
 
