@@ -44,6 +44,7 @@ JNI-backed ones.
       <version.lzf>1.1</version.lzf>
       <version.snappy-jni>1.1.8.4</version.snappy-jni>
       <version.std-jni>1.4.9-5</version.std-jni>
+      <version.xz-tukaani>1.9</version.xz-tukaani>
 
       <!--  deprecated codecs -->
       <version.lzo-java-old>1.0.6</version.lzo-java-old>
@@ -107,6 +108,13 @@ JNI-backed ones.
           <groupId>org.xerial.snappy </groupId>
           <artifactId>snappy-java</artifactId>
           <version>${version.snappy-jni}</version>
+      </dependency>
+
+      <!-- XZ/Tukaani -->
+      <dependency>
+          <groupId>org.tukaani</groupId>
+          <artifactId>xz</artifactId>
+          <version>${version.xz-tukaani}</version>
       </dependency>
 
       <!-- ZStandard -->

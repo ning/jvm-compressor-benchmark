@@ -24,7 +24,9 @@ public class BZip2Driver extends DriverBase
 
     @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException {
-        return uncompressBlockUsingStream(new BZip2CompressorInputStream(new ByteArrayInputStream(compressed)), uncompressBuffer);
+        return uncompressBlockUsingStream(
+                new BZip2CompressorInputStream(
+                        new ByteArrayInputStream(compressed)), uncompressBuffer);
     }
 
     @Override

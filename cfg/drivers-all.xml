@@ -143,22 +143,20 @@
   <driver name="Gzip/Ning/stream">
         <description><div xmlns=""><p>JDK Gzip-via-Ning, streaming
 </p></div></description>
-        <param name="streaming" value="true" />
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.NingGzipDriver" />
+        <param name="streaming" value="true" />
   </driver>
 
   <driver name="BZip2/stream">
         <description><div xmlns=""><p>Commons-compress BZip2 implementation</p></div></description>
-        <param name="streaming" value="true" />
         <param name="japex.driverClass" value="com.ning.jcbm.bzip2.BZip2Driver" />
+        <param name="streaming" value="true" />
   </driver>
 
-<!-- TODO: add XZ codec
-
-  <driver name="XZ/java/block">
-        <description><div xmlns=""><p>XZ from Tukaani, block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.xz.XZTukaaniDriver" />
+  <driver name="XZ/java/stream">
+        <description><div xmlns=""><p>XZ from Tukaani, streaming</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.xz.TukaaniXZDriver" />
+        <param name="streaming" value="true" />
   </driver>
--->
 
 </driverGroup>
