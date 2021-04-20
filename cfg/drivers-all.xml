@@ -45,25 +45,25 @@
           issues here, so need to keep commented out
     -->
   <driver name="Snappy(JNI)/block" normal="false">
-        <description><div xmlns=""><p>Snappy-JNI, block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+        <description><div xmlns=""><p>Snappy-Xerial-JNI, block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
   <!--
   -->
   <!--
   <driver name="Snappy(JNI)/stream" normal="false">
-        <description><div xmlns=""><p>Snappy-JNI, streaming</p></div></description>
+        <description><div xmlns=""><p>Snappy-Xerial-JNI, streaming</p></div></description>
         <param name="streaming" value="true" />
-        <param name="japex.driverClass" value="com.ning.jcbm.snappy.SnappyDriver" />
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.XerialJNISnappyDriver" />
         <param name="japex.singleClassLoader" value="true"/>
   </driver>
 -->
 
   <driver name="Snappy(iq80)/block" normal="false">
-        <description><div xmlns=""><p>Snappy-Java, block mode</p></div>
+        <description><div xmlns=""><p>Snappy-iq80-Java, block mode</p></div>
         </description>
-        <param name="japex.driverClass" value="com.ning.jcbm.iq80snappy.Iq80SnappyDriver"/>
+        <param name="japex.driverClass" value="com.ning.jcbm.snappy.Iq80JavaSnappyDriver"/>
   </driver>
 
   <!-- Normalize or not? Makes sense for throughput; but not so much for

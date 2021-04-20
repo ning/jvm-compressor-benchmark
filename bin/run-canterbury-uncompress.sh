@@ -8,7 +8,7 @@ echo "About to run test on Canterbury corpus files"
 
 java -server -Xmx512M \
  -Djava.awt.headless=true -Djapex.contextClassLoader=true -Djapex.numberOfThreads=1 \
- -Djapex.runsPerDriver=1 -Djapex.warmupTime=7 -Djapex.runTime=30 \
+ -Djapex.runsPerDriver=1 -Djapex.warmupTime=5 -Djapex.runTime=10 \
  -Djapex.plotGroupSize=6 \
  -Djapex.reportsDirectory=reports/canterbury-uncompress \
  -Djapex.inputDir="testdata/canterbury" \

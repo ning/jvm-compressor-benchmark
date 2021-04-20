@@ -8,10 +8,10 @@ import com.ning.jcbm.DriverBase;
 
 import org.xerial.snappy.*;
 
-public class SnappyDriver extends DriverBase
+public class XerialJNISnappyDriver extends DriverBase
 {
-    public SnappyDriver() {
-        super("Snappy");
+    public XerialJNISnappyDriver() {
+        super("Snappy/xerial");
     }
 
     @Override
@@ -19,16 +19,19 @@ public class SnappyDriver extends DriverBase
         return Snappy.maxCompressedLength(length);
     }
 
+    @Override
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer) throws IOException
     {
         return Snappy.compress(uncompressed, 0, uncompressed.length, compressBuffer, 0);
     }
 
+    @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer) throws IOException
     {
         return Snappy.uncompress(compressed, 0, compressed.length, uncompressBuffer, 0);
     }
 
+    @Override
     protected void compressToStream(byte[] uncompressed, OutputStream rawOut) throws IOException
     {
         SnappyOutputStream out = new SnappyOutputStream(rawOut);
@@ -36,6 +39,7 @@ public class SnappyDriver extends DriverBase
         out.close();
     }
     
+    @Override
     protected int uncompressFromStream(InputStream compIn, byte[] inputBuffer) throws IOException
     {
         SnappyInputStream in = new SnappyInputStream(compIn);
