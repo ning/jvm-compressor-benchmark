@@ -5,8 +5,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import com.nixxcode.jvmbrotli.dec.BrotliInputStream;
+import com.nixxcode.jvmbrotli.dec.Decoder;
 import com.nixxcode.jvmbrotli.enc.BrotliOutputStream;
-
+import com.nixxcode.jvmbrotli.enc.Encoder;
 import com.ning.jcbm.DriverBase;
 
 // Brotli with default quality setting (-1)
@@ -28,14 +29,17 @@ public class JvmBrotliDriver extends DriverBase
     protected int compressBlock(byte[] uncompressed, byte[] compressBuffer)
             throws IOException
     {
-        throw new UnsupportedOperationException();
+        byte[] encoded = Encoder.compress(uncompressed);
+        System.arraycopy(encoded, 0, compressBuffer, 0, encoded.length);
+        return encoded.length;
     }
 
     @Override
     protected int uncompressBlock(byte[] compressed, byte[] uncompressBuffer)
             throws IOException
     {
-        throw new UnsupportedOperationException();
+        byte[] decoded = Decoder.decompress(compressed);
+        return decoded.length;
     }
 
     @Override
