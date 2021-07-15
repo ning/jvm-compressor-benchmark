@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Tests for a "Quartet" of somewhat representative ends: from
+     best compression ratio (slow compression) like Brotli to
+     lowest compression ratio (fastest compression) of LZ4
+  -->
+<driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <driver name="Brotli/default/block">
+    <description><div xmlns=""><p>Brotli (default), block</p></div></description>
+    <param name="japex.driverClass" value="com.ning.jcbm.brotli.JvmBrotliDriver" />
+  </driver>
+  
+  <driver name="Gzip/JDK/stream">
+    <description><div xmlns=""><p>JDK Gzip/Deflate, streaming</p></div></description>
+    <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />
+  </driver>
+  
+  <driver name="LZF/block" normal="false">
+    <description><div xmlns=""><p>LZF (Java unsafe), block</p></div></description>
+    <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+  
+  <driver name="LZ4 (JNI)/block" normal="false">
+    <description><div xmlns=""><p>LZ4 (JNI), block mode</p></div></description>
+    <param name="japex.driverClass" value="com.ning.jcbm.lz4.Lz4JNIDriver"/>
+  </driver>
+
+</driverGroup>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testSuite name="Test suite for JVM compressors"
+  xmlns="http://www.sun.com/japex/testSuite"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+    <description><div xmlns=""><p>
+Micro-benchmark for testing performance of 4 representative compressors on JVM platform
+</p></div></description>
+
+    <!-- Drivers: "quartet" -->
+    <xi:include href="drivers-q4.xml" />
+
+    <!-- Test cases: name has to match with filename -->
+
+<testCase name='U:alice29.txt' />
+<testCase name='U:asyoulik.txt' />
+<testCase name='U:cp.html' />
+<testCase name='U:fields.c' />
+<testCase name='U:grammar.lsp' />
+<testCase name='U:kennedy.xls' />
+<testCase name='U:lcet10.txt' />
+<testCase name='U:plrabn12.txt' />
+<testCase name='U:ptt5' />
+<testCase name='U:sum' />
+<testCase name='U:xargs.1' />
+
+</testSuite>

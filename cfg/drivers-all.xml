@@ -125,14 +125,14 @@
 
   <!-- 17-Apr-2021, tatu: Removed "QuickLZ" (http://www.quicklz.com/) codecs -->
 
- <driver name="Brotli/default/block">
+  <driver name="Brotli/default/block">
         <description><div xmlns=""><p>Brotli (default), block mode
 </p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.brotli.JvmBrotliDriver" />
         <param name="streaming" value="false" />
   </driver>
 
- <driver name="Gzip/JDK/stream">
+  <driver name="Gzip/JDK/stream">
         <description><div xmlns=""><p>JDK Gzip/Deflate, streaming
 </p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.gzip.JDKGzipDriver" />

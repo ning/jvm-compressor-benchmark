@@ -12,20 +12,6 @@ Micro-benchmark for testing performance of compressors on JVM platform
     
     <driverGroup name="javaDrivers" xmlns="http://www.sun.com/japex/testSuite"
        xmlns:xi="http://www.w3.org/2001/XInclude">
-  <driver name="Brotli/default/block">
-        <description><div xmlns=""><p>Test driver for Brotli, block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.brotli.JvmBrotliDriver" />
-        <param name="streaming" value="false" />
-  </driver>
-
-  <driver name="Zstd0 (JNI)/block" normal="false">
-        <description><div xmlns=""><p>Zstd/0 (JNI), block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel0ZstdDriver"/>
-  </driver>
-  <driver name="Zstd9 (JNI)/block" normal="false">
-        <description><div xmlns=""><p>Zstd/9 (JNI), block mode</p></div></description>
-        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel9ZstdDriver"/>
-  </driver>
 
   <driver name="LZ4(JNI)/block" normal="false">
         <description><div xmlns=""><p>LZ4/JNI, block mode</p></div></description>
@@ -40,6 +26,21 @@ Micro-benchmark for testing performance of compressors on JVM platform
   <driver name="LZF/block" >
         <description><div xmlns=""><p>Test driver for LZF, block mode</p></div></description>
         <param name="japex.driverClass" value="com.ning.jcbm.lzf.LzfDriver" />
+  </driver>
+
+  <driver name="Zstd0 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>Zstd/0 (JNI), block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel0ZstdDriver"/>
+  </driver>
+  <driver name="Zstd9 (JNI)/block" normal="false">
+        <description><div xmlns=""><p>Zstd/9 (JNI), block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.zstd.LubenJNILevel9ZstdDriver"/>
+  </driver>
+
+  <driver name="Brotli/default/block">
+        <description><div xmlns=""><p>Test driver for Brotli, block mode</p></div></description>
+        <param name="japex.driverClass" value="com.ning.jcbm.brotli.JvmBrotliDriver" />
+        <param name="streaming" value="false" />
   </driver>
 
   <driver name="Gzip/JDK/stream">
