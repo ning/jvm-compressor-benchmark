@@ -39,7 +39,7 @@ JNI-backed ones.
 
       <version.aircompressor>0.18</version.aircompressor>
       <version.brotli.jvm>0.2.0</version.brotli.jvm>
-      <version.commons-compress>1.20</version.commons-compress>
+      <version.commons-compress>1.21</version.commons-compress>
       <version.lz4>1.7.1</version.lz4>
       <version.lzf>1.1</version.lzf>
       <version.snappy-jni>1.1.8.4</version.snappy-jni>
